@@ -1,2 +1,2 @@
 # BADT
-Final Assignment INFS3634
+Final Assignment INFS3634 - Business Analysis using Design Thinking
