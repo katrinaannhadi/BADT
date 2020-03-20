@@ -11,6 +11,9 @@
     <string name="menu_quiz">Quiz</string>
     <string name="menu_flashcards">Flashcards</string>
     <string name="menu_video">Video</string>
+    <string name="bt_video">Video</string>
+    <string name="bt_playlist">Playlist</string>
 
     <string name="home_second">Home Second</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
