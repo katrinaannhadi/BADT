@@ -1,4 +1,4 @@
-package com.katrinaann.badt.ui.gallery;
+package com.katrinaann.badt.ui.quiz;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.katrinaann.badt.R;
 
-public class GalleryFragment extends Fragment {
+public class QuizFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
+    private QuizViewModel quizViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        quizViewModel =
+                ViewModelProviders.of(this).get(QuizViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_quiz, container, false);
+        final TextView textView = root.findViewById(R.id.text_quiz);
+        quizViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
