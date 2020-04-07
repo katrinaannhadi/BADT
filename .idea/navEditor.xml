@@ -8,7 +8,7 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="nav_">
+                  <entry key="nav_flashcard">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -67,8 +67,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
+                            <option name="x" value="16" />
+                            <option name="y" value="-374" />
                           </Point>
                         </option>
                       </LayoutPositions>

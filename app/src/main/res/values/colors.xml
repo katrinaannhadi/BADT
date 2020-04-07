@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="action_bar_color">#0277bd</color>
+    <color name="action_bar_text_color">#fafafa</color>
+    <color name="drawer_background">#fafafa</color>
+    <color name="drawer_selected">#ff9100</color>
+
+    <color name="default_button">#0277bd</color>
+    <color name="default_button_pressed">#01579b</color>
+    <color name="card_undobar_material_text_color">#40c4ff</color>
+    <color name="card_undobar_material_background_color">#EE323232</color>
+
 </resources>

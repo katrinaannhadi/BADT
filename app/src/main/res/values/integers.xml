@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="anim_length_half">50</integer>
+    <integer name="card_flip_left_in">50</integer>
+    <integer name="card_flip_right_in">50</integer>
+    <integer name="card_flip_left_out">50</integer>
+    <integer name="card_flip_right_out">50</integer>
+    <integer name="anim_length">100</integer>
+    <integer name="card_flip_time_full">100</integer>
+    <integer name="card_flip_time_half">50</integer>
+</resources>
