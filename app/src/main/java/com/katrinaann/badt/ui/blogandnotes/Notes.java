@@ -1,4 +1,4 @@
-package com.example.infs3634groupassignmentlocal;
+package com.katrinaann.badt.ui.blogandnotes;
 
 import java.util.ArrayList;
 

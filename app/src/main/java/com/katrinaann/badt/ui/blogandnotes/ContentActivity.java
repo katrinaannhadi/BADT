@@ -1,4 +1,4 @@
-package com.example.infs3634groupassignmentlocal;
+package com.katrinaann.badt.ui.blogandnotes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +15,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.katrinaann.badt.R;
 
 import java.util.ArrayList;
 
@@ -118,10 +120,10 @@ public class ContentActivity extends AppCompatActivity {
         });
 
         //Spannable String example for highlighting - https://www.dev2qa.com/android-spannablestring-example/
-        SpannableString spannableStr = new SpannableString("Hello SpannableString Example.");
+        /*SpannableString spannableStr = new SpannableString("Hello SpannableString Example.");
         BackgroundColorSpan backgroundColorSpan = new BackgroundColorSpan(Color.GREEN);
         spannableStr.setSpan(backgroundColorSpan, 15, 30, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
-        tvInformation.setText(spannableStr);
+        tvInformation.setText(spannableStr); */
 
     }
 
