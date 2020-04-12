@@ -1,6 +1,7 @@
 package com.katrinaann.badt.ui.blogandnotes;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,44 +15,31 @@ public class NoteActivity extends AppCompatActivity {
 
     private String note;
     private Button btnSave;
+    private Button btnDelete;
     private EditText etNoteName;
     private EditText etNoteContent;
     private String previousNoteName;
     private String previousNoteContent;
     private Boolean noteExists;
-
+    public static final String ARG_ITEM_ID = "item_id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        Intent intent = getIntent();
-        note = intent.getStringExtra("note");
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
 
-        btnSave = findViewById(R.id.btnSave);
-        etNoteName = findViewById(R.id.etNoteName);
-        etNoteContent = findViewById(R.id.etNoteContent);
+        Intent intent = getIntent();
 
-        previousNoteName = etNoteName.getText().toString();
-        noteExists = false;
+        String position = intent.getStringExtra(NoteFragment.ARG_ITEM_ID);
 
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                for (int i = 0; i < Notes.noteList.size(); i++) {
-                    if (previousNoteName == Notes.noteList.get(i).getNoteName()) {
-                        Notes.noteList.get(i).setNoteName(etNoteName.toString());
-                        Notes.noteList.get(i).setNoteContent(etNoteContent.toString());
-                        noteExists = true;
-                        break;
-                    }
-                }
-                if (noteExists == false) {
-                    Notes.noteList.add(new Notes(etNoteName.toString(),etNoteContent.toString()));
-                }
-            }
-        });
+        Bundle arguments = new Bundle();
+        arguments.putString(NoteFragment.ARG_ITEM_ID, position);
+        Fragment fragment = new NoteFragment();
+        fragment.setArguments(arguments);
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.scrollDetailActivity, fragment)
+                .commit();
     }
 }

@@ -55,7 +55,7 @@ public class TemporaryActivity extends AppCompatActivity {
     }
 
     public void newActivity2(View v, String topic) {
-        Intent intent = new Intent(this, NoteActivity.class);
+        Intent intent = new Intent(this, NoteListActivity.class);
         intent.putExtra("Note",topic);
         startActivity(intent);
     }
