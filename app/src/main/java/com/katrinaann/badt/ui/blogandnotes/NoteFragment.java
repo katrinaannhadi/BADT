@@ -46,7 +46,7 @@ public class NoteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_note, container, false);
+        View v = inflater.inflate(R.layout.fragment_note2, container, false);
         btnSave = v.findViewById(R.id.btnSave);
         btnDelete = v.findViewById(R.id.btnDelete);
         etNoteName = v.findViewById(R.id.etNoteName);
