@@ -44,8 +44,8 @@ public class HomeFragment extends Fragment {
         NoteAdapter.RecyclerViewClickListener listener = new NoteAdapter.RecyclerViewClickListener() {
             @Override
             public void onClick(View view, int position) {
-                MainActivity mn = (MainActivity) getActivity();
-                mn.addNotePosition(position);
+                HomeActivity home = (HomeActivity) getActivity();
+                home.addNotePosition(position);
 //                listener.onHomeInputSent(position);
 
             }

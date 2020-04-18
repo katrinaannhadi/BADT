@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.katrinaann.badt.R;
-import com.katrinaann.badt.ui.flashcards.FlashcardViewModel;
 
 public class FlashcardFragment extends Fragment {
 
@@ -25,12 +24,12 @@ public class FlashcardFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         flashcardViewModel =
                 ViewModelProviders.of(this).get(FlashcardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_flashcard, container, false);
-        final TextView textView = root.findViewById(R.id.text_flashcard);
+        View root = inflater.inflate(R.layout.fragment_quiz, container, false);
+//        final TextView textView = root.findViewById(R.id.text_flashcard);
         flashcardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                textView.setText(s);
+//                textView.setText(s);
             }
         });
         return root;

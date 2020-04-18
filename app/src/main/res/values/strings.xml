@@ -20,10 +20,10 @@
         <item>Settings</item>
     </string-array>
     <!-- Nav drawer icons. Can be accessed pragmatically using a TypedArray[] -->
-<!--    <array name="nav_drawer_icons">-->
-<!--        <item>@drawable/ic_categories</item>-->
-<!--        <item>@drawable/ic_settings</item>-->
-<!--    </array>-->
+    <!--    <array name="nav_drawer_icons">-->
+    <!--        <item>@drawable/ic_categories</item>-->
+    <!--        <item>@drawable/ic_settings</item>-->
+    <!--    </array>-->
 
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -41,7 +41,6 @@
     <string name="menu_video">Video</string>
 
     <string name="home_second">Home Second</string>
-
 
 
 </resources>

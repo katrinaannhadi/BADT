@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.katrinaann.badt.MainActivity;
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.ui.home.HomeActivity;
 import com.katrinaann.badt.ui.home.NoteAdapter;
 import com.katrinaann.badt.ui.note.Note;
 
@@ -39,8 +40,8 @@ public class NoteFragment extends Fragment {
         NoteAdapter.RecyclerViewClickListener listener = new NoteAdapter.RecyclerViewClickListener() {
             @Override
             public void onClick(View view, int position) {
-                MainActivity mn = (MainActivity) getActivity();
-                mn.addNotePosition(position);
+                HomeActivity home = (HomeActivity) getActivity();
+                home.addNotePosition(position);
             }
         };
         mAdapter = new NoteAdapter(Note.getNote(), listener);

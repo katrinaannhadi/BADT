@@ -92,11 +92,11 @@ public class Note {
     public static ArrayList<Note> getNote() {
         ArrayList<Note> notes = new ArrayList<>();
 
-        notes.add(new Note(1, "Design Thinking", "Empathise", "1", R.drawable.yellow, "This is the first step of Design Thinking"));
-        notes.add(new Note(1, "Design Thinking", "Ceremonies", "1", R.drawable.yellow, "This is the second step of Design Thinking"));
-        notes.add(new Note(1, "Design Thinking", "Artifacts", "1", R.drawable.yellow, "This is the third step of Design Thinking"));
-        notes.add(new Note(1, "Design Thinking", "Artifacts", "1", R.drawable.yellow, "This is the fourth step of Design Thinking"));
-        notes.add(new Note(1, "Design Thinking", "Testing", "1", R.drawable.yellow, "This is the fifth step of Design Thinking"));
+        notes.add(new Note(1, "Design Thinking", "Empathise", "1", R.drawable.ic_scrum, "This is the first step of Design Thinking"));
+        notes.add(new Note(1, "Design Thinking", "Ceremonies", "1", R.drawable.ic_lean, "This is the second step of Design Thinking"));
+        notes.add(new Note(1, "Design Thinking", "Artifacts", "1", R.drawable.ic_designthinking, "This is the third step of Design Thinking"));
+        notes.add(new Note(1, "Design Thinking", "Artifacts", "1", R.drawable.ic_systems, "This is the fourth step of Design Thinking"));
+        notes.add(new Note(1, "Design Thinking", "Testing", "1", R.drawable.ic_quiz, "This is the fifth step of Design Thinking"));
 
         notes.add(new Note(2, "Agile Scrum", "Roles", "1", R.drawable.yellow, "This is the first topic of Agile"));
         notes.add(new Note(2, "Agile Scrum", "Ceremonies", "1", R.drawable.yellow, "This is the first topic of Agile"));

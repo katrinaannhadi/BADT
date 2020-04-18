@@ -45,7 +45,7 @@
         android:id="@+id/nav_flashcard"
         android:name="com.katrinaann.badt.ui.flashcards.FlashcardFragment"
         android:label="@string/menu_flashcards"
-        tools:layout="@layout/fragment_flashcard" />
+        tools:layout="@layout/fragment_categories" />
 
     <fragment
         android:id="@+id/nav_note"
