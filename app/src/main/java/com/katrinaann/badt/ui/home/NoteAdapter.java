@@ -60,10 +60,9 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.RestaurantView
     @Override
     public void onBindViewHolder(RestaurantViewHolder holder, int position){
         Note note = mNotes.get(position);
-        holder.name.setText(note.getName());
-        holder.cuisineType.setText(note.getCuisineType());
-        holder.location.setText(note.getLocation());
-        holder.rating.setText(String.valueOf(note.getRating()));
+        holder.name.setText(note.getTopic());
+        holder.cuisineType.setText(note.getSubTopic());
+        holder.location.setText(note.getLevelOfDifficulty());
         holder.image.setImageResource(note.getImageID());
     }
     //Return the size of our dataset

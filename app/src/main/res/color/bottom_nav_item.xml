@@ -16,7 +16,7 @@
 
   <item
       android:state_checked="true"
-      android:color="@color/colorAccent"/>
+      android:color="@color/owl_yellow_dark_primary"/>
   <item android:color="#fff"/> <!--always white, invariant of theme-->
 
 </selector>

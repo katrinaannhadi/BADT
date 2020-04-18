@@ -50,7 +50,7 @@ public class HomeFragment extends Fragment {
 
             }
         };
-        mAdapter = new NoteAdapter(Note.getRestaurant(), listener);
+        mAdapter = new NoteAdapter(Note.getNote(), listener);
         mRecyclerView.setAdapter(mAdapter);
 
         return root;

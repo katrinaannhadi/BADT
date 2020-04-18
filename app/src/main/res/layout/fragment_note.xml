@@ -11,25 +11,35 @@
     android:theme="@style/Owl.Yellow"
     tools:targetApi="o">
 
+    <!--    <TextView-->
+<!--        android:id="@+id/choose"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="203dp"-->
+<!--        android:layout_marginStart="@dimen/grid_4"-->
+<!--        android:layout_marginTop="56dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:gravity="end"-->
+<!--        android:padding="@dimen/grid_1"-->
+<!--        android:paddingTop="@dimen/grid_1"-->
+<!--        android:text="Learn Design Thinking"-->
+<!--        android:textAppearance="@style/TextAppearance.Owl.Headline3"-->
+<!--        android:textColor="@color/owl_blue_dark_primary"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.809"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="MissingPrefix" />-->
 
-    <TextView
-        android:id="@+id/choose"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/grid_4"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="24dp"
-        android:gravity="end"
-        android:padding="@dimen/grid_1"
-        android:paddingTop="@dimen/grid_1"
-        android:text="Learn Design Thinking"
-        android:textAppearance="@style/TextAppearance.Owl.Headline3"
-        android:textColor="@color/owl_blue_dark_primary"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingPrefix" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv"
@@ -40,7 +50,7 @@
         android:paddingHorizontal="@dimen/grid_2"
         android:text="@string/scroll"
         android:textAppearance="@style/TextAppearance.Owl.Subtitle1"
-        android:textColor="@color/owl_blue_700"
+        android:textColor="@color/design_default_color_primary_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
@@ -50,7 +60,7 @@
         android:id="@+id/rvList"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginBottom="124dp"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:orientation="vertical"
@@ -61,8 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/choose"
-        app:layout_constraintVertical_bias="0.304"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:reverseLayout="true"
         app:spanCount="2"
         tools:listitem="@layout/note_list_row" />

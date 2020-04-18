@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAboutField"
         app:srcCompat="@drawable/ic_compass"
-        app:tint="@color/colorPrimaryDark" />
+        app:tint="@color/design_default_color_surface" />
 
 
     <TextView
@@ -48,7 +48,7 @@
         android:text="@{course.subject}"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.Owl.Body1"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/owl_yellow_dark_primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView" />
@@ -61,7 +61,7 @@
         android:paddingHorizontal="@dimen/grid_2"
         android:text="@{course.name}"
         android:textAppearance="@style/TextAppearance.Owl.Headline2"
-        android:textColor="@color/design_default_color_surface"
+        android:textColor="@color/owl_yellow_dark_primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvLocationField" />
@@ -75,7 +75,7 @@
         android:text="@{course.subject}"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.Owl.Body1"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/owl_yellow_dark_primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/restaurant_name" />
@@ -89,7 +89,7 @@
         android:text="@{course.subject}"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.Owl.Body1"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/owl_yellow_dark_primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvCuisineTypeField" />
@@ -112,7 +112,7 @@
         android:text="@{String.valueOf(course.steps)}"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.Owl.Body1"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/owl_yellow_dark_primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/imageView"
         app:layout_constraintTop_toBottomOf="@id/tvRatingField" />

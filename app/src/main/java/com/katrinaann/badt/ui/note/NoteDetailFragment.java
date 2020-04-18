@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.katrinaann.badt.MainActivity;
 import com.katrinaann.badt.R;
 
 public class NoteDetailFragment extends Fragment {
@@ -36,7 +35,7 @@ public class NoteDetailFragment extends Fragment {
         TextView name = v.findViewById(R.id.restaurant_name);
         TextView cuisineType = v.findViewById(R.id.tvCuisineTypeField);
         TextView location = v.findViewById(R.id.tvLocationField);
-        TextView rating = v.findViewById(R.id.tvRatingField);
+//        TextView rating = v.findViewById(R.id.tvRatingField);
         TextView about = v.findViewById(R.id.tvAboutField);
         ImageView image = v.findViewById(R.id.imageView);
         ImageView search = v.findViewById(R.id.ivSearch);
@@ -46,13 +45,12 @@ public class NoteDetailFragment extends Fragment {
 
         Bundle bundle = getArguments();
         if (bundle != null){
-            mNote = Note.getRestaurant().get(getArguments().getInt("position"));
+            mNote = Note.getNote().get(getArguments().getInt("position"));
 //            mNote = Note.getRestaurant().get(position);
 
-            name.setText(mNote.getName());
-            cuisineType.setText((mNote.getCuisineType()));
-            location.setText(mNote.getLocation());
-            rating.setText(String.valueOf(mNote.getRating()));
+            name.setText(mNote.getTopic());
+            cuisineType.setText((mNote.getSubTopic()));
+            location.setText(mNote.getLevelOfDifficulty());
             about.setText(String.valueOf(mNote.getAbout()));
             image.setImageResource(mNote.getImageID());
 
@@ -62,7 +60,7 @@ public class NoteDetailFragment extends Fragment {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                searchRestaurant(mNote.getName(), mNote.getLocation());
+                searchRestaurant(mNote.getTopic(), mNote.getLevelOfDifficulty());
             }
 
         });
