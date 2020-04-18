@@ -7,7 +7,10 @@ import android.view.Menu;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.katrinaann.badt.ui.note.NoteDetailFragment;
 
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -18,6 +21,7 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String EXTRA_MESSAGE = "com.katrinaann.badt.MESSAGE";
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -39,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_quiz, R.id.nav_video)
+                R.id.nav_home, R.id.nav_quiz, R.id.nav_video, R.id.nav_note)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -59,5 +63,18 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    //method gets the position from the home Fragment (Note page) and sends it to NoteDetailFragment
+    public void addNotePosition(int position) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        NoteDetailFragment noteFragment = new NoteDetailFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt("position", position);
+        noteFragment.setArguments(bundle);
+        transaction.add(R.id.detail_container,noteFragment);
+        transaction.commit();
+
     }
 }

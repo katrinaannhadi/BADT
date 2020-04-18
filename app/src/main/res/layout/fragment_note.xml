@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/owl_pink_500"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    android:theme="@style/Owl.Yellow"
+    tools:targetApi="o">
+
+
+    <TextView
+        android:id="@+id/choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/grid_4"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="end"
+        android:padding="@dimen/grid_1"
+        android:paddingTop="@dimen/grid_1"
+        android:text="Learn Design Thinking"
+        android:textAppearance="@style/TextAppearance.Owl.Headline3"
+        android:textColor="@color/owl_blue_dark_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/grid_2"
+        android:text="@string/scroll"
+        android:textAppearance="@style/TextAppearance.Owl.Subtitle1"
+        android:textColor="@color/owl_blue_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/grid_1"
+        android:paddingStart="@dimen/grid_3"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choose"
+        app:layout_constraintVertical_bias="0.304"
+        app:reverseLayout="true"
+        app:spanCount="2"
+        tools:listitem="@layout/note_list_row" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
