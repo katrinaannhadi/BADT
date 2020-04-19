@@ -51,7 +51,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.RestaurantView
 
     @Override
     public NoteAdapter.RestaurantViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.note_list_row, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_note_list, parent, false);
         return new RestaurantViewHolder(v, mListener);
     }
 

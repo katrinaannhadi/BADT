@@ -41,7 +41,7 @@ public class CategoryAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, final int position) {
         layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.categories_item, container, false);
+        View view = layoutInflater.inflate(R.layout.item_categories, container, false);
 
         ImageView imageView;
         TextView title, desc;

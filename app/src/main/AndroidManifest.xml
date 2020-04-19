@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Owl.Pink">
         <activity android:name=".ui.home.HomeActivity"></activity>
+        <activity android:name=".ui.flashcards.FlashcardActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

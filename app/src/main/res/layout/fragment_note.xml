@@ -74,6 +74,6 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:reverseLayout="true"
         app:spanCount="2"
-        tools:listitem="@layout/note_list_row" />
+        tools:listitem="@layout/row_note_list" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
