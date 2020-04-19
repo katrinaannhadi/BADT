@@ -14,14 +14,14 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/image"
-                android:src="@drawable/ic_designthinking"
-                android:scaleType="centerCrop"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_designthinking" />
 
             <TextView
                 android:id="@+id/title"
@@ -37,17 +37,22 @@
 
             <TextView
                 android:id="@+id/desc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/title"
+                android:layout_width="355dp"
+                android:layout_height="143dp"
+                android:layout_below="@+id/title"
+                android:layout_alignStart="@+id/title"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-1dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="13dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
                 android:layout_marginRight="16dp"
                 android:drawablePadding="10dp"
                 android:ellipsize="end"
                 android:maxLines="3"
                 android:text="Description"
-                android:textAppearance="@style/TextAppearance.Owl.Body1" />
+                android:textAppearance="@style/TextAppearance.Owl.Body1"
+                android:textSize="14sp" />
 
         </RelativeLayout>
 

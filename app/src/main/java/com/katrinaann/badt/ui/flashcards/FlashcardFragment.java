@@ -27,6 +27,11 @@ public class FlashcardFragment extends Fragment {
     private Button categoryOne;
     private Button categoryTwo;
     private Button categoryThree;
+    private Button categoryFour;
+    private Button categoryFive;
+    private Button categorySix;
+    private Button categorySeven;
+
     private int value;
 
     public FlashcardFragment(){
@@ -45,34 +50,68 @@ public class FlashcardFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         flashcardViewModel =
                 ViewModelProviders.of(this).get(FlashcardViewModel.class);
-        view = inflater.inflate(R.layout.fragment_start_quiz, container, false);
+        view = inflater.inflate(R.layout.fragment_flashcard, container, false);
 
 
         categoryOne = view.findViewById(R.id.button_category_one);
         categoryTwo = view.findViewById(R.id.button_category_two);
         categoryThree = view.findViewById(R.id.button_category_three);
-        categoryOne.setText("Lean");
-        categoryTwo.setText("Agile");
-        categoryThree.setText("Design Thinking");
+        categoryFour = view.findViewById(R.id.button_category_four);
+        categoryFive = view.findViewById(R.id.button_category_five);
+        categorySix = view.findViewById(R.id.button_category_six);
+        categorySeven = view.findViewById(R.id.button_category_seven);
+
+        categoryOne.setText("Introduction to Business Analysis");
+        categoryTwo.setText("Project Management");
+        categoryThree.setText("Requirements Gathering and Modelling");
+        categoryFour.setText("System Development Life Cycle");
+        categoryFive.setText("Design Thinking");
+        categorySix.setText("Agile Scrum");
+        categorySeven.setText("Lean Start Up");
+
 
         categoryOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startQuiz(1);
+                startFlashcard(1);
             }
         });
 
         categoryTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startQuiz(2);
+                startFlashcard(2);
             }
         });
 
         categoryThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startQuiz(3);
+                startFlashcard(3);
+            }
+        });
+        categoryFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startFlashcard(4);
+            }
+        });
+        categoryFive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startFlashcard(5);
+            }
+        });
+        categorySix.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startFlashcard(6);
+            }
+        });
+        categorySeven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startFlashcard(7);
             }
         });
 
@@ -86,10 +125,10 @@ public class FlashcardFragment extends Fragment {
         });
         return view;
     }
-    private void startQuiz(int number){
+    private void startFlashcard(int number){
         Context c = view.getContext();
         Intent intent = new Intent(c, FlashcardActivity.class);
-        intent.putExtra("Difficulty", number);
+        intent.putExtra("Category", number);
         c.startActivity(intent);
     }
 }

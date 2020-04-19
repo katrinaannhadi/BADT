@@ -28,26 +28,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/image"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="156dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="148dp"
+                android:gravity="center"
                 android:text="Brochure"
-                android:textAppearance="@style/TextAppearance.Owl.Headline1"
+                android:textAppearance="@style/TextAppearance.Owl.Headline2"
                 android:textColor="#262626"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/desc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/title"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="13dp"
-                android:layout_marginRight="16dp"
-                android:drawablePadding="10dp"
-                android:ellipsize="end"
-                android:maxLines="3"
-                android:text="Description"
-                android:textAppearance="@style/TextAppearance.Owl.Body1" />
+            <!--            <TextView-->
+<!--                android:id="@+id/desc"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/title"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginTop="13dp"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:drawablePadding="10dp"-->
+<!--                android:ellipsize="end"-->
+<!--                android:maxLines="3"-->
+<!--                android:text="Description"-->
+<!--                android:textAppearance="@style/TextAppearance.Owl.Body1" />-->
 
         </RelativeLayout>
 

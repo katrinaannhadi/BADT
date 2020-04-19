@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
         //temp to change the background colour of the viewpager for the categories blurb
         Integer[] colors_temp = {
-                getResources().getColor(R.color.owl_blue_700),
                 getResources().getColor(R.color.owl_pink_500),
+                getResources().getColor(R.color.owl_blue_700),
                 getResources().getColor(R.color.owl_yellow_400),
-                getResources().getColor(R.color.owl_blue_200)
+                getResources().getColor(R.color.owl_pink_500)
         };
         //setting these colors
         colors = colors_temp;

@@ -27,7 +27,7 @@
         android:layout_marginBottom="60dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:text="Order Now!"
+        android:text="Skip to Home"
         android:textColor="#fff" />
 
 </RelativeLayout>
