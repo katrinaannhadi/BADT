@@ -11,6 +11,7 @@ import java.util.List;
 @Entity
 public class Flashcard {
 
+    public boolean isFlipped;
     @PrimaryKey
     private int id;
     private String title;
@@ -24,6 +25,10 @@ public class Flashcard {
         this.answer = answer;
         this.category = category;
         this.imageID = imageID;
+    }
+
+    public Flashcard() {
+
     }
 
     public int getId() {

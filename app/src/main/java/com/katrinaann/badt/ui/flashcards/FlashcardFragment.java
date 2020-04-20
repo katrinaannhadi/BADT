@@ -18,9 +18,12 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.ui.flashcards.models.Flashcard;
 
 
 public class FlashcardFragment extends Fragment {
+
+    //TODO CHANGE TO RECYCLER VIEW
 
     private FlashcardViewModel flashcardViewModel;
     private View view;
@@ -130,5 +133,17 @@ public class FlashcardFragment extends Fragment {
         Intent intent = new Intent(c, FlashcardActivity.class);
         intent.putExtra("Category", number);
         c.startActivity(intent);
+
+//        public void onClick(View view, int position) {
+//            FlashcardActivity flashcardActivity = (FlashcardActivity) getActivity();
+//            flashcardActivity.addFlashCardPosition(position);
+
+        }
+
+
+//            Bundle arguments = new Bundle();
+//            arguments.putInt("position", position);
+//            detailFragment.setArguments(arguments);
+//            transaction.add(R.id.detail_container, detailFragment);
+//            transaction.commit();
     }
-}
