@@ -14,21 +14,22 @@ public class Flashcard {
     public boolean isFlipped;
     @PrimaryKey
     private int id;
+    private int category;
     private String title;
     private String answer;
-    private int category; //can be switched out for difficulty or difficulty can be added?
+    //can be switched out for difficulty or difficulty can be added?
     private int imageID;
 
-    public Flashcard(int id, String title, String answer, int category, int imageID) {
+    public Flashcard(int id, int category, String title, String answer, int imageID) {
         this.id = id;
+        this.category = category;
         this.title = title;
         this.answer = answer;
-        this.category = category;
         this.imageID = imageID;
     }
 
     public Flashcard() {
-
+        
     }
 
     public int getId() {
@@ -37,6 +38,14 @@ public class Flashcard {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getCategory() {
+        return category;
+    }
+
+    public void setCategory(int category) {
+        this.category = category;
     }
 
     public String getTitle() {
@@ -55,14 +64,6 @@ public class Flashcard {
         this.answer = answer;
     }
 
-    public int getCategory() {
-        return category;
-    }
-
-    public void setCategory(int category) {
-        this.category = category;
-    }
-
     public int getImageID() {
         return imageID;
     }
@@ -71,33 +72,75 @@ public class Flashcard {
         this.imageID = imageID;
     }
 
-    public static List<Flashcard> getFlashcardList(){
-        //TODO:: to put this somewhere that's not here
-        //TODO:: add url from api, not sure we can find relevant data in our APIs for these flashcards?
-        //questions and answers from https://www.sageadvice.eu/2017/11/27/trivia-quiz-on-5th-edition-dd-rules/
-        List<Flashcard> flashcardList = new ArrayList<>();
-        flashcardList.add(0, new Flashcard(0,
-                "One word flashcards",
-                "This is the answer",
-                1,
-                R.drawable.ic_flashcard));
-        flashcardList.add(1, new Flashcard(1,
-                "One word flashcards",
-                "This is the answer",
-                1,
-                R.drawable.ic_flashcard));
-        flashcardList.add(2, new Flashcard(2,
-                "One word flashcards",
-                "This is the answer",
-                1,
-                R.drawable.ic_flashcard));
-        flashcardList.add(0, new Flashcard(3,
-                "One word flashcards",
-                "This is the answer",
-                1,
-                R.drawable.ic_flashcard));
+    public static ArrayList<Flashcard> getCategory1() {
+        ArrayList<Flashcard> Flashcards = new ArrayList<>();
+            Flashcards.add(new Flashcard(0, 1, "QuizName", "Introduction to Business Analysis", R.drawable.ic_scrum));
+            Flashcards.add(new Flashcard(1, 1, "QuizName", "Introduction to Business Analysis", R.drawable.ic_scrum));
+            Flashcards.add(new Flashcard(2, 1, "QuizName", "Introduction to Business Analysis", R.drawable.ic_scrum));
+            Flashcards.add(new Flashcard(3, 1, "QuizName", "Introduction to Business Analysis", R.drawable.ic_scrum));
+            Flashcards.add(new Flashcard(4, 1, "QuizName", "Introduction to Business Analysis", R.drawable.ic_scrum));
+            Flashcards.add(new Flashcard(5, 1, "QuizName", "Introduction to Business Analysis", R.drawable.ic_scrum));
+            Flashcards.add(new Flashcard(6, 1, "QuizName", "Introduction to Business Analysis", R.drawable.ic_scrum));
+            Flashcards.add(new Flashcard(7, 1, "QuizName", "Introduction to Business Analysis", R.drawable.ic_scrum));
+            Flashcards.add(new Flashcard(8, 1, "QuizName", "Introduction to Business Analysis", R.drawable.ic_scrum));
+            return Flashcards;
+        }
 
-        return flashcardList;
+        public static ArrayList<Flashcard> getCategory2() {
+        ArrayList<Flashcard> Flashcards = new ArrayList<>();
+            Flashcards.add(new Flashcard(0, 2,"QuizName", "Introduction to Business Analysis", R.drawable.ic_lean));
+            Flashcards.add(new Flashcard(1, 2,"QuizName", "Introduction to Business Analysis", R.drawable.ic_lean));
+            Flashcards.add(new Flashcard(2, 2,"QuizName", "Introduction to Business Analysis", R.drawable.ic_lean));
+            Flashcards.add(new Flashcard(3, 2,"QuizName", "Introduction to Business Analysis", R.drawable.ic_lean));
+            Flashcards.add(new Flashcard(4, 2,"QuizName", "Introduction to Business Analysis", R.drawable.ic_lean));
+            Flashcards.add(new Flashcard(5, 2,"QuizName", "Introduction to Business Analysis", R.drawable.ic_lean));
+            Flashcards.add(new Flashcard(6, 2,"QuizName", "Introduction to Business Analysis", R.drawable.ic_lean));
+            Flashcards.add(new Flashcard(7, 2,"QuizName", "Introduction to Business Analysis", R.drawable.ic_lean));
+            Flashcards.add(new Flashcard(8, 2,"QuizName", "Introduction to Business Analysis", R.drawable.ic_lean));
+            Flashcards.add(new Flashcard(9, 2,"QuizName", "Introduction to Business Analysis", R.drawable.ic_lean));
+        return Flashcards;
     }
+        public static ArrayList<Flashcard> getCategory3() {
+            ArrayList<Flashcard> Flashcards = new ArrayList<>();
+            Flashcards.add(new Flashcard(0, 3,"QuizName", "Introduction to Business Analysis", R.drawable.ic_designthinking));
+            Flashcards.add(new Flashcard(1, 3,"QuizName", "Introduction to Business Analysis", R.drawable.ic_designthinking));
+            Flashcards.add(new Flashcard(2, 3,"QuizName", "Introduction to Business Analysis", R.drawable.ic_designthinking));
+            Flashcards.add(new Flashcard(3, 3,"QuizName", "Introduction to Business Analysis", R.drawable.ic_designthinking));
+            Flashcards.add(new Flashcard(4, 3,"QuizName", "Introduction to Business Analysis", R.drawable.ic_designthinking));
+            Flashcards.add(new Flashcard(5, 3,"QuizName", "Introduction to Business Analysis", R.drawable.ic_designthinking));
+            Flashcards.add(new Flashcard(6, 3,"QuizName", "Introduction to Business Analysis", R.drawable.ic_designthinking));
+            Flashcards.add(new Flashcard(7, 3,"QuizName", "Introduction to Business Analysis", R.drawable.ic_designthinking));
+            Flashcards.add(new Flashcard(8, 3,"QuizName", "Introduction to Business Analysis", R.drawable.ic_designthinking));
+            Flashcards.add(new Flashcard(9, 3,"QuizName", "Introduction to Business Analysis", R.drawable.ic_designthinking));
+            return Flashcards;
+        }
+
+        public static ArrayList<Flashcard> getCategory4() {
+            ArrayList<Flashcard> Flashcards = new ArrayList<>();
+            Flashcards.add(new Flashcard(0, 4,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(1, 4,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(2, 4,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(3, 4,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(4, 4,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(5, 4,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(6, 4,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(7, 4,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+
+            return Flashcards;
+        }
+        public static ArrayList<Flashcard> getCategory5() {
+            ArrayList<Flashcard> Flashcards = new ArrayList<>();
+            Flashcards.add(new Flashcard(0, 5,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(1, 5,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(2, 5,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(3, 5,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(4, 5,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(5, 5,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(6, 5,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(7, 5,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            Flashcards.add(new Flashcard(8, 5,"QuizName", "Introduction to Business Analysis", R.drawable.ic_systems));
+            return Flashcards;
+        }
+
 }
 

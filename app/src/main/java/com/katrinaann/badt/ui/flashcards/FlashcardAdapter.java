@@ -50,10 +50,10 @@ public class FlashcardAdapter extends RecyclerView.Adapter<FlashcardAdapter.MyVi
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
 
-        Flashcard flashcard = list.get(position);
+        final Flashcard flashcard = list.get(position);
         holder.title.setText(flashcard.getTitle());
-//        holder.desc.setText(flashcard.getAnswer());
         holder.image.setImageResource(flashcard.getImageID());
+//        holder.desc.setText(flashcard.getAnswer());
 
         if (holder.flipView.getCurrentFlipState() == EasyFlipView.FlipState.FRONT_SIDE && list.get(
                 position).isFlipped) {
