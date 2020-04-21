@@ -41,7 +41,7 @@ public class NoteDetailFragment extends Fragment {
         ImageView search = v.findViewById(R.id.ivSearch);
 
 //        Intent intent = getActivity().getIntent();
-//        position = intent.getIntExtra(MainActivity.EXTRA_MESSAGE,0);
+//        position = intent.getIntExtra(IntroActivity.EXTRA_MESSAGE,0);
 
         Bundle bundle = getArguments();
         if (bundle != null){

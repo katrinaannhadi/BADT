@@ -79,4 +79,9 @@ public class HomeActivity extends AppCompatActivity {
         transaction.commit();
 
     }
+    // Disabling the back button (for some Android devices).
+    @Override
+    public void onBackPressed() {
+    }
+
 }

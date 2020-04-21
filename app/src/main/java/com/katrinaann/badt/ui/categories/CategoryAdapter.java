@@ -2,6 +2,7 @@ package com.katrinaann.badt.ui.categories;
 
 import android.content.Context;
 import android.content.Intent;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.ui.home.HomeActivity;
 
@@ -18,18 +20,18 @@ import java.util.List;
 
 public class CategoryAdapter extends PagerAdapter {
 
-    private List<Category> mCategories;
+    private List<Category> models;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public CategoryAdapter(List<Category> categories, Context context) {
-        this.mCategories = categories;
+    public CategoryAdapter(List<Category> models, Context context) {
+        this.models = models;
         this.context = context;
     }
 
     @Override
     public int getCount() {
-        return mCategories.size();
+        return models.size();
     }
 
     @Override
@@ -50,15 +52,15 @@ public class CategoryAdapter extends PagerAdapter {
         title = view.findViewById(R.id.title);
         desc = view.findViewById(R.id.desc);
 
-        imageView.setImageResource(mCategories.get(position).getImage());
-        title.setText(mCategories.get(position).getTitle());
-        desc.setText(mCategories.get(position).getDesc());
+        imageView.setImageResource(models.get(position).getImage());
+        title.setText(models.get(position).getTitle());
+        desc.setText(models.get(position).getDesc());
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, HomeActivity.class);
-//                intent.putExtra("param", mCategories.get(position).getTitle());
+                intent.putExtra("param", models.get(position).getTitle());
                 context.startActivity(intent);
                 // finish();
             }

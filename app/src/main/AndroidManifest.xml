@@ -12,14 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Owl.Pink">
+
+        <activity android:name=".ui.categories.IntroActivity"></activity>
+        <activity android:name=".ui.flashcards.FlashcardActivity"></activity>
         <activity android:name=".ui.home.HomeActivity"></activity>
-        <activity android:name=".ui.flashcards.FlashcardActivity">
-            <intent-filter>
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".ui.quiz.QuizActivity"></activity>
+        <activity android:name=".ui.signin.signupPageActivity"></activity>
+        <activity android:name=".ui.quiz.QuizAfterPageActivity"></activity>
+        <activity android:name=".ui.quiz.QuizLeaderboardActivity"></activity>
+        <activity android:name=".ui.quiz.QuizSelectionPageActivity"></activity>
+
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.signin.SignInActivity"
             android:label="@string/app_name"
             android:theme="@style/Base.Owl">
             <intent-filter>
@@ -27,6 +31,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
 
         <meta-data

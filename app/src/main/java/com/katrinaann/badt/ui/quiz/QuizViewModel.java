@@ -10,7 +10,7 @@ public class QuizViewModel extends ViewModel {
 
     public QuizViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is quiz fragment");
+        mText.setValue("Test your knowledge");
     }
 
     public LiveData<String> getText() {

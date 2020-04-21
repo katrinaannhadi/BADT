@@ -1,6 +1,5 @@
 package com.katrinaann.badt.ui.home;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.katrinaann.badt.MainActivity;
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.ui.note.Note;
 
@@ -57,7 +55,7 @@ public class HomeFragment extends Fragment {
     }
 
 //    private void launchDetailActivity(int position) {
-//        MainActivity mn = (MainActivity) getActivity();
+//        IntroActivity mn = (IntroActivity) getActivity();
 //        mn.addNotePosition(position);
 //        Intent intent = new Intent(this.getActivity(), NoteDetailActivity.class);
 //        intent.putExtra(EXTRA_MESSAGE, position);
