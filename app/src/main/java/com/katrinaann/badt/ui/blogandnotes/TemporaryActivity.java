@@ -11,9 +11,12 @@ import com.katrinaann.badt.R;
 
 public class TemporaryActivity extends AppCompatActivity {
 
-    private Button tvDesignThinking;
-    private Button tvAgile;
-    private Button tvNote;
+    private Button btnDesignThinking;
+    private Button btnAgile;
+    private Button btnNote;
+    private Button btnSdlc;
+    private Button btnLeanStartup;
+    private Button btnSysDevMethods;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,25 +25,49 @@ public class TemporaryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temporary);
 
-        tvDesignThinking = findViewById(R.id.tvDesignThinking);
-        tvAgile = findViewById(R.id.tvAgile);
-        tvNote = findViewById(R.id.tvNote);
+        btnDesignThinking = findViewById(R.id.btnDesignThinking);
+        btnAgile = findViewById(R.id.btnAgile);
+        btnNote = findViewById(R.id.btnNote);
+        btnSdlc = findViewById(R.id.btnSdlc);
+        btnLeanStartup = findViewById(R.id.btnLeanStartup);
+        btnSysDevMethods = findViewById(R.id.btnSysDevMethods);
 
-        tvDesignThinking.setOnClickListener(new View.OnClickListener() {
+        btnDesignThinking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 newActivity(v, "Design Thinking");
             }
         });
 
-        tvAgile.setOnClickListener(new View.OnClickListener() {
+        btnAgile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 newActivity(v, "Agile SCRUM");
             }
         });
 
-        tvNote.setOnClickListener(new View.OnClickListener() {
+        btnSdlc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newActivity(v, "Systems Development Lifecycle");
+            }
+        });
+
+        btnLeanStartup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newActivity(v, "Lean Startup");
+            }
+        });
+
+        btnSysDevMethods.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newActivity(v, "Systems Development Methodologies");
+            }
+        });
+
+        btnNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 newActivity2(v, "Note");

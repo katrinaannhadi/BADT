@@ -7,7 +7,7 @@
     tools:context="com.katrinaann.badt.ui.blogandnotes.TemporaryActivity">
 
     <Button
-        android:id="@+id/tvDesignThinking"
+        android:id="@+id/btnDesignThinking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Design Thinking"
@@ -17,22 +17,82 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/tvAgile"
+        android:id="@+id/btnAgile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Agile SCRUM"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDesignThinking" />
+        app:layout_constraintTop_toBottomOf="@+id/btnDesignThinking" />
 
     <Button
-        android:id="@+id/tvNote"
+        android:id="@+id/btnNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Notes"
-        app:layout_constraintBottom_toTopOf="@+id/tvDesignThinking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSdlc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Systems Development Lifecycle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAgile" />
+
+    <Button
+        android:id="@+id/btnLeanStartup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lean Startup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSdlc" />
+
+    <Button
+        android:id="@+id/btnSysDevMethods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="System Development Methodologies"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLeanStartup" />
+
+    <Button
+        android:id="@+id/btnReqGatheringAndModelling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Requirements Gathering And Modelling"
+        app:layout_constraintBottom_toTopOf="@+id/btnDesignThinking"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnProjectManagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Project Management"
+        app:layout_constraintBottom_toTopOf="@+id/btnReqGatheringAndModelling"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnIntroToBA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Introduction to Business Analysis"
+        app:layout_constraintBottom_toTopOf="@+id/btnProjectManagement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -29,8 +30,10 @@ public class ContentActivity extends AppCompatActivity {
     private int page = 1;
     private String topic;
     //private ArrayList<Topic> temp;
-    private Spinner mSpinner;
+    //private Spinner mSpinner;
+    private TextView tvTitle;
     private int maxPages;
+    private ImageView ivPicture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +44,14 @@ public class ContentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content);
 
+        tvTitle = findViewById(R.id.tvTitle);
         tvInformation = findViewById(R.id.tvInformation);
         tvPage = findViewById(R.id.tvPage);
         btnBack = findViewById(R.id.btnBack);
         btnNext = findViewById(R.id.btnNext);
+        ivPicture = findViewById(R.id.ivPicture);
+
+        /*
         mSpinner = (Spinner) findViewById(R.id.mSpinner);
 
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -53,7 +60,7 @@ public class ContentActivity extends AppCompatActivity {
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        mSpinner.setAdapter(adapter);
+        mSpinner.setAdapter(adapter); */
 
         //Implement listener for when an item is selected: https://www.youtube.com/watch?v=mrcrFY-5c-c
 
@@ -170,23 +177,52 @@ public class ContentActivity extends AppCompatActivity {
                 //tvInformation.setText(DesignThinking.getDesignThinking().get(page - 1).getInformation());
                 tvInformation.setText(Topic.getDesignThinking().get(page - 1).getInformation());
                 maxPages = Topic.getDesignThinking().size();
-                setTitle(Topic.getDesignThinking().get(page - 1).getTopic() + " - " + Topic.getDesignThinking().get(page - 1).getSubTopic());
+                setTitle(Topic.getDesignThinking().get(page - 1).getTopic());
+                tvTitle.setText(Topic.getDesignThinking().get(page - 1).getSubTopic());
+                ivPicture.setImageResource(Topic.getDesignThinking().get(page - 1).getSupTopicImage());
                 break;
             case "Agile SCRUM":
                 //tvInformation.setText("Agile Methodology");
                 tvInformation.setText(Topic.getAgileSCRUM().get(page - 1).getInformation());
                 maxPages = Topic.getAgileSCRUM().size();
-                setTitle(Topic.getAgileSCRUM().get(page - 1).getTopic() + " - " + Topic.getAgileSCRUM().get(page - 1).getSubTopic());
+                setTitle(Topic.getAgileSCRUM().get(page - 1).getTopic());
+                tvTitle.setText(Topic.getAgileSCRUM().get(page - 1).getSubTopic());
+                ivPicture.setImageResource(Topic.getAgileSCRUM().get(page - 1).getSupTopicImage());
                 break;
-            case "Systems Development Life Cycle":
+            case "Systems Development Lifecycle":
                 tvInformation.setText(Topic.getSDLC().get(page - 1).getInformation());
                 maxPages = Topic.getSDLC().size();
-                setTitle(Topic.getSDLC().get(page - 1).getTopic() + " - " + Topic.getSDLC().get(page - 1).getSubTopic());
+                setTitle(Topic.getSDLC().get(page - 1).getTopic());
+                tvTitle.setText(Topic.getSDLC().get(page - 1).getSubTopic());
+                ivPicture.setImageResource(Topic.getSDLC().get(page - 1).getSupTopicImage());
                 break;
             case "Lean Startup":
                 tvInformation.setText(Topic.getLeanStartup().get(page - 1).getInformation());
                 maxPages = Topic.getLeanStartup().size();
-                setTitle(Topic.getLeanStartup().get(page - 1).getTopic() + " - " + Topic.getLeanStartup().get(page - 1).getSubTopic());
+                setTitle(Topic.getLeanStartup().get(page - 1).getTopic());
+                tvTitle.setText(Topic.getLeanStartup().get(page - 1).getSubTopic());
+                ivPicture.setImageResource(Topic.getLeanStartup().get(page - 1).getSupTopicImage());
+                break;
+            case "Introduction to Business Analysis":
+                tvInformation.setText(Topic.getIntroductiontoBA().get(page - 1).getInformation());
+                maxPages = Topic.getIntroductiontoBA().size();
+                setTitle(Topic.getIntroductiontoBA().get(page - 1).getTopic());
+                tvTitle.setText(Topic.getIntroductiontoBA().get(page - 1).getSubTopic());
+                ivPicture.setImageResource(Topic.getIntroductiontoBA().get(page - 1).getSupTopicImage());
+                break;
+            case "Project Management":
+                tvInformation.setText(Topic.getProjectManagement().get(page - 1).getInformation());
+                maxPages = Topic.getProjectManagement().size();
+                setTitle(Topic.getProjectManagement().get(page - 1).getTopic());
+                tvTitle.setText(Topic.getProjectManagement().get(page - 1).getSubTopic());
+                ivPicture.setImageResource(Topic.getProjectManagement().get(page - 1).getSupTopicImage());
+                break;
+            case "Requirements Gathering And Modelling":
+                tvInformation.setText(Topic.getSystemsDevelopmentMethodologies().get(page - 1).getInformation());
+                maxPages = Topic.getSystemsDevelopmentMethodologies().size();
+                setTitle(Topic.getSystemsDevelopmentMethodologies().get(page - 1).getTopic());
+                tvTitle.setText(Topic.getSystemsDevelopmentMethodologies().get(page - 1).getSubTopic());
+                ivPicture.setImageResource(Topic.getSystemsDevelopmentMethodologies().get(page - 1).getSupTopicImage());
                 break;
         }
     }
