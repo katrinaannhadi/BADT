@@ -53,7 +53,9 @@ public class NoteFragment extends Fragment {
         etNoteContent = v.findViewById(R.id.etNoteContent);
 
         etNoteName.setText(mNotes.getNoteName());
-        etNoteContent.setText(mNotes.getNoteContent());
+        //etNoteContent.setText(mNotes.getNoteContent());
+        System.out.println("content = " + mNotes.getNoteContent());
+        etNoteContent.setText("TESTINGTESTINGTESTING");
 
         previousNoteName = etNoteName.getText().toString();
 

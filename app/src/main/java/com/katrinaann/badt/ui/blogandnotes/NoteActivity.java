@@ -31,10 +31,10 @@ public class NoteActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        String position = intent.getStringExtra(NoteFragment.ARG_ITEM_ID);
+        String noteName = intent.getStringExtra(NoteFragment.ARG_ITEM_ID);
 
         Bundle arguments = new Bundle();
-        arguments.putString(NoteFragment.ARG_ITEM_ID, position);
+        arguments.putString(NoteFragment.ARG_ITEM_ID, noteName);
         Fragment fragment = new NoteFragment();
         fragment.setArguments(arguments);
         getSupportFragmentManager()
