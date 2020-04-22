@@ -16,7 +16,7 @@ import com.katrinaann.badt.models.Flashcard;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class FlashcardActivity extends AppCompatActivity  {
+public class FlashcardActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.katrinaann.flashcards.MESSAGE";
     private String TAG = "FlashcardActivity";
@@ -49,7 +49,7 @@ public class FlashcardActivity extends AppCompatActivity  {
         // Receive data object from the flashcard fragment
         Intent intent = getIntent();
         flashcardCategory = intent.getIntExtra("Category", 1);
-        Log.d(TAG,"Category is: " + flashcardCategory);
+        Log.d(TAG, "Category is: " + flashcardCategory);
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
@@ -57,26 +57,26 @@ public class FlashcardActivity extends AppCompatActivity  {
 //        mLayoutManager = new LinearLayoutManager(this);
 //        mRecyclerView.setLayoutManager(mLayoutManager);
 
-
         // Setting up what the intent number is and setting the appropriate flashcard deck
         if (flashcardCategory == 1) {
             flashcardArrayListSize = Flashcard.getCategory1().size();
-            Log.d(TAG,"Category size is: " + flashcardArrayListSize);
+            Log.d(TAG, "Category size is: " + flashcardArrayListSize);
 
             flashcards = Flashcard.getCategory1();
-            Log.d(TAG,"Category 1 is " + flashcards);
+            Log.d(TAG, "Category 1 is " + flashcards);
 
             mAdapter = new FlashcardAdapter(flashcards);
-            Log.d(TAG,"Category 1 adapter is " + flashcards);
+            Log.d(TAG, "Category 1 adapter is " + flashcards);
 
             mRecyclerView.setAdapter(mAdapter);
-            Log.d(TAG,"Category 1 adapter is " + flashcards);
+            Log.d(TAG, "Category 1 adapter is " + flashcards);
 
         } else if (flashcardCategory == 2) {
             flashcardArrayListSize = Flashcard.getCategory2().size();
             flashcards = Flashcard.getCategory2();
             mAdapter = new FlashcardAdapter(flashcards);
             mRecyclerView.setAdapter(mAdapter);
+
         } else if (flashcardCategory == 3) {
             flashcardArrayListSize = Flashcard.getCategory3().size();
             flashcards = Flashcard.getCategory3();
@@ -92,10 +92,20 @@ public class FlashcardActivity extends AppCompatActivity  {
             flashcards = Flashcard.getCategory5();
             mAdapter = new FlashcardAdapter(flashcards);
             mRecyclerView.setAdapter(mAdapter);
-        }
+        } else if (flashcardCategory == 6) {
+            flashcardArrayListSize = Flashcard.getCategory5().size();
+            flashcards = Flashcard.getCategory5();
+            mAdapter = new FlashcardAdapter(flashcards);
+            mRecyclerView.setAdapter(mAdapter);
+
+        } else if (flashcardCategory == 7) {
+            flashcardArrayListSize = Flashcard.getCategory5().size();
+            flashcards = Flashcard.getCategory5();
+            mAdapter = new FlashcardAdapter(flashcards);
+            mRecyclerView.setAdapter(mAdapter);
 
 
-        // Sets the order for the flashcards to come up
+            // Sets the order for the flashcards to come up
 //        for (int i = 1; i < flashcardArrayListSize; i++){
 //            flashcardCategoryList.add(i);
 ////            Flashcard flashcard = new Flashcard();
@@ -105,14 +115,10 @@ public class FlashcardActivity extends AppCompatActivity  {
 //        }
 //        Collections.shuffle(flashcardCategoryList);
 
-        // Fill the Recycler View with flashcard content
-
-
-
+            // Fill the Recycler View with flashcard content
 
 
 //        new GetFlashcardTask().execute();
-
 
 
 //        for (int i = 0; i < 20; i++) {
@@ -121,11 +127,12 @@ public class FlashcardActivity extends AppCompatActivity  {
 //            list.add(flashcard);
 //        }
 
-    }
+        }
 
 //    public void addFlashCardPosition(int position) {
 //        category = findViewById(R.id.category);
 //        category.setText(position);
 //    }
+    }
 }
 
