@@ -102,6 +102,7 @@ public class ContentActivity extends AppCompatActivity {
         tvPage.setText(Integer.toString(page));
     }
 
+    //To adjust for recyclerview - Change the cases to positions on the recyclerview or leave it and make the recyclerview pass an argument that contains these topics (e.g. via textview)
     public void displayPage() {
         switch (topic) {
             case "Design Thinking":
