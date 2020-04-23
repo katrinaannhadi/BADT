@@ -17,11 +17,6 @@
     <string name="home_second">Home Second</string>
     <string name="title_activity_maps">Map</string>
 
-    <string-array name="BATopics">
-        <item>Design Thinking</item>
-        <item>Agile Methodology</item>
-    </string-array>
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -17,6 +17,9 @@ public class TemporaryActivity extends AppCompatActivity {
     private Button btnSdlc;
     private Button btnLeanStartup;
     private Button btnSysDevMethods;
+    private Button btnIntroToBA;
+    private Button btnProjectManagement;
+    private Button btnReqGatheringAndModelling;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,11 @@ public class TemporaryActivity extends AppCompatActivity {
         btnSdlc = findViewById(R.id.btnSdlc);
         btnLeanStartup = findViewById(R.id.btnLeanStartup);
         btnSysDevMethods = findViewById(R.id.btnSysDevMethods);
+        btnIntroToBA = findViewById(R.id.btnIntroToBA);
+        btnProjectManagement = findViewById(R.id.btnProjectManagement);
+        btnReqGatheringAndModelling = findViewById(R.id.btnReqGatheringAndModelling);
+
+
 
         btnDesignThinking.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +72,27 @@ public class TemporaryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 newActivity(v, "Systems Development Methodologies");
+            }
+        });
+
+        btnIntroToBA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newActivity(v, "Introduction to Business Analysis");
+            }
+        });
+
+        btnProjectManagement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newActivity(v, "Project Management");
+            }
+        });
+
+        btnReqGatheringAndModelling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newActivity(v, "Requirements Gathering And Modelling");
             }
         });
 
