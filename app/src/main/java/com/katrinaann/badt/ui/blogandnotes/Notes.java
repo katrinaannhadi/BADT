@@ -1,15 +1,28 @@
 package com.katrinaann.badt.ui.blogandnotes;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Notes {
 
+    @PrimaryKey (autoGenerate = true)
+    private int noteId;
     private String noteName;
     private String noteContent;
-    private static ArrayList<Notes> noteList = new ArrayList<>();
-    private static ArrayList<Notes> savedList;
-    //private static boolean noteListExists;
+    //private static ArrayList<Notes> noteList = new ArrayList<>();
+
+    public int getNoteId() {
+        return noteId;
+    }
+
+    public void setNoteId(int noteId) {
+        this.noteId = noteId;
+    }
 
     public String getNoteName() {
         return noteName;
@@ -27,16 +40,13 @@ public class Notes {
         this.noteContent = noteContent;
     }
 
-    public Notes(String noteName, String noteContent) {
+    public Notes(int noteId, String noteName, String noteContent) {
+        this.noteId = noteId;
         this.noteName = noteName;
         this.noteContent = noteContent;
     }
 
-    public void createNoteList() {
-        noteList = new ArrayList<>();
-        //noteListExists = true;
-    }
-
+    /*
     public static void addNote (String noteName, String noteContent) {
 
         Notes newNote = new Notes(noteName,noteContent);
@@ -53,28 +63,6 @@ public class Notes {
     }
 
     public static ArrayList<Notes> getNoteList () {
-        //saveList();
         return noteList;
-    }
-
-    /*
-    public static ArrayList<Notes> testNoteList() {
-        ArrayList<Notes> testNoteList = new ArrayList<>();
-        testNoteList.add(new Notes("test","test"));
-        return testNoteList;
     } */
-
-    /*
-    public static void saveList() {
-        //System.out.println(noteListExists);
-        if (NotesSingleton.getInstance().getNoteListExists() == true) {
-            noteList = savedList;
-            System.out.println("Saved List Loaded");
-        } else {
-            savedList = noteList;
-            NotesSingleton.getInstance().setNoteListExists(true);
-            System.out.println("New List Saved");
-        }
-    } */
-
 }

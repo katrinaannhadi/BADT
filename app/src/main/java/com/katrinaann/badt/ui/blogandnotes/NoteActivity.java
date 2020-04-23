@@ -21,7 +21,7 @@ public class NoteActivity extends AppCompatActivity {
     private String previousNoteName;
     private String previousNoteContent;
     private Boolean noteExists;
-    public static final String ARG_ITEM_ID = "item_id";
+    public static final String ARG_ITEM_ID = "note_id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +31,11 @@ public class NoteActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        String noteName = intent.getStringExtra(NoteFragment.ARG_ITEM_ID);
+        int noteId = intent.getIntExtra(NoteFragment.ARG_ITEM_ID,0);
+        System.out.println(noteId);
 
         Bundle arguments = new Bundle();
-        arguments.putString(NoteFragment.ARG_ITEM_ID, noteName);
+        arguments.putInt(NoteFragment.ARG_ITEM_ID, noteId);
         Fragment fragment = new NoteFragment();
         fragment.setArguments(arguments);
         getSupportFragmentManager()

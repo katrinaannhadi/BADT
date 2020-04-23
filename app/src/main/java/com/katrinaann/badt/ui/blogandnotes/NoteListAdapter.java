@@ -3,6 +3,7 @@ package com.katrinaann.badt.ui.blogandnotes;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +20,7 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.NoteLi
 
     private boolean wideScreen;
     private NoteListActivity mParentActivity;
-    private ArrayList<Notes> mNotes;
+    private List<Notes> mNotes;
     private View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -28,8 +29,8 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.NoteLi
             System.out.println(v.getTag());
             if (wideScreen) {
                 Bundle arguments = new Bundle();
-                arguments.putString(NoteFragment.ARG_ITEM_ID, note.getNoteName());
-                System.out.println(note.getNoteName());
+                arguments.putInt(NoteFragment.ARG_ITEM_ID, note.getNoteId());
+                //System.out.println(note.getNoteName());
                 NoteFragment fragment = new NoteFragment();
                 fragment.setArguments(arguments);
                 mParentActivity.getSupportFragmentManager()
@@ -39,11 +40,12 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.NoteLi
             } else {
                 Context context = v.getContext();
                 Intent intent = new Intent(context, NoteActivity.class);
-                intent.putExtra(NoteFragment.ARG_ITEM_ID, note.getNoteName());
+                intent.putExtra(NoteFragment.ARG_ITEM_ID, note.getNoteId());
                 context.startActivity(intent);
             }
         };
     };
+    private String TAG = "NoteListAdapter";
 
     public NoteListAdapter (NoteListActivity mParentActivity, ArrayList<Notes> mNotes, boolean wideScreen ) {
         this.mParentActivity = mParentActivity;
@@ -77,5 +79,11 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.NoteLi
     @Override
     public int getItemCount() {
         return mNotes.size();
+    }
+
+    public void setNotes (List<Notes> notes) {
+        mNotes = notes;
+        notifyDataSetChanged();
+        Log.d(TAG, "setNotes: Success");
     }
 }
