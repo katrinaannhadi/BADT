@@ -50,5 +50,5 @@
     <string name="confirm">Confirm</string>
     <string name="question">Question</string>
     <string name="quiz_yourself_here">Quiz Yourself Here!</string>
-    <string name="menu_note" />
+    <string name="menu_note">Note</string>
 </resources>
