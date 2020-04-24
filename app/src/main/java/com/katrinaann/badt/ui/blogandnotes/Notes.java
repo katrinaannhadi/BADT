@@ -1,21 +1,19 @@
 package com.katrinaann.badt.ui.blogandnotes;
 
-import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.util.ArrayList;
-import java.util.List;
-
+//@Entity to connect with Room
 @Entity
 public class Notes {
 
-    @PrimaryKey (autoGenerate = true)
+    //Attributes
+    @PrimaryKey (autoGenerate = true) //Set noteId as primary key of a row in database and autoincrement
     private int noteId;
     private String noteName;
     private String noteContent;
-    //private static ArrayList<Notes> noteList = new ArrayList<>();
 
+    //Getters and Setters
     public int getNoteId() {
         return noteId;
     }
@@ -40,29 +38,10 @@ public class Notes {
         this.noteContent = noteContent;
     }
 
+    //Constructor
     public Notes(int noteId, String noteName, String noteContent) {
         this.noteId = noteId;
         this.noteName = noteName;
         this.noteContent = noteContent;
     }
-
-    /*
-    public static void addNote (String noteName, String noteContent) {
-
-        Notes newNote = new Notes(noteName,noteContent);
-        noteList.add(newNote);
-    }
-
-    public static void removeNote (String noteName) {
-        for (int i = 0; i < noteList.size(); i++) {
-            if (noteList.get(i).getNoteName().equals(noteName)) {
-                noteList.remove(i);
-                break;
-            }
-        }
-    }
-
-    public static ArrayList<Notes> getNoteList () {
-        return noteList;
-    } */
 }

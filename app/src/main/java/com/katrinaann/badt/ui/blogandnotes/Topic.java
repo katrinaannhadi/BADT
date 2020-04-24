@@ -5,12 +5,19 @@ import com.katrinaann.badt.R;
 import java.util.ArrayList;
 
 public class Topic {
+
+    //String representing the topic name to be used for the title of the ContentActivity
     private String topic;
+    //Integer representing the subtopic number of a topic
     private int topicNo;
+    //String representing the subtopic name to be used for the textview "tvTitle"
     private String subTopic;
+    //String including all the information for the subtopic to be used for the body of the Content Activity
     private String information;
+    //Integer that stores the drawable to be used in the imageview of ContentActivity
     private int subTopicImage;
 
+    //Constructors
     public Topic() {
     }
 
@@ -22,6 +29,7 @@ public class Topic {
         this.subTopicImage = subTopicImage;
     }
 
+    //Getters and setters
     public int getTopicNo() {
         return topicNo;
     }
@@ -62,9 +70,16 @@ public class Topic {
         this.subTopicImage = subTopicImage;
     }
 
+    //Method returning an arrayList containing the variables for each topic to be set into the views of the ContentActivity
+    //Method returning an arrayList for Design Thinking
     public static ArrayList<Topic> getDesignThinking() {
+
+        //Create a new arraylist to contain the variables
         ArrayList<Topic> designThinkingList = new ArrayList<>();
-        designThinkingList.add(new Topic("Design Thinking",1,"Introduction","Design Thinking is a process which involves thinking outside of the box to help you find the right problem to solve. When we talk about thinking outside of the box, we always associate it with finding solutions but in this case, we are actually focusing on finding the right problem to solve rather than the solution.\n" +
+
+        //Insert new topics into the arraylist which can be used in ContentActivity
+        designThinkingList.add(new Topic(
+                "Design Thinking",1,"Introduction","Design Thinking is a process which involves thinking outside of the box to help you find the right problem to solve. When we talk about thinking outside of the box, we always associate it with finding solutions but in this case, we are actually focusing on finding the right problem to solve rather than the solution.\n" +
                 "\nDesign thinking requires the use of six mindsets: Human-centred, mindful of process, culture of prototyping, show don’t tell, radical collaboration, bias toward action.\n",0));
         designThinkingList.add(new Topic("Design Thinking",2,"Design Thinking Mindsets","•\tHuman-Centred: Involving the client in every step of the process\n" +
                 "•\tRadical Collaboration: Constantly working with many team members\n" +
@@ -107,6 +122,7 @@ public class Topic {
         return designThinkingList;
     }
 
+    //Method returning an arrayList for Agile SCRUM
     public static ArrayList<Topic> getAgileSCRUM() {
         ArrayList<Topic> agileList = new ArrayList<>();
         agileList.add(new Topic("Agile SCRUM", 1,"Introduction","An agile methodology is the opposite end of the spectrum to waterfall development which focuses on sequential, well-planned project management. Agile instead focuses on a series of fast iterations or ‘sprints’ that focus on producing results rapidly and often results in products being produced at the end of each sprint.\n" +
@@ -143,6 +159,7 @@ public class Topic {
         return agileList;
     }
 
+    //Method returning an arrayList for Lean Startup
     public static ArrayList<Topic> getLeanStartup() {
         ArrayList<Topic> leanStartupList = new ArrayList<>();
         leanStartupList.add(new Topic("Lean Startup", 1,"Introduction","Lean start-up is a methodology that borrows ideas from lean manufacturing and focuses on reducing waste. The key idea is to only produce what users need and where there is demand. This methodology prescribes how ideas should go from inception to implementation and is a methodology that can be used in any type of organisation.\n" +
@@ -162,7 +179,7 @@ public class Topic {
         return leanStartupList;
     }
 
-
+    //Method returning an arrayList for Systems Development Lifecycle
     public static ArrayList<Topic> getSDLC() {
         ArrayList<Topic> sdlcList = new ArrayList<>();
         sdlcList.add(new Topic("Systems Development Lifecycle", 1,"Introduction","The Systems Development Lifecycle (SDLC) is a simple depiction of a typical lifecycle of every information system (IS). It consists of four phases: Planning, Analysis, Design and Implementation; and can be executed sequentially, incrementally, iteratively or in any pattern that is deemed appropriate by team working on the IS. Each phase also consists of a series of steps and is documented through deliverables.",R.drawable.sdlc));
@@ -187,6 +204,7 @@ public class Topic {
         return sdlcList;
     }
 
+    //Method returning an arrayList for Systems Development Methodologies
     public static ArrayList<Topic> getSystemsDevelopmentMethodologies() {
         ArrayList<Topic> systemDevMethodList = new ArrayList<>();
         systemDevMethodList.add(new Topic("Systems Development Methodology", 1,"Waterfall",
@@ -202,6 +220,7 @@ public class Topic {
         return systemDevMethodList;
     }
 
+    //Method returning an arrayList for Introduction to Business Analysis
     public static ArrayList<Topic> getIntroductiontoBA() {
         ArrayList<Topic> introToBaList = new ArrayList<>();
         introToBaList.add(new Topic("Introduction to Business Analysis", 1,"Introduction", "An information system is a system that collects, stores, processes and retrieves information and turns raw data into business insight.\n" +
@@ -226,6 +245,7 @@ public class Topic {
         return introToBaList;
     }
 
+    //Method returning an arrayList for Project Management
     public static ArrayList<Topic> getProjectManagement() {
         ArrayList<Topic> projectManagementList = new ArrayList<>();
         projectManagementList.add(new Topic("Project Management", 1,"Introduction", "A project is a set of activities with a beginning and an ending point, meant to create a system, which when completed, is expected to deliver value to the business\n" +
@@ -256,6 +276,7 @@ public class Topic {
         return projectManagementList;
     }
 
+    //Method returning an arrayList for Requirements Gathering and Modelling
     public static ArrayList<Topic> getReqGatheringAndModelling() {
         ArrayList<Topic> reqGatheringAndModellingList = new ArrayList<>();
         reqGatheringAndModellingList.add(new Topic("Requirements Gathering And Modelling", 1, "Requirements Gathering Techniques", "The requirements gathering process is used to uncover requirements and is a collaborative activity to build support and trust among users. Some commonly used techniques include interviews, joint application development, surveys, document analysis and observations.\n" +
