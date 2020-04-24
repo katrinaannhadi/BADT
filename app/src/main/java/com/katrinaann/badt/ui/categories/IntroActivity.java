@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.ui.home.HomeActivity;
 import com.katrinaann.badt.ui.signin.SignInActivity;
 
 import java.util.ArrayList;
@@ -33,7 +34,8 @@ public class IntroActivity extends AppCompatActivity {
 
         if (isFirstRun) {
             //show intro activity
-            startActivity(new Intent(IntroActivity.this, SignInActivity.class));
+            //TODO CHANGE BACK TO SIGN IN ACTIVITY
+            startActivity(new Intent(IntroActivity.this, HomeActivity.class));
             Toast.makeText(IntroActivity.this, "Run only once", Toast.LENGTH_LONG)
                     .show();
         }
@@ -87,7 +89,6 @@ public class IntroActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                //TODO Set to move towards selected fragment
 
 
             }

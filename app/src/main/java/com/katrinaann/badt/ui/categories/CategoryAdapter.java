@@ -15,6 +15,7 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.ui.home.HomeActivity;
+import com.katrinaann.badt.ui.signin.SignInActivity;
 
 import java.util.List;
 
@@ -59,6 +60,7 @@ public class CategoryAdapter extends PagerAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //TODO CHANGE BACK TO SIGNIN ACTIVITY
                 Intent intent = new Intent(context, HomeActivity.class);
                 intent.putExtra("param", models.get(position).getTitle());
                 context.startActivity(intent);

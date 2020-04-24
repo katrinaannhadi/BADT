@@ -2,6 +2,8 @@ package com.katrinaann.badt.ui.flashcards;
 
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +18,9 @@ import java.util.ArrayList;
 
 public class FlashcardAdapter extends RecyclerView.Adapter<FlashcardAdapter.FlashcardViewHolder> {
 
+
     private ArrayList<Flashcard> mFlashcards;
+    public static final String TAG = "Flashcard Adapter";
 
     public FlashcardAdapter(ArrayList<Flashcard> flashcards){
         mFlashcards = flashcards;
@@ -32,7 +36,7 @@ public class FlashcardAdapter extends RecyclerView.Adapter<FlashcardAdapter.Flas
             super(view);
             flipView = view.findViewById(R.id.flipView);
             title = view.findViewById(R.id.title);
-            desc = view.findViewById(R.id.desc);
+            desc = view.findViewById(R.id.answer);
             image = view.findViewById(R.id.image);
         }
     }
@@ -50,32 +54,56 @@ public class FlashcardAdapter extends RecyclerView.Adapter<FlashcardAdapter.Flas
     //replace the contents of the view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(final FlashcardViewHolder holder, final int position) {
-        Flashcard flashcard = mFlashcards.get(position);
+        final Flashcard flashcard = mFlashcards.get(position);
         holder.title.setText(flashcard.getTitle());
         holder.image.setImageResource(flashcard.getImageID());
-//        holder.desc.setText(flashcard.getAnswer());
+        Log.d(TAG, "Title is " + flashcard.getTitle());
+
 
         if (holder.flipView.getCurrentFlipState() == EasyFlipView.FlipState.FRONT_SIDE && mFlashcards.get(
                 position).isFlipped) {
             holder.flipView.setFlipDuration(0);
             holder.flipView.flipTheView();
+            holder.desc.setText(flashcard.getAnswer());
+            Log.d(TAG, "I am number 1");
         } else if (holder.flipView.getCurrentFlipState() == EasyFlipView.FlipState.BACK_SIDE
                 && !mFlashcards.get(position).isFlipped) {
             holder.flipView.setFlipDuration(0);
             holder.flipView.flipTheView();
+            holder.desc.setText(flashcard.getAnswer());
+            Log.d(TAG, "I am number 2");
+
         }
         holder.flipView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mFlashcards.get(position).isFlipped) {
                     mFlashcards.get(position).isFlipped = false;
+//                    holder.desc.setText(flashcard.getAnswer());
+                    Log.d(TAG, "I am number 3");
+                    holder.flipView.setFlipDuration(700);
+                    holder.flipView.flipTheView();
+
                 } else {
                     mFlashcards.get(position).isFlipped = true;
+//                    holder.desc.setText(flashcard.getAnswer());
+                    holder.flipView.setFlipDuration(700);
+                    holder.flipView.flipTheView();
+                    Log.d(TAG, "4 Title is  " + flashcard.getTitle());
+                    Log.d(TAG, "I am number 4.1");
+                    holder.title.setText(flashcard.getTitle());
+                    Log.d(TAG, "I am number 4.1");
+                    holder.image.setImageResource(flashcard.getImageID());
+                    Log.d(TAG, "I am number 4.2");
+                    holder.desc.setText(flashcard.getAnswer());
+                    Log.d(TAG, "I am number 4.3");
+
                 }
-                holder.flipView.setFlipDuration(700);
-                holder.flipView.flipTheView();
+                Log.d(TAG, "I am number 5");
             }
         });
+        Log.d(TAG, "I am number 6");
+
     }
     // Return the size of your data set (invoked by the layout manager)
     @Override
