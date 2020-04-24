@@ -16,4 +16,38 @@
 
     <string name="home_second">Home Second</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="my_notes">Restaurants</string>
+    <string name="featured">Featured</string>
+    <string name="search">Search</string>
+    <string name="account">Account</string>
+    <string name="notesName">Restaurant Name</string>
+    <string name="restaurantCuisineType">Cuisine Type</string>
+    <string name="restaurantLocation">Location</string>
+    <string name="restaurantRating">Rating</string>
+    <string name="scroll">Scroll on cards and tap for more information</string>
+
+
+
+    <!-- Nav drawer titles. Can be accessed programaticaly using a String[] -->
+    <string-array name="nav_drawer_titles">
+        <item>Categories</item>
+        <item>Settings</item>
+    </string-array>
+    <!-- Nav drawer icons. Can be accessed pragmatically using a TypedArray[] -->
+    <!--    <array name="nav_drawer_icons">-->
+    <!--        <item>@drawable/ic_categories</item>-->
+    <!--        <item>@drawable/ic_settings</item>-->
+    <!--    </array>-->
+
+
+    <string name="description">You are designing for SOMEONE ELSE not for yourself</string>
+
+    <string name="answer_1">Answer 1</string>
+    <string name="answer3">Answer3</string>
+    <string name="answer_4">Answer 4</string>
+    <string name="answer_2">Answer 2</string>
+    <string name="confirm">Confirm</string>
+    <string name="question">Question</string>
+    <string name="quiz_yourself_here">Quiz Yourself Here!</string>
 </resources>
