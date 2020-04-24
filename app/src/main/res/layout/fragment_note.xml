@@ -2,66 +2,78 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.blogandnotes.NoteActivity">
+    android:background="@color/owl_pink_500"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    android:theme="@style/Owl.Yellow"
+    tools:targetApi="o">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <!--    <TextView-->
+<!--        android:id="@+id/choose"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="203dp"-->
+<!--        android:layout_marginStart="@dimen/grid_4"-->
+<!--        android:layout_marginTop="56dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:gravity="end"-->
+<!--        android:padding="@dimen/grid_1"-->
+<!--        android:paddingTop="@dimen/grid_1"-->
+<!--        android:text="Learn Design Thinking"-->
+<!--        android:textAppearance="@style/TextAppearance.Owl.Headline3"-->
+<!--        android:textColor="@color/owl_blue_dark_primary"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.809"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="MissingPrefix" />-->
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <EditText
-            android:id="@+id/etNoteContent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:gravity="start"
-            android:hint="Write your notes here"
-            android:scrollHorizontally="false"
-            android:singleLine="false" />
-
-    </ScrollView>
-
-    <EditText
-        android:id="@+id/etNoteName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:ems="10"
-        android:hint="Give your note a name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnDelete"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:text="Delete"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
-
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:text="Save "
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/grid_2"
+        android:text="@string/scroll"
+        android:textAppearance="@style/TextAppearance.Owl.Subtitle1"
+        android:textColor="@color/design_default_color_on_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="124dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/grid_1"
+        android:paddingStart="@dimen/grid_3"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:reverseLayout="true"
+        app:spanCount="2"
+        tools:listitem="@layout/row_note_list" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

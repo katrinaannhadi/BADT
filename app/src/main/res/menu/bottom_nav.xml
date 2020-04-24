@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/myRestaurants"
+        android:title="@string/my_notes"
+        android:icon="@drawable/asl_my_restaurants"/>
+
+    <item
+        android:id="@+id/featured"
+        android:title="@string/featured"
+        android:icon="@drawable/asl_featured"/>
+
+    <item
+        android:id="@+id/search"
+        android:title="@string/search"
+        android:icon="@drawable/asl_search"/>
+
+</menu>

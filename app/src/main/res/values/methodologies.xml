@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="restaurant_images">
+        <item>@drawable/lankan</item>
+        <item>@drawable/quay</item>
+        <item>@drawable/momofoku</item>
+        <item>@drawable/peter</item>
+        <item>@drawable/bentley</item>
+        <item>@drawable/hubert</item>
+        <item>@drawable/ester</item>
+        <item>@drawable/yellow</item>
+        <item>@drawable/sixpenny</item>
+        <item>@drawable/bella</item>
+    </array>
+</resources>

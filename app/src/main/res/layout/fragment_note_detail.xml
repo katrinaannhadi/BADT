@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/owl_pink_500">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+    android:transitionName="@{course.name}"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@{course.thumbContentDesc}"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="4:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivSearch"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/search"
+        android:padding="@dimen/grid_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAboutField"
+        app:srcCompat="@drawable/ic_compass"
+        app:tint="@color/design_default_color_surface" />
+
+
+    <TextView
+        android:id="@+id/tvLocationField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/grid_2"
+        android:text="@{course.subject}"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.Owl.Body1"
+        android:textColor="@color/owl_yellow_dark_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <TextView
+        android:id="@+id/restaurant_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/grid_2"
+        android:text="@{course.name}"
+        android:textAppearance="@style/TextAppearance.Owl.Headline2"
+        android:textColor="@color/owl_yellow_dark_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLocationField" />
+
+    <TextView
+        android:id="@+id/tvCuisineTypeField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/grid_2"
+        android:text="@{course.subject}"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.Owl.Body1"
+        android:textColor="@color/owl_yellow_dark_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/restaurant_name" />
+
+    <TextView
+        android:id="@+id/tvRatingField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/grid_2"
+        android:text="@{course.subject}"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.Owl.Body1"
+        android:textColor="@color/owl_yellow_dark_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCuisineTypeField" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <TextView
+        android:id="@+id/tvAboutField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/grid_2"
+        android:paddingVertical="@dimen/grid_3"
+        android:text="@{String.valueOf(course.steps)}"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Owl.Body1"
+        android:textColor="@color/owl_yellow_dark_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/tvRatingField" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+
