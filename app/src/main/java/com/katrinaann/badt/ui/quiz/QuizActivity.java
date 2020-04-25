@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -31,6 +32,7 @@ public class QuizActivity extends AppCompatActivity {
     private TextView questionNo;
     private Button confirmButton;
     private Button resultsPageButton;
+    private ImageView background;
 
     private int qaArrayListSize = 0;
     private int questionNumber = 0;
@@ -48,7 +50,7 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
+        setContentView(R.layout.activity_quiz2);
 
         // Connecting UI widgets to variables.
         username_TV = findViewById(R.id.username_TV);
@@ -59,6 +61,8 @@ public class QuizActivity extends AppCompatActivity {
         resultsPageButton = findViewById(R.id.resultsPage_BT);
         resultsPageButton.setVisibility(View.GONE);
         quizScore = findViewById((R.id.quizScore_TV));
+        background = findViewById(R.id.bg_light2);
+        background.setVisibility(View.GONE);
 
         // Receive data from the quizSelectionPage.
         Intent intent = getIntent();
@@ -145,6 +149,7 @@ public class QuizActivity extends AppCompatActivity {
 
             adjustScores(amountCorrect, questionNumber);
             resultsPageButton.setVisibility(View.VISIBLE);
+            background.setVisibility(View.VISIBLE);
         } else {
             adjustScores(amountCorrect, questionNumber);
             askQuestionAnswer();

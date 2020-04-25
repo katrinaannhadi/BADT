@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/introductionQuiz_BT"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="Start Quiz"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,7 +18,7 @@
 
     <Button
         android:id="@+id/projectManagementQuiz_BT"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="Start Quiz"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
 
     <Button
         android:id="@+id/requirementsQuiz_BT"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="Start Quiz"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
 
     <Button
         android:id="@+id/designThinkingQuiz_BT"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="Start Quiz"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +48,7 @@
 
     <Button
         android:id="@+id/agileScrumQuiz_BT"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="Start Quiz"
         app:layout_constraintEnd_toEndOf="parent"

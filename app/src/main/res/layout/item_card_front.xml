@@ -14,15 +14,15 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp">
+            android:layout_height="390dp">
 
             <ImageView
                 android:id="@+id/image_front"
-                android:src="@drawable/ic_designthinking"
-                android:scaleType="centerInside"
-                android:adjustViewBounds="true"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_designthinking" />
 
             <TextView
                 android:id="@+id/title"
@@ -43,18 +43,18 @@
                 android:textSize="24sp" />
 
             <!--            <TextView-->
-<!--                android:id="@+id/desc"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@id/title"-->
-<!--                android:layout_marginLeft="16dp"-->
-<!--                android:layout_marginTop="13dp"-->
-<!--                android:layout_marginRight="16dp"-->
-<!--                android:drawablePadding="10dp"-->
-<!--                android:ellipsize="end"-->
-<!--                android:maxLines="3"-->
-<!--                android:text="Description"-->
-<!--                android:textAppearance="@style/TextAppearance.Owl.Body1" />-->
+            <!--                android:id="@+id/desc"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/title"-->
+            <!--                android:layout_marginLeft="16dp"-->
+            <!--                android:layout_marginTop="13dp"-->
+            <!--                android:layout_marginRight="16dp"-->
+            <!--                android:drawablePadding="10dp"-->
+            <!--                android:ellipsize="end"-->
+            <!--                android:maxLines="3"-->
+            <!--                android:text="Description"-->
+            <!--                android:textAppearance="@style/TextAppearance.Owl.Body1" />-->
 
         </RelativeLayout>
 

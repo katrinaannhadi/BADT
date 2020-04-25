@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/btnDesignThinking"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Design Thinking"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,7 +18,7 @@
 
     <Button
         android:id="@+id/btnAgile"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Agile SCRUM"
@@ -28,7 +28,7 @@
 
     <Button
         android:id="@+id/btnNote"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Notes"
@@ -38,7 +38,7 @@
 
     <Button
         android:id="@+id/btnSdlc"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Systems Development Lifecycle"
@@ -48,7 +48,7 @@
 
     <Button
         android:id="@+id/btnLeanStartup"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Lean Startup"
@@ -58,7 +58,7 @@
 
     <Button
         android:id="@+id/btnSysDevMethods"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="System Development Methodologies"
@@ -68,7 +68,7 @@
 
     <Button
         android:id="@+id/btnReqGatheringAndModelling"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Requirements Gathering And Modelling"
@@ -78,7 +78,7 @@
 
     <Button
         android:id="@+id/btnProjectManagement"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Project Management"
@@ -88,7 +88,7 @@
 
     <Button
         android:id="@+id/btnIntroToBA"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Introduction to Business Analysis"
