@@ -16,7 +16,7 @@ import androidx.room.Room;
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.models.QA;
 import com.katrinaann.badt.database.ScoresDatabase;
-import com.katrinaann.badt.models.quizScores;
+import com.katrinaann.badt.models.QuizScores;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -237,7 +237,7 @@ public class QuizActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             ScoresDatabase scoresDB = Room.databaseBuilder(getApplicationContext(), ScoresDatabase.class, "scores-database").build();
-            scoresDB.userDaoScores().insertScores(new quizScores(currentUser, amountCorrect, quizName));
+            scoresDB.userDaoScores().insertScores(new QuizScores(currentUser, amountCorrect, quizName));
             return null;
         }
     }

@@ -31,9 +31,9 @@
 
     <fragment
         android:id="@+id/nav_note"
-        android:name="com.katrinaann.badt.ui.blogandnotes.NoteListActivity"
+        android:name="com.katrinaann.badt.ui.drawerFragments.NoteTakingFragment"
         android:label="Note"
-        tools:layout="@layout/activity_note_list" />
+        tools:layout="@layout/fragment_note_taking" />
 
     <fragment
         android:id="@+id/nav_flashcard"

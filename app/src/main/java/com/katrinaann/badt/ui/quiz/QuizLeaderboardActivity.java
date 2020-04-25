@@ -12,9 +12,8 @@ import androidx.room.Room;
 
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.database.ScoresDatabase;
-import com.katrinaann.badt.models.quizScores;
+import com.katrinaann.badt.models.QuizScores;
 import com.katrinaann.badt.ui.drawerFragments.QuizSelectionFragment;
-import com.katrinaann.badt.ui.home.HomeFragment;
 
 import java.util.List;
 
@@ -98,16 +97,16 @@ public class QuizLeaderboardActivity extends AppCompatActivity {
     }
 
     // An AsyncTask which queries the top 5 quis results, and their respective user (in the ROOM database).
-    private class getTopFiveQuizScoresTask extends AsyncTask<Void, Void, List<quizScores>> {
+    private class getTopFiveQuizScoresTask extends AsyncTask<Void, Void, List<QuizScores>> {
         @Override
-        protected List<quizScores> doInBackground(Void... voids) {
+        protected List<QuizScores> doInBackground(Void... voids) {
             ScoresDatabase scoreDB = Room.databaseBuilder(getApplicationContext(), ScoresDatabase.class, "scores-database").build();
             return scoreDB.userDaoScores().getTopFiveQuizScores(quizName);
         }
 
         // Updating the leaderboard.
         @Override
-        protected void onPostExecute(List<quizScores> quizScores) {
+        protected void onPostExecute(List<QuizScores> quizScores) {
             if (quizScores.size() >= 1) {
                 firstUser_TV.setText(quizScores.get(0).username);
                 firstScore_TV.setText(Integer.toString(quizScores.get(0).score) + "/" + Integer.toString(totalquestions));

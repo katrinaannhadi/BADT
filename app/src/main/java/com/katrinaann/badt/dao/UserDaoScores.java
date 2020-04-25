@@ -4,7 +4,7 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.katrinaann.badt.models.quizScores;
+import com.katrinaann.badt.models.QuizScores;
 
 import java.util.List;
 
@@ -12,11 +12,11 @@ import java.util.List;
 @Dao
 public interface UserDaoScores {
     // Query to ger the top 5 quiz scores for the leaderboard.
-    @Query("SELECT username, id, score FROM quizScores WHERE type =:name ORDER BY score DESC LIMIT 5")
-    List<quizScores> getTopFiveQuizScores(String name);
+    @Query("SELECT username, id, score FROM QuizScores WHERE type =:name ORDER BY score DESC LIMIT 5")
+    List<QuizScores> getTopFiveQuizScores(String name);
 
     // Insert to add new score.
     @Insert
-    void insertScores(quizScores scores);
+    void insertScores(QuizScores scores);
 }
 

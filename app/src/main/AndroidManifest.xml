@@ -23,9 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.blogandnotes.NoteActivity"></activity>
-        <activity android:name=".ui.blogandnotes.NoteListActivity"></activity>
-        <activity android:name=".ui.blogandnotes.ContentActivity"></activity>
+        <activity android:name=".ui.notes.NoteActivity"></activity>
+        <activity android:name=".ui.notes.NoteListActivity"></activity>
+        <activity android:name=".ui.blog.BlogActivity"></activity>
         <activity android:name=".ui.flashcards.FlashcardActivity"></activity>
         <activity android:name=".ui.home.HomeActivity"></activity>
         <activity android:name=".ui.quiz.QuizActivity"></activity>

@@ -11,8 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.models.Model;
-import com.katrinaann.badt.ui.blogandnotes.ContentActivity;
-import com.katrinaann.badt.ui.flashcards.FlashcardActivity;
+import com.katrinaann.badt.ui.blog.BlogActivity;
 
 import java.util.List;
 
@@ -58,8 +57,8 @@ public class NoteSelectionAdapter extends PagerAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context.getActivity(), ContentActivity.class);
-                intent.putExtra("Topic", models.get(position).getTitle());
+                Intent intent = new Intent(context.getActivity(), BlogActivity.class);
+                intent.putExtra("Blog", models.get(position).getTitle());
                 context.startActivity(intent);
 //                finish();
             }

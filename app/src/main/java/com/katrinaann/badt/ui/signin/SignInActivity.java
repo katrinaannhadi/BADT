@@ -14,7 +14,7 @@ import androidx.room.Room;
 
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.database.UsersDatabase;
-import com.katrinaann.badt.models.accountUsers;
+import com.katrinaann.badt.models.AccountUsers;
 import com.katrinaann.badt.ui.home.HomeActivity;
 
 public class SignInActivity extends AppCompatActivity {
@@ -78,16 +78,16 @@ public class SignInActivity extends AppCompatActivity {
 
     // An AsyncTask which queries a user (in the ROOM database) which has the same username as tempUsername (the username used to login).
     // This is essentially to check whether the login username exists.
-    private class getUserDetailsTask extends AsyncTask<Void, Void, accountUsers> {
+    private class getUserDetailsTask extends AsyncTask<Void, Void, AccountUsers> {
         @Override
-        protected accountUsers doInBackground(Void... voids) {
+        protected AccountUsers doInBackground(Void... voids) {
             UsersDatabase usersDB = Room.databaseBuilder(getApplicationContext(), UsersDatabase.class, "users-database").build();
             return usersDB.userDaoUsers().getUsernameByString(tempUsername);
         }
 
         // Checking whether the login details are correct.
         @Override
-        protected void onPostExecute(accountUsers tempUser) {
+        protected void onPostExecute(AccountUsers tempUser) {
             // If no user was returned, then the username was wrong to begin with.
             // This has to go first since if the user doesn't exist, its (nonexistent) attributes cannot be part of any comparison statements.
             if (tempUser == null) {

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/owl_pink_500"
-    tools:context=".ui.blogandnotes.ContentActivity">
+    tools:context=".ui.blog.BlogActivity">
 
     <ScrollView
         android:id="@+id/scrollView2"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.katrinaann.badt.ui.blogandnotes.TemporaryActivity">
+    tools:context="com.katrinaann.badt.ui.notes.TemporaryActivity">
 
     <Button
         android:id="@+id/btnDesignThinking"
