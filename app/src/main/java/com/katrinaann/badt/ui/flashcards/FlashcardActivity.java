@@ -8,12 +8,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.models.Flashcard;
+import com.katrinaann.badt.ui.drawerFragments.FlashcardSelectionFragment;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -39,6 +42,8 @@ public class FlashcardActivity extends AppCompatActivity {
     ArrayList<Integer> flashcardCategoryList = new ArrayList<Integer>();
     private ArrayList<Flashcard> flashcards;
 
+    private boolean mTwoPane;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,10 +60,27 @@ public class FlashcardActivity extends AppCompatActivity {
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
+
+
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         ConstraintLayout layout = findViewById(R.id.layoutFlashcards);
 //        mLayoutManager = new LinearLayoutManager(this);
 //        mRecyclerView.setLayoutManager(mLayoutManager);
+        mTwoPane = findViewById(R.id.detail_container) != null;
+        Log.d(TAG, "Two Pane is = " + mTwoPane);
+        if (mTwoPane) {
+            final FragmentManager manager = getSupportFragmentManager();
+            FragmentTransaction transaction = manager.beginTransaction();
+            Bundle bundle = new Bundle();
+            bundle.putBoolean("wideScreen",mTwoPane);
+            FlashcardSelectionFragment fragment = new FlashcardSelectionFragment();
+            fragment.setArguments(bundle);
+            transaction.replace(R.id.detail_container, fragment);
+            transaction.commit();
+
+        } else {
+//            launchDetailActivity(position);
+        }
 
         // Setting up what the intent number is and setting the appropriate flashcard deck
         if (flashcardCategory == 1) {

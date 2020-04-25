@@ -100,8 +100,37 @@ public class QA {
         return QAs;
     }
 
-    // Question bank for quiz 'Design Thinking'
+    // Question bank for SDLC
     public static ArrayList<QA> getQAs4() {
+        ArrayList<QA> QAs = new ArrayList<>();
+        QAs.add(new QA(0, "QuizName", "Systems Development Life Cycle"));
+        QAs.add(new QA(1, "What is the name of the first phase, characterised as “defining the reason for building the system to structure the project”?", "Planning"));
+        QAs.add(new QA(2, "What is the name of the second phase, characterised as “defining who the system is being built for and where it will be used”?", "Analysis"));
+        QAs.add(new QA(3, "What is the name of the third phase, characterised as “the actual blueprint of the system and how it will work”?", "Design"));
+        QAs.add(new QA(4, "What is the name of the fourth phase, characterised as “the delivery and support of the completed system”?", "Implementation"));
+        QAs.add(new QA(5, "In the Planning Phase, what term described as “finding the right people with the right skills”?", "Project Staffing"));
+        QAs.add(new QA(6, "In the Planning Phase, what tool is used to manage the project?", "Workplan"));
+        QAs.add(new QA(7, "In the Analysis Phase, what is created to model the functions between the system and user?", "Use Cases"));
+        QAs.add(new QA(8, "In the Analysis Phase, what are determined to understand the functions of the system?", "Business Requirements"));
+        QAs.add(new QA(9, "In the Design Phase, what system design refers to the structure of the system?", "Physical"));
+        QAs.add(new QA(10, "In the Design Phase, what system design refers to how the user will interact with the system?", "Interface"));
+        QAs.add(new QA(11, "In the Implementation Phase, what is used to construct the system?", "Programming/Testing"));
+        QAs.add(new QA(12, "In the Implementation Phase, what comes after installing the system?", "Maintaining"));
+        return QAs;
+    }
+
+    public static ArrayList<QA> getQAs5() {
+        ArrayList<QA> QAs = new ArrayList<>();
+        QAs.add(new QA(0, "QuizName", "System Development Methodologies"));
+        QAs.add(new QA(1, "Which System Development Methodology is characterised as “completed sequentially and is resource-heavy”?", "Waterfall"));
+        QAs.add(new QA(2, "Which System Development Methodology is characterised as “working on several sub-projects at once”?", "Parallel"));
+        QAs.add(new QA(3, "Which System Development Methodology is characterised as “having a continual testing and feedback to improve communication”?", "Phased"));
+        QAs.add(new QA(4, "Which System Development Methodology is characterised as “creating a functional model of the system to incrementally improve”?", "System Prototyping"));
+        QAs.add(new QA(5, "Which System Development Methodology is characterised as “creation non-functional models of the system to eventually discard”?", "Throwaway Prototyping"));
+        return QAs;
+    }
+    // Question bank for quiz 'Design Thinking'
+    public static ArrayList<QA> getQAs6() {
         ArrayList<QA> QAs = new ArrayList<>();
         QAs.add(new QA(0, "QuizName", "Design Thinking"));
         QAs.add(new QA(1, "Which attribute of Design Thinking is defined as “involving the client in every step of the process?", "Human-Centered"));
@@ -123,7 +152,7 @@ public class QA {
     }
 
     // Question bank for quiz 'Scrum Framework'
-    public static ArrayList<QA> getQAs5() {
+    public static ArrayList<QA> getQAs7() {
         ArrayList<QA> QAs = new ArrayList<>();
         QAs.add(new QA(0, "QuizName", "Scrum Framework"));
         QAs.add(new QA(1, "Which part of the Scrum Framework is defined as a “2-4 week extreme programming iteration”?", "Scrum Sprint"));
@@ -137,6 +166,23 @@ public class QA {
         QAs.add(new QA(9, "Which Scrum Artefact is defined as a “list of user stories and story points”?", "Product Backlog"));
         QAs.add(new QA(10, "Which Scrum Artefact is defined as “team members selecting tasks to complete during the sprint”?", "Sprint Backlog"));
         QAs.add(new QA(11, "Which Scrum Artefact is defined as a “tracking mechanism of what Sprint work has been completed and is yet to be complete”?", "Sprint Burndown Chart"));
+        return QAs;
+    }
+
+
+
+    public static ArrayList<QA> getQAs8() {
+        ArrayList<QA> QAs = new ArrayList<>();
+        QAs.add(new QA(0, "QuizName", "Lean Startup"));
+        QAs.add(new QA(1, "What is the first step of Lean Startup, characterised as “Identifying assumptions using first-person perspectives”?", "Identifying and Prioritising Assumptions "));
+        QAs.add(new QA(2, "What is the second step of Lean Startup, characterised as “Formulating tests from assumptions”?", "Developing Hypotheses"));
+        QAs.add(new QA(2, "What is the third step of Lean Startup, characterised as “Creating a basic version of the function”?", "Building an MVP"));
+        QAs.add(new QA(4, "What is the fourth step of Lean Startup, characterised as “using five whys root cause analysis to better understand results”?", "Learning from Experiments"));
+        QAs.add(new QA(5, "Which is the fifth step of the Lean Startup, characterised as “creating another MVP to test new features”", "Iterate"));
+        QAs.add(new QA(6, "What does identifying and prioritising assumptions help achieve?", "Focusing on Critical Information"));
+        QAs.add(new QA(7, "What does creating Value Hypotheses help achieve?", "Understanding Product Value"));
+        QAs.add(new QA(8, "What process is used to gather higher quality insights on an MVP?", "A/B Testing"));
+        QAs.add(new QA(9, "What process is used when abandoning the whole product in general?", "Pivoting"));
         return QAs;
     }
 }

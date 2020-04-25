@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -29,7 +30,7 @@ public class VideoFragment extends Fragment implements View.OnClickListener {
                              ViewGroup container, Bundle savedInstanceState) {
         videoViewModel =
                 ViewModelProviders.of(this).get(VideoViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_video, container, false);
+        View root = inflater.inflate(R.layout.fragment_video2, container, false);
         final TextView textView = root.findViewById(R.id.text_video);
         videoViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
@@ -38,7 +39,7 @@ public class VideoFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-        Button btnPlayVideo = root.findViewById(R.id.buttonVideo);
+        ImageView btnPlayVideo = root.findViewById(R.id.buttonVideo);
         Button btnPlaylist = root.findViewById(R.id.buttonPlaylist);
 
         btnPlayVideo.setOnClickListener(this);

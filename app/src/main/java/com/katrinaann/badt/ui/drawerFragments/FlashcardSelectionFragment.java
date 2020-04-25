@@ -3,11 +3,14 @@ package com.katrinaann.badt.ui.drawerFragments;
 import android.animation.ArgbEvaluator;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.models.Model;
@@ -27,6 +30,7 @@ public class FlashcardSelectionFragment extends Fragment {
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
     private static final String TAG = " 2 ARTICLE SELECTION ";
+    private boolean mTwoPane;
 
 
     public FlashcardSelectionFragment() {
@@ -63,6 +67,22 @@ public class FlashcardSelectionFragment extends Fragment {
         viewPager = view.findViewById(R.id.viewPager);
         viewPager.setAdapter(mTopicAdapter);
         viewPager.setPadding(130, 0, 130, 0);
+
+        mTwoPane = view.findViewById(R.id.detail_container) != null;
+        Log.d(TAG, "Two Pane is = " + mTwoPane);
+        if (mTwoPane) {
+            final FragmentManager manager = getFragmentManager();
+            FragmentTransaction transaction = manager.beginTransaction();
+            Bundle bundle = new Bundle();
+            bundle.putBoolean("wideScreen",mTwoPane);
+            FlashcardSelectionFragment fragment = new FlashcardSelectionFragment();
+            fragment.setArguments(bundle);
+            transaction.replace(R.id.detail_container, fragment);
+            transaction.commit();
+
+        } else {
+//            launchDetailActivity(position);
+        }
 
         Integer[] colors_temp = {
                 getResources().getColor(R.color.rainbow8),

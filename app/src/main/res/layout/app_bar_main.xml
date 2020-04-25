@@ -13,11 +13,12 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            app:titleTextColor="@color/owl_pink_dark_primary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/owl_pink_500"
-            app:popupTheme="@style/Owl.Pink" />
+            android:background="@color/design_default_color_primary"
+            app:popupTheme="@style/Owl.Pink"
+            app:titleTextAppearance="@style/TextAppearance.Owl.Headline6"
+            app:titleTextColor="@android:color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

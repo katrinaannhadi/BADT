@@ -91,11 +91,23 @@ public class QuizActivity extends AppCompatActivity {
         } else if (quizIndex == 4) {
             qaArrayListSize = QA.getQAs4().size();
             qaArrayRoot = QA.getQAs4();
-            layout.setBackgroundColor(Color.parseColor("#009CFE"));
+            layout.setBackgroundColor(Color.parseColor("#ffc000"));
         } else if (quizIndex == 5) {
             qaArrayListSize = QA.getQAs5().size();
             qaArrayRoot = QA.getQAs5();
+            layout.setBackgroundColor(Color.parseColor("#00BD00"));
+        } else if (quizIndex == 6) {
+            qaArrayListSize = QA.getQAs6().size();
+            qaArrayRoot = QA.getQAs6();
+            layout.setBackgroundColor(Color.parseColor("#009CFE"));
+        } else if (quizIndex == 7) {
+            qaArrayListSize = QA.getQAs7().size();
+            qaArrayRoot = QA.getQAs7();
             layout.setBackgroundColor(Color.parseColor("#000084"));
+        } else if (quizIndex == 8) {
+            qaArrayListSize = QA.getQAs8().size();
+            qaArrayRoot = QA.getQAs8();
+            layout.setBackgroundColor(Color.parseColor("#6D33A6"));
         }
 
         // Initialising the name of the quiz - for the intent.
