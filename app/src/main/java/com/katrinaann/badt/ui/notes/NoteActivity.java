@@ -31,7 +31,7 @@ public class NoteActivity extends AppCompatActivity {
         fragment.setArguments(arguments);
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.scrollDetailActivity, fragment) //Replace the scrollDetailActivity with BlogFragment
+                .replace(R.id.fragment_container, fragment) //Replace the scrollDetailActivity with BlogFragment
                 .commit();
     }
 }
