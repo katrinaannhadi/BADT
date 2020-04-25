@@ -55,8 +55,7 @@
                 android:layout_marginRight="16dp"
                 android:drawablePadding="10dp"
                 android:ellipsize="end"
-                android:maxLines="3"
-                android:text="Description"
+                android:maxLines="5"
                 android:textAppearance="@style/TextAppearance.Owl.Body1"
                 android:textSize="14sp" />
 

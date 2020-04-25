@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.katrinaann.badt.ui.drawerFragments.NoteSelectionFragment"
+        android:name="com.katrinaann.badt.ui.home.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_article_selection_viewpager">
+        tools:layout="@layout/fragment_home">
 
         <action
             android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
@@ -28,6 +28,12 @@
             android:name="myArg"
             app:argType="string" />
     </fragment>
+
+    <fragment
+        android:id="@+id/nav_blog"
+        android:name="com.katrinaann.badt.ui.drawerFragments.NoteSelectionFragment"
+        android:label="Note"
+        tools:layout="@layout/fragment_article_selection_viewpager" />
 
     <fragment
         android:id="@+id/nav_note"

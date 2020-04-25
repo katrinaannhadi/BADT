@@ -48,11 +48,11 @@ public class QuizSelectionAdapter extends PagerAdapter {
 
         imageView = view.findViewById(R.id.image);
         title = view.findViewById(R.id.title);
-        desc = view.findViewById(R.id.desc);
+//        desc = view.findViewById(R.id.desc);
 
         imageView.setImageResource(models.get(position).getImage());
         title.setText(models.get(position).getTitle());
-        desc.setText(models.get(position).getDesc());
+//        desc.setText(models.get(position).getDesc());
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override

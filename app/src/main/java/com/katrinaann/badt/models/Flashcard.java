@@ -535,14 +535,154 @@ public class Flashcard {
     }
         public static ArrayList<Flashcard> getCategory6() {
         ArrayList<Flashcard> flashcards = new ArrayList<>();
-        flashcards.add(new Flashcard(0
-                , 6
-                , "Design Thinking"
-                , "What is Design Thinking?"
-                ,"The waterfall or structured design is a path dependent process. Each stage is completed sequentially and must be fully completed before moving onto the next stage"
-                , R.drawable.ic_designthinkinglist
-                , R.drawable.ic_designthinkinglist
-                , ""));
+            flashcards.add(new Flashcard(0
+                    , 6
+                    , "Design Thinking"
+                    , "What is Design Thinking?"
+                    ,"A process which involves thinking outside of the box to help you find the right problem to solve."
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/FVTNhwyR4yk/1600x900"));
+            flashcards.add(new Flashcard(1
+                    , 6
+                    , "Design Thinking"
+                    , "What are the 6 different mindsets in design thinking?"
+                    ,"Human-centred, mindful of process, culture of prototyping, show don’t tell, radical collaboration, bias toward action."
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.designthinkingmindset
+                    , ""));
+            flashcards.add(new Flashcard(2
+                    , 6
+                    , "Design Thinking"
+                    , "What does human-centred mean?"
+                    ,"Involving the client in every step of the process"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/riYdn15o96U/1600x900"));
+            flashcards.add(new Flashcard(3
+                    , 6
+                    , "Design Thinking"
+                    , "What does radical collaboration mean?"
+                    ,"Constantly working with many team members"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/lbLgFFlADrY/1600x900"));
+            flashcards.add(new Flashcard(4
+                    , 6
+                    , "Design Thinking"
+                    , "What does culture of prototyping mean?"
+                    ,"Creating regular prototypes to solicit feedback"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/MKDEMlPRoYU/1600x900"));
+            flashcards.add(new Flashcard(5
+                    , 6
+                    , "Design Thinking"
+                    , "What does show don't tell mean?"
+                    ,"Being visual when representing ideas"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/ZhQCZjr9fHo/1600x900"));
+            flashcards.add(new Flashcard(6
+                    , 6
+                    , "Design Thinking"
+                    , "What does bias towards action mean?"
+                    ,"Doing more and talking less"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/zXqizKxnbBU/1600x900"));
+            flashcards.add(new Flashcard(7
+                    , 6
+                    , "Design Thinking"
+                    , "What does mindful towards process mean?"
+                    ,"Constantly reflecting on how to improve processes"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/OsC8HauR0e0/1600x900"));
+            flashcards.add(new Flashcard(9
+                    , 6
+                    , "Design Thinking"
+                    , "What is the Design Thinking process by Stamford's design school?"
+                    ,"There are 5 stages: Empathise, Define, Ideate, Prototype and Test."
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.designthinkingprocess
+                    , ""));
+            flashcards.add(new Flashcard(11
+                    , 6
+                    , "Design Thinking"
+                    , "What does the Empathise phase involve?"
+                    ,"Focuses on trying to understand the users that you are developing for. The main idea behind empathising is that you are developing for someone else and not yourself"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/gq5PECP8pHE/1600x900"));
+            flashcards.add(new Flashcard(12
+                    , 6
+                    , "Design Thinking"
+                    , "Tools used in Empathy phase?"
+                    ,"Extreme User Sampling, User Interviews\n" +
+                    "Observations, Root Cause Analysis\n" +
+                    "Empathy maps, Observation grids"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/LQ1t-8Ms5PY/1600x900"));
+            flashcards.add(new Flashcard(12
+                    , 6
+                    , "Design Thinking"
+                    , "What does the Define phase involve?"
+                    ,"Understand your user, identify their needs and then derive insights"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/va_Opp86kfQ/1600x900"));
+            flashcards.add(new Flashcard(13
+                    , 6
+                    , "Design Thinking"
+                    , "Tools used in Define phase?"
+                    ,"Visualising, Thematic Analysis, Point of View Statement, How Might We lists of questions"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/RLw-UC03Gwc/1600x900"));
+            flashcards.add(new Flashcard(14
+                    , 6
+                    , "Design Thinking"
+                    , "What does the Ideate phase involve?"
+                    ,"Generating ideas to the problem that has just been identified and selected"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/82TpEld0_e4/1600x900"));
+            flashcards.add(new Flashcard(14
+                    , 6
+                    , "Design Thinking"
+                    , "Tools used in Ideate phase?"
+                    ,"Setting guidelines  Sketches, Mind-mapping, Body-storming, Criteria based choice making"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/bjemWZcNF34/1600x900"));
+            flashcards.add(new Flashcard(15
+                    , 6
+                    , "Design Thinking"
+                    , "What does the Prototype phase involve?"
+                    ,"Bringing the ideas to life by creating something tangible that the users can interact with"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/ukeUH3KbMWU/1600x900"));
+            flashcards.add(new Flashcard(16
+                    , 6
+                    , "Design Thinking"
+                    , "Tools used in Ideate phase?"
+                    ,"Some examples of prototypes include paper, mocks, code and physical, sorted from low fidelity to high fidelity. \n" +
+                    "Fidelity refers to the level of features, elements and complexity."
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/tZc3vjPCk-Q/1600x900"));
+            flashcards.add(new Flashcard(16
+                    , 6
+                    , "Design Thinking"
+                    , "What does the Testing phase involve?"
+                    ,"Taking the prototype that you have made to your end users to solicit feedback.\n" +
+                    "Go back and refine the prototype before testing it again. Repeat the cycle"
+                    , R.drawable.ic_designthinkinglist
+                    , R.drawable.ic_designthinkinglist
+                    , "https://source.unsplash.com/tV-RX0beDp8/1600x900"));
         return flashcards;
     }
 

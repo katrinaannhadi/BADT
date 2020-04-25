@@ -25,7 +25,8 @@
     <string name="restaurantCuisineType">Cuisine Type</string>
     <string name="restaurantLocation">Location</string>
     <string name="restaurantRating">Rating</string>
-    <string name="scroll">Scroll on cards and tap for more information</string>
+    <string name="scroll">Use the drawer navigation to make your way through the many options for learning!</string>
+    <string name="rainbow">Different chapter topics are represented by the colours of the rainbow</string>
 
 
     <!-- Nav drawer titles. Can be accessed programaticaly using a String[] -->
