@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +13,9 @@ import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.database.NoteDatabase;
+import com.katrinaann.badt.models.Notes;
+import com.katrinaann.badt.ui.home.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +49,7 @@ public class NoteListActivity extends AppCompatActivity {
         setTitle("Your Notes");
 
         //Create Database
-        mDb = Room.databaseBuilder(getApplicationContext(),NoteDatabase.class,"noteDB").build();
+        mDb = Room.databaseBuilder(getApplicationContext(), NoteDatabase.class,"noteDB").build();
 
         //Execute the GetNoteTask to get the note list from the database and set the adapter to display them
         new GetNoteTask().execute();
@@ -102,5 +106,10 @@ public class NoteListActivity extends AppCompatActivity {
             mAdapter.setNotes(notes);
             Log.d(TAG, "createNoteTask onPostExecute: SUCCESS");
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, HomeActivity.class));
     }
 }

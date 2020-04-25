@@ -1,4 +1,4 @@
-package com.katrinaann.badt.ui.notes;
+package com.katrinaann.badt.models;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
