@@ -118,7 +118,7 @@ public class BlogActivity extends AppCompatActivity {
             loadQuiz();
         }
 
-        Log.d(TAG,"nextPage: Success");
+        Log.d(TAG, "nextPage: Success");
     }
 
     //Method to "move onto the previous page" by updating the content in the view
@@ -139,7 +139,7 @@ public class BlogActivity extends AppCompatActivity {
         tvPage.setText(Integer.toString(page));
 
 
-        Log.d(TAG,"previousPage: Success");
+        Log.d(TAG, "previousPage: Success");
     }
 
     //Method to update the UI of the page based on what extra (String that represents topic) was passed in
@@ -215,7 +215,7 @@ public class BlogActivity extends AppCompatActivity {
                 break;
         }
 
-        Log.d(TAG,"displayPage: Success");
+        Log.d(TAG, "displayPage: Success");
     }
 
     //Method to search on Google for the current topic
@@ -229,6 +229,8 @@ public class BlogActivity extends AppCompatActivity {
         int quizIndex = 0;
         switch (topic) {
             case "Introduction to Business Analysis":
+                //Specific quiz run is determined by an int (quizIndex). This sets that int to the right
+                //number in relation to the topic.
                 quizIndex = 1;
                 break;
             case "Project Management":
@@ -243,7 +245,7 @@ public class BlogActivity extends AppCompatActivity {
             case "Agile SCRUM":
                 quizIndex = 5;
                 break;
-            /*case "Systems Development Life Cycle":
+            case "Systems Development Life Cycle":
                 quizIndex = 6;
                 break;
             case "Systems Development Methodologies":
@@ -251,15 +253,12 @@ public class BlogActivity extends AppCompatActivity {
                 break;
             case "Lean Startup":
                 quizIndex = 8;
-                break; */
+                break;
         }
 
-        if (quizIndex != 0) {
-            Intent intent = new Intent(this, QuizActivity.class);
-            intent.putExtra("quizIndex", quizIndex);
-            startActivity(intent);
-        }
+        //Intent to start QuizActivity and passes in the right quizIndex to start a specific quiz
+        Intent intent = new Intent(this, QuizActivity.class);
+        intent.putExtra("quizIndex", quizIndex);
+        startActivity(intent);
     }
-
-
 }

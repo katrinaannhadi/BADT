@@ -52,7 +52,8 @@ public class NoteFragment extends Fragment {
             new GetNoteTask().execute(getArguments().getInt(ARG_ITEM_ID));
         }
 
-        // This callback will only be called when MyFragment is at least Started.
+        //Callback to override the back button, ensuring that pressing back on the NoteFragment always goes
+        //Back to the list (NoteListActivity)
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {

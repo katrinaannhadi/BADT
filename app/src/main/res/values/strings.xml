@@ -54,6 +54,16 @@
     <string name="tap">Tap to reveal, scroll for different cards</string>
     <string name="welcomeTap">Scroll to find out more about our app! Tap to Enter</string>
 
+    <string name="next">NEXT</string>
+    <string name="back">BACK</string>
+    <string name="page_number">Page Number</string>
+
+    <string name="noteTitleHint">Give your note a name</string>
+    <string name="noteContentHint">Write your notes here</string>
+    <string name="save">SAVE</string>
+    <string name="delete">DELETE</string>
+    <string name="noteTitle">Note Title</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

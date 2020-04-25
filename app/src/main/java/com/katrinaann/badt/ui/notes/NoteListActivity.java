@@ -108,6 +108,8 @@ public class NoteListActivity extends AppCompatActivity {
         }
     }
 
+    //Override the back button to make sure that when back button is pressed on the this activity, it always goes back to "Home"
+    //Overcomes issues with going back to NoteFragment when back is pressed after making changes to a note
     @Override
     public void onBackPressed() {
         startActivity(new Intent(this, HomeActivity.class));
