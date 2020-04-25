@@ -76,6 +76,10 @@ public class NoteTakingFragment extends Fragment {
                 Context c = view.getContext();
                 Intent intent = new Intent(c, NoteActivity.class);
                 c.startActivity(intent);
+                //TODO JEFF TO CHECK -
+                // Intent intent = new Intent(this, NoteListActivity.class);
+                //        intent.putExtra("Note",topic);
+                //        startActivity(intent);
             }
         });
 
