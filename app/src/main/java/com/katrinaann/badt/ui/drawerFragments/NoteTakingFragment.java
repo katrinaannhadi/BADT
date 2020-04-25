@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.ui.notes.NoteActivity;
 import com.katrinaann.badt.ui.notes.NoteListActivity;
 
 /**
@@ -73,7 +74,7 @@ public class NoteTakingFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Context c = view.getContext();
-                Intent intent = new Intent(c, NoteListActivity.class);
+                Intent intent = new Intent(c, NoteActivity.class);
                 c.startActivity(intent);
             }
         });
