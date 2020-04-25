@@ -16,7 +16,6 @@ import com.katrinaann.badt.R;
 import com.katrinaann.badt.database.UsersDatabase;
 import com.katrinaann.badt.models.accountUsers;
 import com.katrinaann.badt.ui.home.HomeActivity;
-import com.katrinaann.badt.ui.quiz.QuizSelectionPageActivity;
 
 public class SignInActivity extends AppCompatActivity {
 

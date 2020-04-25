@@ -71,6 +71,7 @@ public class IntroActivity extends AppCompatActivity {
 //        };
         // TODO
         Integer[] colors_temp = {
+                getResources().getColor(R.color.rainbow8),
                 getResources().getColor(R.color.rainbow1),
                 getResources().getColor(R.color.rainbow2),
                 getResources().getColor(R.color.rainbow3),
@@ -78,7 +79,7 @@ public class IntroActivity extends AppCompatActivity {
                 getResources().getColor(R.color.rainbow5),
                 getResources().getColor(R.color.rainbow6),
                 getResources().getColor(R.color.rainbow7),
-                getResources().getColor(R.color.rainbow8)
+
         };
 
         colors = colors_temp;

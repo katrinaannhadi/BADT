@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.ui.drawerFragments.QuizSelectionFragment;
 import com.katrinaann.badt.ui.home.HomeActivity;
 
 public class QuizAfterPageActivity extends AppCompatActivity {
@@ -123,7 +124,7 @@ public class QuizAfterPageActivity extends AppCompatActivity {
 
     // Goes to title.
     public void returnTitle() {
-        Intent intent = new Intent(this, QuizSelectionPageActivity.class);
+        Intent intent = new Intent(this, QuizSelectionFragment.class);
         intent.putExtra("currentUser", currentUser);
         startActivity(intent);
     }

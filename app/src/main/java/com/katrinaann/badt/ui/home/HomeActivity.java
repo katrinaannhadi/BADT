@@ -1,5 +1,6 @@
 package com.katrinaann.badt.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -8,9 +9,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.katrinaann.badt.R;
-import com.katrinaann.badt.ui.note.NoteDetailFragment;
 
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
@@ -25,6 +24,8 @@ public class HomeActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.katrinaann.badt.MESSAGE";
     private AppBarConfiguration mAppBarConfiguration;
+
+    private String currentUser = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,13 +47,22 @@ public class HomeActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_quiz, R.id.nav_video, R.id.nav_note, R.id.nav_flashcard, R.id.nav_topic)
+                R.id.nav_home, R.id.nav_note,R.id.nav_quiz,R.id.nav_video)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        // Receiving the username - if it exists.
+        Intent intent = getIntent();
+        if (intent == null) {
+            // Nothing
+        } else {
+            currentUser = intent.getStringExtra("currentUser");
+        }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -69,17 +79,17 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     // Method to get the position from home fragment recycler view and sending argument to note detail fragment
-    public void addNotePosition(int position) {
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        NoteDetailFragment detailFragment = new NoteDetailFragment();
-        Bundle arguments = new Bundle();
-        arguments.putInt("position", position);
-        detailFragment.setArguments(arguments);
-        transaction.add(R.id.detail_container, detailFragment);
-        transaction.commit();
+//    public void addNotePosition(int position) {
+//        FragmentManager manager = getSupportFragmentManager();
+//        FragmentTransaction transaction = manager.beginTransaction();
+//        NoteDetailFragment detailFragment = new NoteDetailFragment();
+//        Bundle arguments = new Bundle();
+//        arguments.putInt("position", position);
+//        detailFragment.setArguments(arguments);
+//        transaction.add(R.id.detail_container, detailFragment);
+//        transaction.commit();
 
-    }
+//    }
     // Disabling the back button (for some Android devices).
     @Override
     public void onBackPressed() {

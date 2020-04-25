@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.katrinaann.badt.ui.home.HomeFragment"
-        android:label="@string/app_name"
-        tools:layout="@layout/fragment_note">
+        android:name="com.katrinaann.badt.ui.drawerFragments.NoteSelectionFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_article_selection_viewpager">
 
         <action
             android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
@@ -17,9 +17,9 @@
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
-        android:name="com.katrinaann.badt.ui.home.HomeFragment"
+        android:name="com.katrinaann.badt.ui.drawerFragments.NoteSelectionFragment"
         android:label="@string/home_second"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragment_article_selection_viewpager">
         <action
             android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
             app:destination="@id/nav_home" />
@@ -30,10 +30,22 @@
     </fragment>
 
     <fragment
+        android:id="@+id/nav_note"
+        android:name="com.katrinaann.badt.ui.blogandnotes.NoteFragment"
+        android:label="Note"
+        tools:layout="@layout/fragment_note_jeff" />
+
+    <fragment
+        android:id="@+id/nav_flashcard"
+        android:name="com.katrinaann.badt.ui.drawerFragments.FlashcardSelectionFragment"
+        android:label="@string/menu_flashcards"
+        tools:layout="@layout/fragment_article_selection_viewpager" />
+
+    <fragment
         android:id="@+id/nav_quiz"
-        android:name="com.katrinaann.badt.ui.quiz.QuizFragment"
+        android:name="com.katrinaann.badt.ui.drawerFragments.QuizSelectionFragment"
         android:label="@string/menu_quiz"
-        tools:layout="@layout/fragment_quiz" />
+        tools:layout="@layout/fragment_article_selection_viewpager" />
 
     <fragment
         android:id="@+id/nav_video"
@@ -41,21 +53,4 @@
         android:label="@string/menu_video"
         tools:layout="@layout/fragment_video" />
 
-    <fragment
-        android:id="@+id/nav_flashcard"
-        android:name="com.katrinaann.badt.ui.flashcards.FlashcardSelectionFragment"
-        android:label="@string/menu_flashcards"
-        tools:layout="@layout/fragment_flashcard_selection" />
-
-    <fragment
-        android:id="@+id/nav_note"
-        android:name="com.katrinaann.badt.ui.note.NoteFragment"
-        android:label="@string/menu_note"
-        tools:layout="@layout/fragment_note_jeff" />
-
-    <fragment
-        android:id="@+id/nav_topic"
-        android:name="com.katrinaann.badt.ui.blogandnotes.TopicFragment"
-        android:label="@string/menu_note"
-        tools:layout="@layout/fragment_topic" />
 </navigation>

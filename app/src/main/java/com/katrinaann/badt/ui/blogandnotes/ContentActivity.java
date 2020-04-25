@@ -157,7 +157,7 @@ public class ContentActivity extends AppCompatActivity {
                 tvTitle.setText(Topic.getAgileSCRUM().get(page - 1).getSubTopic());
                 ivPicture.setImageResource(Topic.getAgileSCRUM().get(page - 1).getSupTopicImage());
                 break;
-            case "Systems Development Lifecycle":
+            case "Systems Development Life Cycle":
                 tvInformation.setText(Topic.getSDLC().get(page - 1).getInformation());
                 maxPages = Topic.getSDLC().size();
                 setTitle(Topic.getSDLC().get(page - 1).getTopic());

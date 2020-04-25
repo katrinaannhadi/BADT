@@ -13,6 +13,8 @@ import androidx.room.Room;
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.database.ScoresDatabase;
 import com.katrinaann.badt.models.quizScores;
+import com.katrinaann.badt.ui.drawerFragments.QuizSelectionFragment;
+import com.katrinaann.badt.ui.home.HomeFragment;
 
 import java.util.List;
 
@@ -135,7 +137,7 @@ public class QuizLeaderboardActivity extends AppCompatActivity {
 
     // Go back to quiz selection page.
     public void backToQuizSelection() {
-        Intent intent = new Intent(this, QuizSelectionPageActivity.class);
+        Intent intent = new Intent(this, QuizSelectionFragment.class);
         intent.putExtra("currentUser", currentUser);
         startActivity(intent);
     }

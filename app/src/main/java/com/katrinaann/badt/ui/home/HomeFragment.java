@@ -7,14 +7,11 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.katrinaann.badt.R;
-import com.katrinaann.badt.ui.note.Note;
 
 public class HomeFragment extends Fragment {
-
 
 
     public static final String EXTRA_MESSAGE = "com.katrinaann.top10restaurants.MESSAGE";
@@ -33,26 +30,30 @@ public class HomeFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_note, container, false);
 
-
-        mRecyclerView = root.findViewById(R.id.rvList);
-        mRecyclerView.setHasFixedSize(true);
-        mLayoutManager = new LinearLayoutManager(getActivity());
-        mRecyclerView.setLayoutManager(mLayoutManager);
-
-        NoteAdapter.RecyclerViewClickListener listener = new NoteAdapter.RecyclerViewClickListener() {
-            @Override
-            public void onClick(View view, int position) {
-                HomeActivity home = (HomeActivity) getActivity();
-                home.addNotePosition(position);
-//                listener.onHomeInputSent(position);
-
-            }
-        };
-        mAdapter = new NoteAdapter(Note.getNote(), listener);
-        mRecyclerView.setAdapter(mAdapter);
+//
+//        View root = inflater.inflate(R.layout.fragment_note, container, false);
+//
+//
+//        mRecyclerView = root.findViewById(R.id.rvList);
+//        mRecyclerView.setHasFixedSize(true);
+//        mLayoutManager = new LinearLayoutManager(getActivity());
+//        mRecyclerView.setLayoutManager(mLayoutManager);
+//
+//        NoteAdapter.RecyclerViewClickListener listener = new NoteAdapter.RecyclerViewClickListener() {
+//            @Override
+//            public void onClick(View view, int position) {
+//                HomeActivity home = (HomeActivity) getActivity();
+//                home.addNotePosition(position);
+////                listener.onHomeInputSent(position);
+//
+//            }
+//        };
+//        mAdapter = new NoteAdapter(Note.getNote(), listener);
+//        mRecyclerView.setAdapter(mAdapter);
 
         return root;
     }
+}
 
 //    private void launchDetailActivity(int position) {
 //        IntroActivity mn = (IntroActivity) getActivity();
@@ -61,4 +62,3 @@ public class HomeFragment extends Fragment {
 //        intent.putExtra(EXTRA_MESSAGE, position);
 //        startActivity(intent);
 //    }
-}

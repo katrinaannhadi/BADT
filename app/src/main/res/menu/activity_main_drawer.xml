@@ -7,12 +7,15 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/asl_featured"
-            android:title="@string/menu_note" />
-
+            android:title="Home" />
         <item
-            android:id="@+id/nav_topic"
+            android:id="@+id/nav_note"
             android:icon="@drawable/asl_featured"
-            android:title="@string/topic" />
+            android:title="@string/menu_note" />
+        <item
+            android:id="@+id/nav_flashcard"
+            android:icon="@drawable/ic_menu_flashcard"
+            android:title="@string/menu_flashcards" />
         <item
             android:id="@+id/nav_quiz"
             android:icon="@drawable/ic_menu_quiz"
@@ -21,10 +24,7 @@
             android:id="@+id/nav_video"
             android:icon="@drawable/ic_menu_video"
             android:title="@string/menu_video" />
-        <item
-            android:id="@+id/nav_flashcard"
-            android:icon="@drawable/ic_menu_flashcard"
-            android:title="@string/menu_flashcards" />
+
 
     </group>
 </menu>
