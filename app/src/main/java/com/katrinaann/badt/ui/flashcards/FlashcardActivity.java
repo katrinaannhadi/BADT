@@ -91,14 +91,14 @@ public class FlashcardActivity extends AppCompatActivity {
             flashcards = Flashcard.getCategory3();
             mAdapter = new FlashcardAdapter(flashcards);
             mRecyclerView.setAdapter(mAdapter);
-//        } else if (flashcardCategory == 4) {
-//            flashcardArrayListSize = Flashcard.getCategory4().size();
-//            // Connecting Widgets to Variables
-//            categoryName = findViewById(R.id.category);
-//            categoryName.setText(category);
-//            flashcards = Flashcard.getCategory4();
-//            mAdapter = new FlashcardAdapter(flashcards);
-//            mRecyclerView.setAdapter(mAdapter);
+        } else if (flashcardCategory == 4) {
+            flashcardArrayListSize = Flashcard.getCategory4().size();
+            // Connecting Widgets to Variables
+            categoryName = findViewById(R.id.category);
+            categoryName.setText(category);
+            flashcards = Flashcard.getCategory4();
+            mAdapter = new FlashcardAdapter(flashcards);
+            mRecyclerView.setAdapter(mAdapter);
 //        } else if (flashcardCategory == 5) {
 //            flashcardArrayListSize = Flashcard.getCategory5().size();
 //            // Connecting Widgets to Variables

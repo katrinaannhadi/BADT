@@ -475,11 +475,52 @@ public class Flashcard {
                 , ""));
         return flashcards;
     }
-//    public static ArrayList<Flashcard> getCategory4() {
-//        ArrayList<Flashcard> flashcards = new ArrayList<>();
-//            flashcards.add(new Flashcard(0, 4, "Project Management", "What is an information system?", "A system that collects, stores, processes and retrieves information and turns raw data into business insight", R.drawable.ic_scrum, R.drawable.baintro));
-//        return flashcards;
-//    }
+    public static ArrayList<Flashcard> getCategory4() {
+        ArrayList<Flashcard> flashcards = new ArrayList<>();
+        flashcards.add(new Flashcard(0
+                , 4
+                , "Systems Development Methodologies"
+                , "What is SDLC?"
+                ,"Systems Development Lifecycle - is a simple depiction of a typical lifecycle of every information system (IS). "
+                , R.drawable.ic_ba
+                , R.drawable.sdlc
+                , ""));
+        flashcards.add(new Flashcard(1
+                , 4
+                , "Systems Development Methodologies"
+                , "How many phases are there?"
+                ,"Planning, Analysis, Design and Implementation"
+                , R.drawable.ic_ba
+                , R.drawable.sdlc
+                , "https://source.unsplash.com/v9FQR4tbIq8/1600x900"));
+        flashcards.add(new Flashcard(2
+                , 4
+                , "Systems Development Methodologies"
+                , "Planning Phase - What does it involve??"
+                ,"The planning phase is focused on defining the reason for building the system and how to structure the project.\n" +
+                "\t•Identifying opportunities and whether or not the system exploits it\n" +
+                "\t•Analysing feasibility by consider benefits and costs and whether or not the system will generate more value than it costs\n" +
+                "\t•Developing a workplan to manage the project \n" +
+                "\t•Staffing the project with the right people with the right skills\n" +
+                "\t•Controlling and directing the project to ensure it runs smoothly and effectively\n"
+                , R.drawable.ic_ba
+                , R.drawable.planning
+                , "https://source.unsplash.com/v9FQR4tbIq8/1600x900"));
+        flashcards.add(new Flashcard(3
+                , 4
+                , "Systems Development Methodologies"
+                , "Analysis Phase - What does it involve??"
+                ,"Focused on who the system is being built for, what the system is, where it will be used and when it will be built.\n" +
+                "\t•Developing an analysis strategy \n" +
+                "\t•Determine business requirements\n" +
+                "\t•Create use cases\n" +
+                "\t•Model processes\n" +
+                "\t•Model data\n"
+                , R.drawable.ic_ba
+                , R.drawable.analysis
+                , "https://source.unsplash.com/v9FQR4tbIq8/1600x900"));
+        return flashcards;
+    }
 //    public static ArrayList<Flashcard> getCategory5() {
 //        ArrayList<Flashcard> flashcards = new ArrayList<>();
 //            flashcards.add(new Flashcard(0, 5, "Requirements Determination", "What is an information system?", "A system that collects, stores, processes and retrieves information and turns raw data into business insight", R.drawable.ic_scrum, R.drawable.baintro));
