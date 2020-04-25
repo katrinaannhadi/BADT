@@ -316,21 +316,165 @@ public class Flashcard {
         flashcards.add(new Flashcard(0
                 , 2
                 , "Project Management"
-                , "Type of organisation: \n" +
-                "\n" +
-                "\tAvant-Garde"
-                , "Often new companies that are extremely welcoming to risk seek to exploit as many opportunities as possible\n" +
-                "\n Eg. StartUps, Spotify, Uber"
+                , "What is a project? "
+                ,"A set of activities with a beginning and an ending point, meant to create a system, which when completed, is expected to deliver value to the business"
                 , R.drawable.ic_ba
                 , R.drawable.ic_ba
-                , "https://source.unsplash.com/H4fYXZ1hyco/1600x900"));
+                , "https://source.unsplash.com/b21Ty33CqVs/1600x900"));
+        flashcards.add(new Flashcard(1
+                , 2
+                , "Project Management"
+                , "What is project management? "
+                ,"The process of planning and controlling the development of a system within a specified time frame at a minimum cost with the desired functionality"
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/5aiRb5f464A/1600x900"));
+        flashcards.add(new Flashcard(2
+                , 2
+                , "Project Management"
+                , "What is a system request? "
+                ,"The system request is a document that describes the reasons for and the value added from building a new system. It typically contains five elements"
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/legU0r1V1Gk/1600x900"));
+        flashcards.add(new Flashcard(3
+                , 2
+                , "Project Management"
+                , "What are the 5 elements in a Systems request?"
+                ,"Project Sponsor, Business Need, Business Requirements, Business Value, Special Issues and Constraints"
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/kCes633Hh1M/1600x900"));
+        flashcards.add(new Flashcard(4
+                , 2
+                , "Project Management"
+                , "What is a project sponsor?"
+                ,"The primary point of contact for the project"
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/F2KRf_QfCqw/1600x900"));
+        flashcards.add(new Flashcard(5
+                , 2
+                , "Project Management"
+                , "What is a business need?"
+                ,"The reason prompting the project"
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/u6yYESiiXco/1600x900"));
+        flashcards.add(new Flashcard(6
+                , 2
+                , "Project Management"
+                , "What is a business requirement?"
+                ,"What the system will do"
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/m_HRfLhgABo/1600x900"));
+        flashcards.add(new Flashcard(7
+                , 2
+                , "Project Management"
+                , "What is business value?"
+                ,"How will the organization benefit from the project"
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/ZGjbiukp_-A/1600x900"));
+        flashcards.add(new Flashcard(8
+                , 2
+                , "Project Management"
+                , "What are special issues or constraints?"
+                ,"Anything else that should be considered"
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/VO5w2Ida70s/1600x900"));
+        flashcards.add(new Flashcard(9
+                , 2
+                , "Project Management"
+                , "What is a feasibility analysis?"
+                ,"Feasibility analysis considers the potential risks and potential benefits of the project to make a decision about whether it is viable to conduct it. "
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/0gO3-b-5m80/1600x900"));
+        flashcards.add(new Flashcard(10
+                , 2
+                , "Project Management"
+                , "What are the 3 components of feasibility analysis?"
+                ,"Technical, Economic and Organisational Feasibility"
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/hhq1Lxtuwd8/1600x900"));
+        flashcards.add(new Flashcard(11
+                , 2
+                , "Project Management"
+                , "What do we need stakeholder analysis?"
+                ,"Stakeholder analysis allows the business to understand the key stakeholders, their interests in the system and what kind of influence they have. "
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/lbLgFFlADrY/1600x900"));
+        flashcards.add(new Flashcard(12
+                , 2
+                , "Project Management"
+                , "What is a stakeholder rainbow?"
+                ,"A stakeholder Rainbow is a method of stakeholder analysis that maps stakeholders by their influence on the project and how they are affected by the project."
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/wpw8sHoBtSY/1600x900"));
+        flashcards.add(new Flashcard(13
+                , 2
+                , "Project Management"
+                , "What is a interest mapping?"
+                ,"Interest mapping maps stakeholders by their interest and influence to a project"
+                , R.drawable.ic_ba
+                , R.drawable.ic_ba
+                , "https://source.unsplash.com/uE2T1tCFsn8/1600x900"));
         return flashcards;
     }
-//    public static ArrayList<Flashcard> getCategory3() {
-//        ArrayList<Flashcard> flashcards = new ArrayList<>();
-//        flashcards.add(new Flashcard(0, 3, "Systems Development Methodologies", "What is an information system?", "A system that collects, stores, processes and retrieves information and turns raw data into business insight", R.drawable.ic_scrum, R.drawable.baintro));
-//        return flashcards;
-//    }
+    public static ArrayList<Flashcard> getCategory3() {
+        ArrayList<Flashcard> flashcards = new ArrayList<>();
+        flashcards.add(new Flashcard(0
+                , 3
+                , "Systems Development Methodologies"
+                , "What is Waterfall?"
+                ,"The waterfall or structured design is a path dependent process. Each stage is completed sequentially and must be fully completed before moving onto the next stage"
+                , R.drawable.ic_ba
+                , R.drawable.waterfall
+                , ""));
+        flashcards.add(new Flashcard(2
+                , 3
+                , "Systems Development Methodologies"
+                , "What is Parallel"
+                ,"Developed to shorten the development time required by waterfall models. \n" +
+                "An overarching system design is developed which are subdivided into smaller sub-projects that are worked on in parallel and converge in the end."
+                , R.drawable.ic_ba
+                , R.drawable.parallel
+                , ""));
+        flashcards.add(new Flashcard(3
+                , 3
+                , "Systems Development Methodologies"
+                , "What is Phased"
+                ,"Understanding the overall needs of the system and then develops it incrementally until final implementation. \n" +
+                "Continuous testing and feedback during the development process"
+                , R.drawable.ic_ba
+                , R.drawable.parallel
+                , ""));
+        flashcards.add(new Flashcard(4
+                , 3
+                , "Systems Development Methodologies"
+                , "What is System Prototyping"
+                ,"Develop and incrementally improve a functional prototype of the final system.\n" +
+                " This cycle repeats only until the prototype is satisfactory where it will be released to end users for use\n"
+                , R.drawable.ic_ba
+                , R.drawable.systemprototyping
+                , ""));
+        flashcards.add(new Flashcard(5
+                , 3
+                , "Systems Development Methodologies"
+                , "What is Throwaway Prototyping"
+                ,"Engages with users and creates throwaway prototypes. These throwaway prototypes have no functionality and are design prototypes (mock-ups of the real system).\n" +
+                "At the end of the project, a functional prototype will be worked on and released when produced to a satisfactory standard"
+                , R.drawable.ic_ba
+                , R.drawable.throwawayprototyping
+                , ""));
+        return flashcards;
+    }
 //    public static ArrayList<Flashcard> getCategory4() {
 //        ArrayList<Flashcard> flashcards = new ArrayList<>();
 //            flashcards.add(new Flashcard(0, 4, "Project Management", "What is an information system?", "A system that collects, stores, processes and retrieves information and turns raw data into business insight", R.drawable.ic_scrum, R.drawable.baintro));

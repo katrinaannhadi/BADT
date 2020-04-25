@@ -74,23 +74,23 @@ public class FlashcardActivity extends AppCompatActivity {
             mRecyclerView.setAdapter(mAdapter);
             Log.d(TAG, "Category 1 adapter is " + flashcards);
         //TODO TURN BACK ON
-//        } else if (flashcardCategory == 2) {
-//            flashcardArrayListSize = Flashcard.getCategory2().size();
-//            // Connecting Widgets to Variables
-//            categoryName = findViewById(R.id.category);
-//            categoryName.setText(category);
-//            flashcards = Flashcard.getCategory2();
-//            mAdapter = new FlashcardAdapter(flashcards);
-//            mRecyclerView.setAdapter(mAdapter);
-//
-//        } else if (flashcardCategory == 3) {
-//            flashcardArrayListSize = Flashcard.getCategory3().size();
-//            // Connecting Widgets to Variables
-//            categoryName = findViewById(R.id.category);
-//            categoryName.setText(category);
-//            flashcards = Flashcard.getCategory3();
-//            mAdapter = new FlashcardAdapter(flashcards);
-//            mRecyclerView.setAdapter(mAdapter);
+        } else if (flashcardCategory == 2) {
+            flashcardArrayListSize = Flashcard.getCategory2().size();
+            // Connecting Widgets to Variables
+            categoryName = findViewById(R.id.category);
+            categoryName.setText(category);
+            flashcards = Flashcard.getCategory2();
+            mAdapter = new FlashcardAdapter(flashcards);
+            mRecyclerView.setAdapter(mAdapter);
+
+        } else if (flashcardCategory == 3) {
+            flashcardArrayListSize = Flashcard.getCategory3().size();
+            // Connecting Widgets to Variables
+            categoryName = findViewById(R.id.category);
+            categoryName.setText(category);
+            flashcards = Flashcard.getCategory3();
+            mAdapter = new FlashcardAdapter(flashcards);
+            mRecyclerView.setAdapter(mAdapter);
 //        } else if (flashcardCategory == 4) {
 //            flashcardArrayListSize = Flashcard.getCategory4().size();
 //            // Connecting Widgets to Variables
