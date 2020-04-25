@@ -1,6 +1,7 @@
 package com.katrinaann.badt.ui.quiz;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.room.Room;
 
 import com.katrinaann.badt.R;
@@ -41,6 +43,7 @@ public class QuizActivity extends AppCompatActivity {
     private String quizName = "";
     private int quizIndex = 0;
     private String currentUser = "";
+    private ConstraintLayout layout;
 
     // Setting up arraylists.
     private ArrayList<Integer> questionsOrderList = new ArrayList<Integer>();
@@ -63,6 +66,8 @@ public class QuizActivity extends AppCompatActivity {
         quizScore = findViewById((R.id.quizScore_TV));
         background = findViewById(R.id.bg_light2);
         background.setVisibility(View.GONE);
+        layout = findViewById(R.id.quiz_constraint_layout);
+
 
         // Receive data from the quizSelectionPage.
         Intent intent = getIntent();
@@ -74,18 +79,23 @@ public class QuizActivity extends AppCompatActivity {
         if (quizIndex == 1) {
             qaArrayListSize = QA.getQAs1().size();
             qaArrayRoot = QA.getQAs1();
+            layout.setBackgroundColor(Color.parseColor("#ffc000"));
         } else if (quizIndex == 2) {
             qaArrayListSize = QA.getQAs2().size();
             qaArrayRoot = QA.getQAs2();
+            layout.setBackgroundColor(Color.parseColor("#DE0000"));
         } else if (quizIndex == 3) {
             qaArrayListSize = QA.getQAs3().size();
             qaArrayRoot = QA.getQAs3();
+            layout.setBackgroundColor(Color.parseColor("#FE622D"));
         } else if (quizIndex == 4) {
             qaArrayListSize = QA.getQAs4().size();
             qaArrayRoot = QA.getQAs4();
+            layout.setBackgroundColor(Color.parseColor("#009CFE"));
         } else if (quizIndex == 5) {
             qaArrayListSize = QA.getQAs5().size();
             qaArrayRoot = QA.getQAs5();
+            layout.setBackgroundColor(Color.parseColor("#000084"));
         }
 
         // Initialising the name of the quiz - for the intent.

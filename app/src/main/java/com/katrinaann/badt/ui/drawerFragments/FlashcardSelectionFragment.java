@@ -50,14 +50,14 @@ public class FlashcardSelectionFragment extends Fragment {
         context = view.getContext();
 
         mTopics = new ArrayList<>();
-        mTopics.add(new Model(R.drawable.ic_scrum, "Introduction to Business Analysis", "Finance shouldn't be hard! Read on for hot tips and trendy articles.", 1));
-        mTopics.add(new Model(R.drawable.ic_scrum, "Project Management", "Have some fun and test yourself with our quiz!", 2));
-        mTopics.add(new Model(R.drawable.ic_scrum, "Requirements Gathering And Modelling", "We got your back. Sit back and watch informational videos on finance curated by the team!", 3));
-        mTopics.add(new Model(R.drawable.ic_scrum, "Systems Development Life Cycle", "We got your back. Sit back and watch informational videos on finance curated by the team!", 4));
-        mTopics.add(new Model(R.drawable.ic_scrum, "Systems Development Methodologies", "We got your back. Sit back and watch informational videos on finance curated by the team!", 5));
-        mTopics.add(new Model(R.drawable.ic_scrum, "Design Thinking", "We got your back. Sit back and watch informational videos on finance curated by the team!", 6));
-        mTopics.add(new Model(R.drawable.ic_scrum, "Agile SCRUM", "We got your back. Sit back and watch informational videos on finance curated by the team!", 7));
-        mTopics.add(new Model(R.drawable.ic_scrum, "Lean Start Up", "We got your back. Sit back and watch informational videos on finance curated by the team!", 8));
+        mTopics.add(new Model(R.drawable.ic_introductiontobusinessanalysis, "Introduction to Business Analysis", "Finance shouldn't be hard! Read on for hot tips and trendy articles.", 1));
+        mTopics.add(new Model(R.drawable.ic_projectmanagement, "Project Management", "Have some fun and test yourself with our quiz!", 2));
+        mTopics.add(new Model(R.drawable.ic_requirementsgatheringandmodelling, "Requirements Gathering And Modelling", "We got your back. Sit back and watch informational videos on finance curated by the team!", 3));
+        mTopics.add(new Model(R.drawable.ic_sdlc, "Systems Development Life Cycle", "We got your back. Sit back and watch informational videos on finance curated by the team!", 4));
+        mTopics.add(new Model(R.drawable.ic_systemsdevelopmentmethodologies, "Systems Development Methodologies", "We got your back. Sit back and watch informational videos on finance curated by the team!", 5));
+        mTopics.add(new Model(R.drawable.ic_designthinkinglist, "Design Thinking", "We got your back. Sit back and watch informational videos on finance curated by the team!", 6));
+        mTopics.add(new Model(R.drawable.ic_agile, "Agile SCRUM", "We got your back. Sit back and watch informational videos on finance curated by the team!", 7));
+        mTopics.add(new Model(R.drawable.ic_leanstartup, "Lean Start Up", "We got your back. Sit back and watch informational videos on finance curated by the team!", 8));
         mTopicAdapter = new FlashcardSelectionAdapter(mTopics, this);
 
         viewPager = view.findViewById(R.id.viewPager);

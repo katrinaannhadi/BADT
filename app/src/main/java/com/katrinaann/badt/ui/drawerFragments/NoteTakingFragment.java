@@ -74,7 +74,7 @@ public class NoteTakingFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Context c = view.getContext();
-                Intent intent = new Intent(c, NoteActivity.class);
+                Intent intent = new Intent(c, NoteListActivity.class);
                 c.startActivity(intent);
                 //TODO JEFF TO CHECK -
                 // Intent intent = new Intent(this, NoteListActivity.class);
