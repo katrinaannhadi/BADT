@@ -78,45 +78,45 @@ public class FlashcardSelectionFragment extends Fragment {
         categoryOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startFlashcard(1);
+                startFlashcard(1, "Introduction to Business Analysis");
             }
         });
 
         categoryTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startFlashcard(2);
+                startFlashcard(2, "Project Management");
             }
         });
 
         categoryThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startFlashcard(3);
+                startFlashcard(3, "Requirements Gathering and Modelling");
             }
         });
         categoryFour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startFlashcard(4);
+                startFlashcard(4, "System Development Life Cycle");
             }
         });
         categoryFive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startFlashcard(5);
+                startFlashcard(5, "Design Thinking");
             }
         });
         categorySix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startFlashcard(6);
+                startFlashcard(6, ("Agile Scrum"));
             }
         });
         categorySeven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startFlashcard(7);
+                startFlashcard(7, "Lean Start Up");
             }
         });
 
@@ -130,10 +130,11 @@ public class FlashcardSelectionFragment extends Fragment {
         });
         return view;
     }
-    private void startFlashcard(int number){
+    private void startFlashcard(int number, String categoryName){
         Context c = view.getContext();
         Intent intent = new Intent(c, FlashcardActivity.class);
         intent.putExtra("Category", number);
+        intent.putExtra("Title", categoryName);
         c.startActivity(intent);
 
 //        public void onClick(View view, int position) {

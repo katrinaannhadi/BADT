@@ -14,47 +14,48 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/image"
-                android:src="@drawable/ic_designthinking"
-                android:scaleType="centerCrop"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_designthinking" />
 
-<!--            <TextView-->
-<!--                android:id="@+id/title"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_below="@id/image"-->
-<!--                android:layout_marginLeft="16dp"-->
-<!--                android:layout_marginTop="10dp"-->
-<!--                android:text="Brochure"-->
-<!--                android:textAppearance="@style/TextAppearance.Owl.Headline1"-->
-<!--                android:textColor="#262626"-->
-<!--                android:textSize="16sp" />-->
+            <!--            <TextView-->
+            <!--                android:id="@+id/title"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/image"-->
+            <!--                android:layout_marginLeft="16dp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:text="Brochure"-->
+            <!--                android:textAppearance="@style/TextAppearance.Owl.Headline1"-->
+            <!--                android:textColor="#262626"-->
+            <!--                android:textSize="16sp" />-->
 
             <TextView
                 android:id="@+id/answer"
-                android:layout_width="281dp"
-                android:layout_height="51dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/image"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="56dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="41dp"
-                android:layout_marginEnd="56dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
                 android:drawablePadding="10dp"
                 android:ellipsize="end"
-                android:lineSpacingExtra="18sp"
-                android:maxLines="3"
+                android:lineHeight="20dp"
+                android:lineSpacingExtra="24sp"
+                android:maxLines="10"
                 android:text="Text should load here"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.Owl.Body2"
-                android:textSize="14sp" />
+                android:textColor="@color/owl_pink_dark_primary"
+                android:textSize="18sp" />
 
         </RelativeLayout>
 

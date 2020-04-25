@@ -23,7 +23,8 @@ public class FlashcardActivity extends AppCompatActivity {
 
     // Initialising UI elements and variables t
     private Flashcard mFlashcard;
-    private TextView category;
+    private String category;
+    private TextView categoryName;
 
     private int flashcardCategory = 0;
     private int flashcardArrayListSize = 0;
@@ -43,13 +44,12 @@ public class FlashcardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recyclerview_flip);
         Log.d(TAG, "Flashcard Activity: SUCCESS");
 
-        // Connecting Widgets to Variables
-        category = findViewById(R.id.category);
-
         // Receive data object from the flashcard fragment
         Intent intent = getIntent();
         flashcardCategory = intent.getIntExtra("Category", 1);
+        category = intent.getStringExtra("Title");
         Log.d(TAG, "Category is: " + flashcardCategory);
+        Log.d(TAG, "Title is: " + category);
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
@@ -61,6 +61,9 @@ public class FlashcardActivity extends AppCompatActivity {
         if (flashcardCategory == 1) {
             flashcardArrayListSize = Flashcard.getCategory1().size();
             Log.d(TAG, "Category size is: " + flashcardArrayListSize);
+            // Connecting Widgets to Variables
+            categoryName = findViewById(R.id.category);
+            categoryName.setText(category);
 
             flashcards = Flashcard.getCategory1();
             Log.d(TAG, "Category 1 is " + flashcards);
@@ -70,39 +73,57 @@ public class FlashcardActivity extends AppCompatActivity {
 
             mRecyclerView.setAdapter(mAdapter);
             Log.d(TAG, "Category 1 adapter is " + flashcards);
-
-        } else if (flashcardCategory == 2) {
-            flashcardArrayListSize = Flashcard.getCategory2().size();
-            flashcards = Flashcard.getCategory2();
-            mAdapter = new FlashcardAdapter(flashcards);
-            mRecyclerView.setAdapter(mAdapter);
-
-        } else if (flashcardCategory == 3) {
-            flashcardArrayListSize = Flashcard.getCategory3().size();
-            flashcards = Flashcard.getCategory3();
-            mAdapter = new FlashcardAdapter(flashcards);
-            mRecyclerView.setAdapter(mAdapter);
-        } else if (flashcardCategory == 4) {
-            flashcardArrayListSize = Flashcard.getCategory4().size();
-            flashcards = Flashcard.getCategory4();
-            mAdapter = new FlashcardAdapter(flashcards);
-            mRecyclerView.setAdapter(mAdapter);
-        } else if (flashcardCategory == 5) {
-            flashcardArrayListSize = Flashcard.getCategory5().size();
-            flashcards = Flashcard.getCategory5();
-            mAdapter = new FlashcardAdapter(flashcards);
-            mRecyclerView.setAdapter(mAdapter);
-        } else if (flashcardCategory == 6) {
-            flashcardArrayListSize = Flashcard.getCategory5().size();
-            flashcards = Flashcard.getCategory5();
-            mAdapter = new FlashcardAdapter(flashcards);
-            mRecyclerView.setAdapter(mAdapter);
-
-        } else if (flashcardCategory == 7) {
-            flashcardArrayListSize = Flashcard.getCategory5().size();
-            flashcards = Flashcard.getCategory5();
-            mAdapter = new FlashcardAdapter(flashcards);
-            mRecyclerView.setAdapter(mAdapter);
+        //TODO TURN BACK ON
+//        } else if (flashcardCategory == 2) {
+//            flashcardArrayListSize = Flashcard.getCategory2().size();
+//            // Connecting Widgets to Variables
+//            categoryName = findViewById(R.id.category);
+//            categoryName.setText(category);
+//            flashcards = Flashcard.getCategory2();
+//            mAdapter = new FlashcardAdapter(flashcards);
+//            mRecyclerView.setAdapter(mAdapter);
+//
+//        } else if (flashcardCategory == 3) {
+//            flashcardArrayListSize = Flashcard.getCategory3().size();
+//            // Connecting Widgets to Variables
+//            categoryName = findViewById(R.id.category);
+//            categoryName.setText(category);
+//            flashcards = Flashcard.getCategory3();
+//            mAdapter = new FlashcardAdapter(flashcards);
+//            mRecyclerView.setAdapter(mAdapter);
+//        } else if (flashcardCategory == 4) {
+//            flashcardArrayListSize = Flashcard.getCategory4().size();
+//            // Connecting Widgets to Variables
+//            categoryName = findViewById(R.id.category);
+//            categoryName.setText(category);
+//            flashcards = Flashcard.getCategory4();
+//            mAdapter = new FlashcardAdapter(flashcards);
+//            mRecyclerView.setAdapter(mAdapter);
+//        } else if (flashcardCategory == 5) {
+//            flashcardArrayListSize = Flashcard.getCategory5().size();
+//            // Connecting Widgets to Variables
+//            categoryName = findViewById(R.id.category);
+//            categoryName.setText(category);
+//            flashcards = Flashcard.getCategory5();
+//            mAdapter = new FlashcardAdapter(flashcards);
+//            mRecyclerView.setAdapter(mAdapter);
+//        } else if (flashcardCategory == 6) {
+//            flashcardArrayListSize = Flashcard.getCategory5().size();
+//            // Connecting Widgets to Variables
+//            categoryName = findViewById(R.id.category);
+//            categoryName.setText(category);
+//            flashcards = Flashcard.getCategory5();
+//            mAdapter = new FlashcardAdapter(flashcards);
+//            mRecyclerView.setAdapter(mAdapter);
+//
+//        } else if (flashcardCategory == 7) {
+//            flashcardArrayListSize = Flashcard.getCategory5().size();
+//            // Connecting Widgets to Variables
+//            categoryName = findViewById(R.id.category);
+//            categoryName.setText(category);
+//            flashcards = Flashcard.getCategory5();
+//            mAdapter = new FlashcardAdapter(flashcards);
+//            mRecyclerView.setAdapter(mAdapter);
 
 
             // Sets the order for the flashcards to come up

@@ -33,13 +33,13 @@ public class IntroActivity extends AppCompatActivity {
                 .getBoolean("isFirstRun", true);
 
         if (isFirstRun) {
-            //show intro activity
+            // Show intro activity
             //TODO CHANGE BACK TO SIGN IN ACTIVITY
             startActivity(new Intent(IntroActivity.this, HomeActivity.class));
             Toast.makeText(IntroActivity.this, "Run only once", Toast.LENGTH_LONG)
                     .show();
         }
-        //otherwise show sign in activity
+        // Otherwise show sign in activity
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
                 .putBoolean("isFirstRun", false).commit();
 
@@ -50,18 +50,35 @@ public class IntroActivity extends AppCompatActivity {
         mCategories.add(new Category(R.drawable.ic_quiz, "Quiz", "According to Dr. Henry L. Roediger III, a psychologist, “testing not only measures knowledge but changes it in the direction of more certainty, not less.”."));
         mCategories.add(new Category(R.drawable.ic_video, "Videos", "Visual learners? We got you. Watch the materials being taught through video explanations from reputed sources. ."));
 
+        // Delete these after
+        mCategories.add(new Category(R.drawable.ic_video, "Videos", "Visual learners? We got you. Watch the materials being taught through video explanations from reputed sources. ."));
+        mCategories.add(new Category(R.drawable.ic_video, "Videos", "Visual learners? We got you. Watch the materials being taught through video explanations from reputed sources. ."));
+        mCategories.add(new Category(R.drawable.ic_video, "Videos", "Visual learners? We got you. Watch the materials being taught through video explanations from reputed sources. ."));
+        mCategories.add(new Category(R.drawable.ic_video, "Videos", "Visual learners? We got you. Watch the materials being taught through video explanations from reputed sources. ."));
+
         mCategoryAdapter = new CategoryAdapter(mCategories, this);
 
         viewPager = findViewById(R.id.viewPager);
         viewPager.setAdapter(mCategoryAdapter);
         viewPager.setPadding(130, 0, 130, 0);
 
-        //temp to change the background colour of the viewpager for the categories blurb
+        // Temp to change the background colour of the viewpager for the categories blurb
+//        Integer[] colors_temp = {
+//                getResources().getColor(R.color.owl_pink_500),
+//                getResources().getColor(R.color.owl_blue_700),
+//                getResources().getColor(R.color.owl_yellow_400),
+//                getResources().getColor(R.color.owl_pink_500)
+//        };
+        // TODO
         Integer[] colors_temp = {
-                getResources().getColor(R.color.owl_pink_500),
-                getResources().getColor(R.color.owl_blue_700),
-                getResources().getColor(R.color.owl_yellow_400),
-                getResources().getColor(R.color.owl_pink_500)
+                getResources().getColor(R.color.rainbow1),
+                getResources().getColor(R.color.rainbow2),
+                getResources().getColor(R.color.rainbow3),
+                getResources().getColor(R.color.rainbow4),
+                getResources().getColor(R.color.rainbow5),
+                getResources().getColor(R.color.rainbow6),
+                getResources().getColor(R.color.rainbow7),
+                getResources().getColor(R.color.rainbow8)
         };
 
         colors = colors_temp;

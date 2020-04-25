@@ -46,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_quiz, R.id.nav_video, R.id.nav_note, R.id.nav_flashcard)
+                R.id.nav_home, R.id.nav_quiz, R.id.nav_video, R.id.nav_note, R.id.nav_flashcard, R.id.nav_topic)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -68,7 +68,7 @@ public class HomeActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    //method to get the position from home fragment recycler view and sending argument to note detail fragment
+    // Method to get the position from home fragment recycler view and sending argument to note detail fragment
     public void addNotePosition(int position) {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();

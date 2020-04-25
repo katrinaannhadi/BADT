@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.models.Flashcard;
 import com.wajahatkarim3.easyflipview.EasyFlipView;
@@ -30,14 +31,15 @@ public class FlashcardAdapter extends RecyclerView.Adapter<FlashcardAdapter.Flas
     public static class FlashcardViewHolder extends RecyclerView.ViewHolder {
         EasyFlipView flipView;
         TextView title, desc;
-        ImageView image;
+        ImageView imageFront, imageBack;
 
         FlashcardViewHolder(View view) {
             super(view);
             flipView = view.findViewById(R.id.flipView);
             title = view.findViewById(R.id.title);
             desc = view.findViewById(R.id.answer);
-            image = view.findViewById(R.id.image);
+            imageFront = view.findViewById(R.id.image_front);
+            imageBack = view.findViewById(R.id.image);
         }
     }
 
@@ -56,7 +58,7 @@ public class FlashcardAdapter extends RecyclerView.Adapter<FlashcardAdapter.Flas
     public void onBindViewHolder(final FlashcardViewHolder holder, final int position) {
         final Flashcard flashcard = mFlashcards.get(position);
         holder.title.setText(flashcard.getTitle());
-        holder.image.setImageResource(flashcard.getImageID());
+        holder.imageFront.setImageResource(flashcard.getImageCategory());
         Log.d(TAG, "Title is " + flashcard.getTitle());
 
 
@@ -93,10 +95,16 @@ public class FlashcardAdapter extends RecyclerView.Adapter<FlashcardAdapter.Flas
                     Log.d(TAG, "I am number 4.1");
                     holder.title.setText(flashcard.getTitle());
                     Log.d(TAG, "I am number 4.1");
-                    holder.image.setImageResource(flashcard.getImageID());
+                    holder.imageBack.setImageResource(flashcard.getImageAnswer());
                     Log.d(TAG, "I am number 4.2");
                     holder.desc.setText(flashcard.getAnswer());
                     Log.d(TAG, "I am number 4.3");
+                    Glide.with(holder.imageBack)
+                            .load(flashcard.getImageURL())
+                            .placeholder(flashcard.getImageAnswer())
+                            .centerCrop()
+                            .into(holder.imageBack);
+
 
                 }
                 Log.d(TAG, "I am number 5");

@@ -34,4 +34,25 @@
   <color name="immersive_sys_ui">#33000000</color>
   <color name="nav_bar">@color/immersive_sys_ui</color>
 
+  <!--flashcard colours for different topics-->
+<!--  <color name="rainbow1">#F24949</color>-->
+<!--  <color name="rainbow2">#FE622D</color>-->
+<!--  <color name="rainbow3">#FFFD6F</color>-->
+<!--  <color name="rainbow4">#00BD00</color>-->
+<!--  <color name="rainbow5">#009CFE</color>-->
+<!--  <color name="rainbow6">#000084</color>-->
+<!--  <color name="rainbow7">#2D009C</color>-->
+<!--  <color name="rainbow8">#ffc000</color>-->
+
+  <color name="rainbow1">#DE0000</color>
+  <color name="rainbow2">#FE622D</color>
+  <color name="rainbow3">#ffc000</color>
+  <color name="rainbow4">#00BD00</color>
+  <color name="rainbow5">#009CFE</color>
+  <color name="rainbow6">#000084</color>
+  <color name="rainbow7">#6D33A6</color>
+  <color name="rainbow8">#ffc000</color>
+
+
+
 </resources>

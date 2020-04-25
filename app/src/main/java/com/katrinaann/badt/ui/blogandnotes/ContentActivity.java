@@ -44,7 +44,7 @@ public class ContentActivity extends AppCompatActivity {
         topic = intent.getStringExtra("Topic");
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_content);
+        setContentView(R.layout.activity_content2);
 
         //Match the variables in the fragment to the views in the layout file
         tvTitle = findViewById(R.id.tvTitle);

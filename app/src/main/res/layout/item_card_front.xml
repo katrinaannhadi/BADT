@@ -17,9 +17,10 @@
             android:layout_height="300dp">
 
             <ImageView
-                android:id="@+id/image"
+                android:id="@+id/image_front"
                 android:src="@drawable/ic_designthinking"
-                android:scaleType="centerCrop"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
                 android:layout_width="match_parent"
                 android:layout_height="200dp" />
 
@@ -27,18 +28,19 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/image"
+                android:layout_below="@id/image_front"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="156dp"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="36dp"
-                android:layout_marginEnd="148dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/rubik_bold"
                 android:gravity="center"
                 android:text="Brochure"
-                android:textAppearance="@style/TextAppearance.Owl.Headline2"
-                android:textColor="#262626"
-                android:textSize="16sp" />
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Owl.Headline1"
+                android:textColor="@color/owl_pink_dark_primary"
+                android:textSize="24sp" />
 
             <!--            <TextView-->
 <!--                android:id="@+id/desc"-->
