@@ -50,11 +50,6 @@ public class IntroActivity extends AppCompatActivity {
         mCategories.add(new Category(R.drawable.ic_quiz, "Quiz", "According to Dr. Henry L. Roediger III, a psychologist, “testing not only measures knowledge but changes it in the direction of more certainty, not less.”."));
         mCategories.add(new Category(R.drawable.ic_video, "Videos", "Visual learners? We got you. Watch the materials being taught through video explanations from reputed sources. ."));
 
-        // Delete these after
-        mCategories.add(new Category(R.drawable.ic_video, "Videos", "Visual learners? We got you. Watch the materials being taught through video explanations from reputed sources. ."));
-        mCategories.add(new Category(R.drawable.ic_video, "Videos", "Visual learners? We got you. Watch the materials being taught through video explanations from reputed sources. ."));
-        mCategories.add(new Category(R.drawable.ic_video, "Videos", "Visual learners? We got you. Watch the materials being taught through video explanations from reputed sources. ."));
-        mCategories.add(new Category(R.drawable.ic_video, "Videos", "Visual learners? We got you. Watch the materials being taught through video explanations from reputed sources. ."));
 
         mCategoryAdapter = new CategoryAdapter(mCategories, this);
 
@@ -62,25 +57,14 @@ public class IntroActivity extends AppCompatActivity {
         viewPager.setAdapter(mCategoryAdapter);
         viewPager.setPadding(130, 0, 130, 0);
 
-        // Temp to change the background colour of the viewpager for the categories blurb
-//        Integer[] colors_temp = {
-//                getResources().getColor(R.color.owl_pink_500),
-//                getResources().getColor(R.color.owl_blue_700),
-//                getResources().getColor(R.color.owl_yellow_400),
-//                getResources().getColor(R.color.owl_pink_500)
-//        };
-        // TODO
+        // To change the background colours
         Integer[] colors_temp = {
-                getResources().getColor(R.color.rainbow8),
-                getResources().getColor(R.color.rainbow1),
-                getResources().getColor(R.color.rainbow2),
-                getResources().getColor(R.color.rainbow3),
-                getResources().getColor(R.color.rainbow4),
-                getResources().getColor(R.color.rainbow5),
+                getResources().getColor(R.color.owl_pink_500),
                 getResources().getColor(R.color.rainbow6),
-                getResources().getColor(R.color.rainbow7),
-
+                getResources().getColor(R.color.rainbow2),
+                getResources().getColor(R.color.rainbow7)
         };
+        // TODO
 
         colors = colors_temp;
 
