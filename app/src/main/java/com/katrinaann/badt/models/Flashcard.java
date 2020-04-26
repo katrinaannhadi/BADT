@@ -358,6 +358,22 @@ public class Flashcard {
                 , R.drawable.ic_projectmanagement
                 , R.drawable.ic_projectmanagement
                 , "https://source.unsplash.com/uE2T1tCFsn8/1600x900"));
+        flashcards.add(new Flashcard(14
+                , 2
+                , "Project Management"
+                , "What Requirement Analysis Strategies?"
+                ,"Requirements Analysis Strategies are a part of requirements determination and are decided upon during the preparation phase. "
+                , R.drawable.ic_requirementsgatheringandmodelling
+                , R.drawable.ic_requirementsgatheringandmodelling
+                , "https://source.unsplash.com/68ZlATaVYIo/1600x900"));
+        flashcards.add(new Flashcard(15
+                , 2
+                , "Project Management"
+                , "What is Business Process Automation?"
+                ,"Business Process Automation is a strategy used for small changes and often involves using technology to automate some portions of a process. This process involves a lot of information gathering about the current (as-is) system which often comes in the form of problem analysis or root cause analysis."
+                , R.drawable.ic_requirementsgatheringandmodelling
+                , R.drawable.ic_requirementsgatheringandmodelling
+                , "https://source.unsplash.com/2EJCSULRwC8/1600x900"));
         return flashcards;
     }
         public static ArrayList<Flashcard> getCategory3() {
@@ -365,24 +381,8 @@ public class Flashcard {
             flashcards.add(new Flashcard(0
                     , 3
                     , "Requirements Determination"
-                    , "What is Requirements Determination?"
-                    ,"Requirements Analysis Strategies are a part of requirements determination and are decided upon during the preparation phase. There are three main requirements analysis strategies"
-                    , R.drawable.ic_requirementsgatheringandmodelling
-                    , R.drawable.ic_requirementsgatheringandmodelling
-                    , "https://source.unsplash.com/68ZlATaVYIo/1600x900"));
-            flashcards.add(new Flashcard(1
-                    , 3
-                    , "Requirements Determination"
-                    , "What is Business Process Automation?"
-                    ,"Business Process Automation is a strategy used for small changes and often involves using technology to automate some portions of a process. This process involves a lot of information gathering about the current (as-is) system which often comes in the form of problem analysis or root cause analysis."
-                    , R.drawable.ic_requirementsgatheringandmodelling
-                    , R.drawable.ic_requirementsgatheringandmodelling
-                    , "https://source.unsplash.com/2EJCSULRwC8/1600x900"));
-            flashcards.add(new Flashcard(2
-                    , 3
-                    , "Requirements Determination"
-                    , "What is Requirements Determination?"
-                    ,"Requirements Analysis Strategies are a part of requirements determination and are decided upon during the preparation phase. There are three main requirements analysis strategies"
+                    , "What is Requirements Gathering??"
+                    ,"used to uncover requirements and is a collaborative activity to build support and trust among users"
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , "https://source.unsplash.com/hpjSkU2UYSU/1600x900"));
@@ -397,11 +397,189 @@ public class Flashcard {
             flashcards.add(new Flashcard(4
                     , 3
                     , "Requirements Determination"
-                    , "What is Requirements Determination?"
-                    ,"Requirements Analysis Strategies are a part of requirements determination and are decided upon during the preparation phase. There are three main requirements analysis strategies"
+                    , "Interview technique involves?"
+                    ,"A person-to-person conversation with a stakeholder to understand the interviewee’s perspective. interviews should follow a solid process of choosing the right people, creating an interview guide, preparing, conducting and following up on the interview. To elicit the most amount of insight, there should be a low degree of structure to the interview and open questions should be used to allow the interviewee to have the freedom to explain"
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
-                    , "https://source.unsplash.com/unRkg2jH1j0/1600x900"));
+                    , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
+            flashcards.add(new Flashcard(5
+                    , 3
+                    , "Requirements Determination"
+                    , "What is Joint Application Development (JAD) ?"
+                    ,"A program where users and analysts work together to brainstorm solutions. A JAD session is hosted by a facilitator with 10 to 20 users and requires careful planning to be successful. The general process of the JAD session starts from selecting participants, designing the JAD session, preparing, conducting and ends with following up"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
+            flashcards.add(new Flashcard(6
+                    , 3
+                    , "Requirements Determination"
+                    , "What are Surveys?"
+                    ,"Surveys involve a set of written questions to collect large amounts of data. Surveys are most commonly used when there are large numbers of people, when there is a need to gain information and opinions and also when designing for use outside of the organisation. The general steps include selecting participants, designing the questionnaire, administering it and following up"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
+            flashcards.add(new Flashcard(7
+                    , 3
+                    , "Requirements Determination"
+                    , "What are Document Analysis?"
+                    ,"Document Analysis provides technical information about the as-is (or current) system and involves reviewing technical documents already generated about the system. Some examples of these documents include forms, reports and policy manuals"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
+            flashcards.add(new Flashcard(8
+                    , 3
+                    , "Requirements Determination"
+                    , "What is Observation?"
+                    ,"Observation requires the analyst to become involved in observing the subject’s activities and daily processes"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
+            flashcards.add(new Flashcard(9
+                    , 3
+                    , "Requirements Determination"
+                    , "What are the two types of observation?"
+                    ,"1. Non-participant observation is where the analyst watches the user but is careful not to be directly involved or interrupt their work. \n" +
+                    "2. Participant observation on the other hand is when the analyst directly becomes involved with the user’s work such as participating in team meetings"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
+            flashcards.add(new Flashcard(11
+                    , 3
+                    , "Requirements Determination"
+                    , "What is Requirements Modelling?"
+                    ,"Requirements Modelling helps visualise the requirements of the system to allow communication and collaboration between the developers and users"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
+            flashcards.add(new Flashcard(12
+                    , 3
+                    , "Requirements Determination"
+                    , "How are requirement models driven?"
+                    ,"Requirement models are use-case driven which mean that they mimic the real-world using use-cases to define the behaviour of the system. \n" +
+                    "Each use-case focuses on one business process"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
+            flashcards.add(new Flashcard(13
+                    , 3
+                    , "Requirements Determination"
+                    , "How are models architecture-centric?"
+                    ,"mean that they have a common shared vision of the to-be system. There are three views of the system. The functional (external) view focuses on the user’s perspective. The structural (internal) view focuses on entities, their characteristics and interrelationships. The behavioural view focuses on the dynamic behaviour of objects"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
+            flashcards.add(new Flashcard(14
+                    , 3
+                    , "Requirements Determination"
+                    , "What does incremental and iterative mean in modelling?"
+                    ,"They evolve the system and also evolve with the system"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.reqmodellingintro
+                    , ""));
+            flashcards.add(new Flashcard(15
+                    , 3
+                    , "Requirements Determination"
+                    , "What is a use-case diagram?"
+                    ,"A use-case diagram is a functional model that identifies use-cases (what the user can do) and how the system responds. Each use-case describes on function or business process of the system"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.usecasediagram
+                    , ""));
+            flashcards.add(new Flashcard(16
+                    , 3
+                    , "Requirements Determination"
+                    , "What is a use-case?"
+                    ,"A use case represents the major piece of system functionality. A use case is represented by an oval in the diagram"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.usecasediagram
+                    , ""));
+            flashcards.add(new Flashcard(17
+                    , 3
+                    , "Requirements Determination"
+                    , "What is an actor?"
+                    ,"An actor is a person of system that derives benefit from and is external to the subject (a stakeholder). An actor is depicted by a stick figure in the diagram"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.usecasediagram
+                    , ""));
+            flashcards.add(new Flashcard(18
+                    , 3
+                    , "Requirements Determination"
+                    , "What is a relationship or association?"
+                    ,"A relationship or association connects the various elements (such as actors and use-cases) to demonstrate their connection. There are different types of relationships but will be skipped over to keep the explanation brief. A relationship is depicted by lines connecting different elements"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.usecasediagram
+                    , ""));
+            flashcards.add(new Flashcard(19
+                    , 3
+                    , "Requirements Determination"
+                    , "What is a subject boundary?"
+                    ,"A subject boundary is the named box that depicts the scope of the system and is the box that surrounds all the use cases. It is important to give the subject boundary a name to understand what system the diagram explains and what the scope is"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.usecasediagram
+                    , ""));
+            flashcards.add(new Flashcard(21
+                    , 3
+                    , "Requirements Determination"
+                    , "What is an activity diagram?"
+                    ,"An activity diagram is a functional model that models a business process (use-case) and the flow of its activities. Each use case diagram will have at least one activity diagram for every major use case. Activity diagrams depict the sequence of these activities"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.activitydiagram
+                    , ""));
+            flashcards.add(new Flashcard(20
+                    , 3
+                    , "Requirements Determination"
+                    , "Draw an activity diagram?"
+                    ,"A subject boundary is the named box that depicts the scope of the system and is the box that surrounds all the use cases. It is important to give the subject boundary a name to understand what system the diagram explains and what the scope is"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.activitydiagram
+                    , ""));
+            flashcards.add(new Flashcard(21
+                    , 3
+                    , "Requirements Determination"
+                    , "What is a class diagram?"
+                    ,"A class diagram is a structural model that shows classes and the relationships to one another. Within class diagrams, there are various elements: Classes, attributes, operations and relationships"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.classdiagram
+                    , ""));
+            flashcards.add(new Flashcard(22
+                    , 3
+                    , "Requirements Determination"
+                    , "Draw a class diagram?"
+                    ,"A class diagram is a structural model that shows classes and the relationships to one another. Within class diagrams, there are various elements: Classes, attributes, operations and relationships"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.classdiagram
+                    , ""));
+            flashcards.add(new Flashcard(23
+                    , 3
+                    , "Requirements Determination"
+                    , "What is a sequence diagram?"
+                    ,"A sequence diagram is a behavioural model that models the dynamic and real-life timings of a use-case. It illustrates the object that participate in a single use case and how they interact with each other (through messages). To understand the diagram, the vertical plane (from top to bottom) depicts time"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.sequencediagram
+                    , ""));
+            flashcards.add(new Flashcard(24
+                    , 3
+                    , "Requirements Determination"
+                    , "Draw a sequence diagram?"
+                    ,"A sequence diagram is a behavioural model that models the dynamic and real-life timings of a use-case. It illustrates the object that participate in a single use case and how they interact with each other (through messages). To understand the diagram, the vertical plane (from top to bottom) depicts time"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.sequencediagram
+                    , ""));
+            flashcards.add(new Flashcard(25
+                    , 3
+                    , "Requirements Determination"
+                    , "What is a behavioural state machine?"
+                    ,"Behavioural State Machines: A behavioural state machine is a behavioural model that demonstrates that objects may change state in response to an event. The model captures the different states that the object goes through in its life and includes responses and actions. There are a few components of the model"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.behaviouralstatemachine
+                    , ""));
+            flashcards.add(new Flashcard(26
+                    , 3
+                    , "Requirements Determination"
+                    , "Draw a behavioural state machine?"
+                    ,"Behavioural State Machines: A behavioural state machine is a behavioural model that demonstrates that objects may change state in response to an event. The model captures the different states that the object goes through in its life and includes responses and actions. There are a few components of the model"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.behaviouralstatemachine
+                    , ""));
             return flashcards;
         }
     public static ArrayList<Flashcard> getCategory4() {
@@ -416,7 +594,7 @@ public class Flashcard {
                 , "https://source.unsplash.com/68ZlATaVYIo/1600x900"));
         flashcards.add(new Flashcard(1
                 , 4
-                , "Systems Development Methodologies"
+                , "Systems Development Life Cycle"
                 , "What are the 4 phases of SDLC?"
                 ,"Planning, Analysis, Design and Implementation"
                 , R.drawable.ic_sdlc
@@ -424,7 +602,7 @@ public class Flashcard {
                 , ""));
         flashcards.add(new Flashcard(2
                 , 4
-                , "Systems Development Methodologies"
+                , "Systems Development Life Cycle"
                 , "Planning Phase - What does it involve?"
                 ,"Define the reason for building the system and how to structure the project.\n" +
                 "\t•Identifying opportunities and whether or not the system exploits it\n" +
@@ -437,7 +615,7 @@ public class Flashcard {
                 , ""));
         flashcards.add(new Flashcard(3
                 , 4
-                , "Systems Development Methodologies"
+                , "Systems Development Life Cycle"
                 , "Analysis Phase - What does it involve?"
                 ,"Focused on who the system is being built for, what the system is, where it will be used and when it will be built.\n" +
                 "\t•Developing an analysis strategy \n" +
@@ -448,6 +626,38 @@ public class Flashcard {
                 , R.drawable.ic_sdlc
                 , R.drawable.analysis
                 , ""));
+        flashcards.add(new Flashcard(4
+                , 4
+                , "Systems Development Life Cycle"
+                , "Design Phase - What does it involve?"
+                ,"The design phase focuses on the actual design of the system such as how the system will work. Some common steps in this phase include designing the physical system, architecture, interface, programs and database and files"
+                , R.drawable.ic_sdlc
+                , R.drawable.design
+                , ""));
+        flashcards.add(new Flashcard(5
+                , 4
+                , "Systems Development Life Cycle"
+                , "Implementation Phase - What does it involve?"
+                ,"Implementation focuses on the delivery and support of the completed system. In this stage some common steps include:\n" +
+                "\t•Constructing the system through programming and testing\n" +
+                "\t•Installing the system\n" +
+                "\t•Maintaining the system\n" +
+                "\t•Post implementation audit\n"
+                , R.drawable.ic_sdlc
+                , R.drawable.implementation
+                , ""));
+        flashcards.add(new Flashcard(6
+                , 4
+                , "Systems Development Life Cycle"
+                , "Implementation Phase - What does it involve?"
+                ,"Implementation focuses on the delivery and support of the completed system. In this stage some common steps include:\n" +
+                "\t•Constructing the system through programming and testing\n" +
+                "\t•Installing the system\n" +
+                "\t•Maintaining the system\n" +
+                "\t•Post implementation audit\n"
+                , R.drawable.ic_sdlc
+                , R.drawable.implementation
+                , ""));
         return flashcards;
     }
     public static ArrayList<Flashcard> getCategory5() {
@@ -455,7 +665,15 @@ public class Flashcard {
         flashcards.add(new Flashcard(0
                 , 5
                 , "Systems Development Methodologies"
-                , "What is System Design Methodologies?"
+                , "What are examples of systems development methodologies?"
+                ,"Waterfall, Parallel, Phased, System Prototyping and Throwaway Prototyping"
+                , R.drawable.ic_systemsdevelopmentmethodologies
+                , R.drawable.ic_systemsdevelopmentmethodologies
+                , ""));
+        flashcards.add(new Flashcard(0
+                , 5
+                , "Systems Development Methodologies"
+                , "What is Waterfall?"
                 ,"The waterfall or structured design is a path dependent process. Each stage is completed sequentially and must be fully completed before moving onto the next stage"
                 , R.drawable.ic_systemsdevelopmentmethodologies
                 , R.drawable.waterfall
@@ -658,7 +876,7 @@ public class Flashcard {
                 , 7
                 , "Agile Scrum"
                 , "What is Agile?"
-                ,"An agile methodology is the opposite end of the spectrum to waterfall development which focuses on sequential, well-planned project management"
+                ,"Agile focuses on a series of fast iterations or ‘sprints’ that focus on producing results rapidly and often results in products being produced at the end of each sprint"
                 , R.drawable.ic_agile
                 , R.drawable.ic_agile
                 , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
@@ -678,6 +896,22 @@ public class Flashcard {
                 , R.drawable.ic_agile
                 , R.drawable.ic_agile
                 , "https://source.unsplash.com/Ap3fFS0iOiE/1600x900"));
+        flashcards.add(new Flashcard(3
+                , 7
+                , "Agile Scrum"
+                , "What is a sprint?"
+                ,"A sprint typically lasts 2-4 weeks or at most a month and involves everything from planning to implementation. Typically, good sprints are characterised by constant duration and good rhythm since it builds efficiency, predictability and familiarity. Additionally, each sprint has its own set of requirements that should not be changed until a sprint has finished"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(3
+                , 7
+                , "Agile Scrum"
+                , "What is a sprint?"
+                ,"A sprint typically lasts 2-4 weeks or at most a month and involves everything from planning to implementation. Typically, good sprints are characterised by constant duration and good rhythm since it builds efficiency, predictability and familiarity. Additionally, each sprint has its own set of requirements that should not be changed until a sprint has finished"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
         return flashcards;
     }
     public static ArrayList<Flashcard> getCategory8() {
