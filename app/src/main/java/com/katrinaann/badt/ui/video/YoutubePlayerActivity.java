@@ -62,9 +62,7 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity implements YouTub
         if(!wasRestored) {
             youTubePlayer.cueVideo(YOUTUBE_VIDEO_ID_1);
         }
-
     }
-
 
     // Creates a failure method on does not play the video
     @Override
@@ -109,6 +107,7 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity implements YouTub
 
         }
     };
+    // Some methods to return toasts to the user when an action has started
 
     private YouTubePlayer.PlayerStateChangeListener playerStateChangeListener = new YouTubePlayer.PlayerStateChangeListener() {
         @Override

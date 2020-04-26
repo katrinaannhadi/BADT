@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/owl_pink_500"
+    tools:context=".SignInActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/signUp_BT"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:text="Login"
+        android:textAppearance="@style/TextAppearance.Owl.Button"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errorMessage_TV" />
+
+    <TextView
+        android:id="@+id/password_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Password:"
+        android:textAppearance="@style/TextAppearance.Owl.Subtitle1"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userUsername_ET" />
+
+    <EditText
+        android:id="@+id/userUsername_ET"
+        android:layout_width="360dp"
+        android:layout_height="80dp"
+        android:backgroundTint="#673AB7"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.Owl.Subtitle1"
+        android:textColor="#000000"
+        android:textColorHighlight="#80673AB7"
+        android:textColorLink="#673AB7"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_TV" />
+
+    <TextView
+        android:id="@+id/username_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Username:"
+        android:textAppearance="@style/TextAppearance.Owl.Subtitle1"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/userPassword_ET"
+        android:layout_width="360dp"
+        android:layout_height="80dp"
+        android:backgroundTint="#673AB7"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textAppearance="@style/TextAppearance.Owl.Subtitle1"
+        android:textColor="#000000"
+        android:textColorHighlight="#80673AB7"
+        android:textColorLink="#673AB7"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_TV" />
+
+    <TextView
+        android:id="@+id/signup_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Don't have an account?"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_BT" />
+
+    <Button
+        android:id="@+id/signup_BT"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:text="Signup"
+        android:textAppearance="@style/TextAppearance.Owl.Button"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_TV" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="478dp"
+        android:layout_height="332dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/errorMessage_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Incorrect Login Details"
+        android:textAppearance="@style/TextAppearance.Owl.Subtitle1"
+        android:textColor="#FF0000"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userPassword_ET" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

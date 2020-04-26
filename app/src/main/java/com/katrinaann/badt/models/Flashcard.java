@@ -7,6 +7,10 @@ import com.katrinaann.badt.R;
 
 import java.util.ArrayList;
 
+
+// The class for the Flashcards Bank
+// This was needed as the information was specific to the INFS2603 course,
+// we could not use an API to load the information
 @Entity
 public class Flashcard {
     //boolean value to check whether flashcard has flipped or not
@@ -33,7 +37,7 @@ public class Flashcard {
         this.imageAnswer = imageAnswer;
         this.imageURL = imageURL;
     }
-
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -97,9 +101,8 @@ public class Flashcard {
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
-    //    public Flashcard(int id, int category, String categoryName, String title, String answer, int imageCategory, int imageAnswer) {
 
-
+    // Methods to call the ArrayLists
     public static ArrayList<Flashcard> getCategory1() {
         ArrayList<Flashcard> flashcards = new ArrayList<>();
             flashcards.add(new Flashcard(0

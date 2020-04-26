@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.ui.notes.NoteListActivity;
@@ -23,29 +24,23 @@ public class NoteTakingFragment extends Fragment {
     private Context context;
     private String currentUser;
     private String TAG = "Note Taking Fragment";
+    private TextView username;
+
     public NoteTakingFragment() {
         // Required empty public constructor
-    }
-
-    public static NoteTakingFragment newInstance(String param1, String param2) {
-        NoteTakingFragment fragment = new NoteTakingFragment();
-        Bundle args = new Bundle();
-//        args.putString(ARG_PARAM1, param1);
-//        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         Bundle bundle = getArguments();
         if (bundle != null) {
             currentUser = bundle.getString("currentUser");
         }
-
-
+        Log.d(TAG, "User is: " + currentUser);
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -54,10 +49,11 @@ public class NoteTakingFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_note, container, false);
 
         mButton = view.findViewById(R.id.button);
+        username = view.findViewById(R.id.username);
 
         Log.d(TAG, "User is: " + currentUser);
 
-
+        username.setText(currentUser);
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override

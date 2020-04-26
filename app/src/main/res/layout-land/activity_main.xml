@@ -13,19 +13,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="128dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="52dp"
         android:text="Welcome"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.Owl.Headline4"
+        android:textAppearance="@style/TextAppearance.Owl.Headline6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/tap"
-        android:layout_width="99dp"
-        android:layout_height="73dp"
+        android:layout_width="101dp"
+        android:layout_height="55dp"
         android:layout_marginTop="28dp"
         android:text="@string/welcomeTap"
         android:textAppearance="@style/TextAppearance.Owl.Overline"
@@ -35,8 +35,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="162dp"
-        android:layout_height="129dp"
+        android:layout_width="105dp"
+        android:layout_height="79dp"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="@+id/category"
         app:layout_constraintStart_toStartOf="@+id/category"

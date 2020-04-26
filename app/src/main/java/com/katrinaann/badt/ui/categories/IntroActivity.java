@@ -8,7 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import com.katrinaann.badt.R;
-import com.katrinaann.badt.ui.home.HomeActivity;
+import com.katrinaann.badt.adapters.CategoryAdapter;
 import com.katrinaann.badt.ui.signin.SignInActivity;
 
 import java.util.ArrayList;
@@ -46,7 +46,7 @@ public class IntroActivity extends AppCompatActivity {
         //setting values to the intro activity array list
         mCategories = new ArrayList<>();
         mCategories.add(new Category(R.drawable.ic_blog, "Learn", "Enhance your learning on different business analysis frameworks and methodologies - systems development lifecycle, agile scrum, design thinking and lean"));
-        mCategories.add(new Category(R.drawable.ic_flashcard, "Flashcards", "Flashcards help you engage in active recall which teaches your brain to remember a term, concept or process without context clues, forming stronger neuron connections and making it more likely that you will remember the information in the future."));
+        mCategories.add(new Category(R.drawable.ic_flashcard, "Flashcards", "Flashcards help you engage in active recall which teaches your brain to remember a term, concept or process without context clues."));
         mCategories.add(new Category(R.drawable.ic_quiz, "Quiz", "According to Dr. Henry L. Roediger III, a psychologist, “testing not only measures knowledge but changes it in the direction of more certainty, not less.”."));
         mCategories.add(new Category(R.drawable.ic_video, "Videos", "Visual learners? We got you. Watch the materials being taught through video explanations from reputed sources. ."));
 

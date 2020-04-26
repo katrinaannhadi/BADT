@@ -11,16 +11,16 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.adapters.BlogSelectionAdapter;
 import com.katrinaann.badt.models.Model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class BlogSelectionFragment extends Fragment {
-
+    // Initialising UI elements and variables
     private View view;
     private Context context;
-
     ViewPager viewPager;
     BlogSelectionAdapter mTopicAdapter;
     List<Model> mTopics;
@@ -29,25 +29,24 @@ public class BlogSelectionFragment extends Fragment {
     private String TAG = "Blog Selection Fragment";
     private String currentUser;
 
-
     public BlogSelectionFragment() {
         // Required empty public constructor
     }
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Gets the arguments from Home Activity
         Bundle bundle = getArguments();
         if (bundle != null) {
             currentUser = bundle.getString("currentUser");
         }
-
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_article_selection_viewpager, container, false);
         context = view.getContext();
@@ -80,9 +79,7 @@ public class BlogSelectionFragment extends Fragment {
                 getResources().getColor(R.color.rainbow5),
                 getResources().getColor(R.color.rainbow6),
                 getResources().getColor(R.color.rainbow7),
-
         };
-
         colors = colors_temp;
 
         //Changes the colour with the page change
@@ -103,19 +100,14 @@ public class BlogSelectionFragment extends Fragment {
                     viewPager.setBackgroundColor(colors[colors.length - 1]);
                 }
             }
-
             @Override
             public void onPageSelected(int position) {
 
-
             }
-
             @Override
             public void onPageScrollStateChanged(int state) {
-
             }
         });
-
         return view;
     }
 }

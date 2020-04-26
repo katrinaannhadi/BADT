@@ -8,24 +8,53 @@
     android:background="@color/owl_pink_500">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="171dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="“Hey, "
+        android:textAppearance="@style/TextAppearance.Owl.Headline2"
+        android:textColor="@color/owl_pink_dark_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User "
+        android:textAppearance="@style/TextAppearance.Owl.Headline3"
+        android:textColor="@color/owl_pink_dark_primary"
+        app:layout_constraintEnd_toEndOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="249dp"
+        android:layout_height="245dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
         android:text="“The benefit of study notes is in the writing, not the reading” - Eddie Woo"
         android:textAppearance="@style/TextAppearance.Owl.Subtitle2"
         android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:backgroundTint="@color/design_default_color_primary"
         android:text="Access Your Note List"
         android:textColor="@android:color/white"

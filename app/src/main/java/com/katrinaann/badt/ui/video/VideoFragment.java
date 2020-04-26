@@ -20,7 +20,7 @@ import com.katrinaann.badt.R;
 
 public class VideoFragment extends Fragment implements View.OnClickListener {
 
-    private VideoViewModel videoViewModel;
+
     static final String GOOGLE_API_KEY = "AIzaSyBGLD7OOCSXgfn5E1nKG2NNBj7XfJ28Rkc";
     static final String YOUTUBE_VIDEO_ID_1 = "XsKdzHVEXig";
     static final String YOUTUBE_VIDEO_ID_2 = "5On4Iso_Tf8";
@@ -34,17 +34,11 @@ public class VideoFragment extends Fragment implements View.OnClickListener {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        videoViewModel =
-                ViewModelProviders.of(this).get(VideoViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_video, container, false);
-//        final TextView textView = root.findViewById(R.id.text_video);
-        videoViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-            }
-        });
 
+        View root = inflater.inflate(R.layout.fragment_video, container, false);
+
+        // Initialising UI elements and variables which will be accessed through onclicklisteners.
+        // Connecting UI elements to variables.
         ImageView imageView1 = root.findViewById(R.id.playlist1);
         ImageView imageView2 = root.findViewById(R.id.playlist2);
         ImageView imageView3 = root.findViewById(R.id.playlist3);
@@ -69,7 +63,7 @@ public class VideoFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         Intent intent = null;
 
-        //Utilising YoutubeStandalonePlayer
+        // Utilising YoutubeStandalonePlayer
         switch (view.getId()) {
             case R.id.playlist1:
                 intent = YouTubeStandalonePlayer.createVideoIntent(this.getActivity(), YoutubePlayerActivity.GOOGLE_API_KEY, YoutubePlayerActivity.YOUTUBE_VIDEO_ID_1, 0, true, false);
@@ -104,11 +98,10 @@ public class VideoFragment extends Fragment implements View.OnClickListener {
             default:
 
         }
-
+        // Starts the intent
         if (intent != null) {
             startActivity(intent);
         }
-
 
     }
 }

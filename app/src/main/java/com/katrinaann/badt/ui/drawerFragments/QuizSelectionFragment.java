@@ -2,7 +2,6 @@ package com.katrinaann.badt.ui.drawerFragments;
 
 import android.animation.ArgbEvaluator;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +11,7 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.adapters.QuizSelectionAdapter;
 import com.katrinaann.badt.models.Model;
 
 import java.util.ArrayList;
@@ -19,6 +19,7 @@ import java.util.List;
 
 public class QuizSelectionFragment extends Fragment {
 
+    // Initialising UI elements and variables
     private View view;
     private Context context;
     ViewPager viewPager;
@@ -31,34 +32,24 @@ public class QuizSelectionFragment extends Fragment {
     private static final String TAG = " QuizSelectionFragment";
 
     // Initialising fragment parameters
-//    private static final String currentUser = "tempUsername";
+
     private String currentUser;
 
     public QuizSelectionFragment() {
         // Required empty public constructor
     }
 
-    public static QuizSelectionFragment newInstance(String currentUser) {
-        QuizSelectionFragment fragment = new QuizSelectionFragment();
-        Bundle args = new Bundle();
-        args.putString("currentUser", currentUser);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        // Getting information bundle from the home activity
         Bundle bundle = getArguments();
         if (bundle != null) {
             currentUser = bundle.getString("currentUser");
         }
 
-
         Log.d(TAG, "User is: " + currentUser);
-
-
     }
 
     @Override
@@ -67,9 +58,6 @@ public class QuizSelectionFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_article_selection_viewpager, container, false);
         context = view.getContext();
-
-        // Getting information bundle from the home activity
-
 
         // Setting the titles and images for the view pager
         mTopics = new ArrayList<>();

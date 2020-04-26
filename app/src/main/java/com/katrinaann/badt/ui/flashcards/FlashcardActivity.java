@@ -10,11 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.adapters.FlashcardAdapter;
 import com.katrinaann.badt.models.Flashcard;
 import com.katrinaann.badt.ui.drawerFragments.FlashcardSelectionFragment;
 
@@ -23,28 +23,21 @@ import java.util.Collections;
 
 public class FlashcardActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "com.katrinaann.flashcards.MESSAGE";
     private String TAG = "FlashcardActivity";
 
-    // Initialising UI elements and variables t
-    private Flashcard mFlashcard;
+    // Initialising UI elements and variables
     private String category;
     private String user;
     private TextView categoryName;
-
     private int flashcardCategory = 0;
     private int flashcardArrayListSize = 0;
-
     private RecyclerView.Adapter mAdapter;
     private RecyclerView mRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
     private String currentUser = "";
-
+    private boolean mTwoPane;
     // Set the ArrayLists
     ArrayList<Integer> flashcardCategoryList = new ArrayList<Integer>();
     private ArrayList<Flashcard> flashcards;
-
-    private boolean mTwoPane;
 
 
     @Override
@@ -59,18 +52,23 @@ public class FlashcardActivity extends AppCompatActivity {
         category = intent.getStringExtra("Title");
         user = intent.getStringExtra("currentUser");
 
+        // Log tags to check that data has passed through intents
         Log.d(TAG, "Category is: " + flashcardCategory);
         Log.d(TAG, "Title is: " + category);
         Log.d(TAG, "User is: " + user);
 
+        // Matching UI elements to variables
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
 
-
+        // Setting the recycler view to run horizontally to mimic a flashcard scrolling list effect
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+        // Initialising layout to set colours for different topics
         ConstraintLayout layout = findViewById(R.id.layoutFlashcards);
-//        mLayoutManager = new LinearLayoutManager(this);
-//        mRecyclerView.setLayoutManager(mLayoutManager);
+
+        // Determining if this is a different sized device
+        // Setting a fragment to load in it's place
         mTwoPane = findViewById(R.id.detail_container) != null;
         Log.d(TAG, "Two Pane is = " + mTwoPane);
         if (mTwoPane) {
@@ -82,26 +80,32 @@ public class FlashcardActivity extends AppCompatActivity {
             fragment.setArguments(bundle);
             transaction.replace(R.id.detail_container, fragment);
             transaction.commit();
-
         } else {
-//            launchDetailActivity(position);
+            // no further activity here, this is not needed
         }
 
         // Setting up what the intent number is and setting the appropriate flashcard deck
         if (flashcardCategory == 1) {
+            // Determining the size of the category and logging output
             flashcardArrayListSize = Flashcard.getCategory1().size();
-            layout.setBackgroundColor(Color.parseColor("#ffc000"));
             Log.d(TAG, "Category size is: " + flashcardArrayListSize);
-            // Connecting Widgets to Variables
+
+            // Sets the layout colour to be the same as the category
+            layout.setBackgroundColor(Color.parseColor("#ffc000"));
+
+            // Connecting Widgets to Variables to set the category textView
             categoryName = findViewById(R.id.category);
             categoryName.setText(category);
 
+            // Gets the method from the object class flashcards
             flashcards = Flashcard.getCategory1();
             Log.d(TAG, "Category 1 is " + flashcards);
 
+           // Creates a new adapter
             mAdapter = new FlashcardAdapter(flashcards);
             Log.d(TAG, "Category 1 adapter is " + flashcards);
 
+            // Adapts the arrays in the arraylist to the recyclerview
             mRecyclerView.setAdapter(mAdapter);
             Log.d(TAG, "Category 1 adapter is " + flashcards);
 
@@ -109,7 +113,6 @@ public class FlashcardActivity extends AppCompatActivity {
         } else if (flashcardCategory == 2) {
             flashcardArrayListSize = Flashcard.getCategory2().size();
             layout.setBackgroundColor(Color.parseColor("#DE0000"));
-            // Connecting Widgets to Variables
             categoryName = findViewById(R.id.category);
             categoryName.setText(category);
             flashcards = Flashcard.getCategory2();
@@ -119,7 +122,6 @@ public class FlashcardActivity extends AppCompatActivity {
         } else if (flashcardCategory == 3) {
             flashcardArrayListSize = Flashcard.getCategory3().size();
             layout.setBackgroundColor(Color.parseColor("#FE622D"));
-            // Connecting Widgets to Variables
             categoryName = findViewById(R.id.category);
             categoryName.setText(category);
             flashcards = Flashcard.getCategory3();
@@ -129,7 +131,6 @@ public class FlashcardActivity extends AppCompatActivity {
         } else if (flashcardCategory == 4) {
             flashcardArrayListSize = Flashcard.getCategory4().size();
             layout.setBackgroundColor(Color.parseColor("#ffc000"));
-            // Connecting Widgets to Variables
             categoryName = findViewById(R.id.category);
             categoryName.setText(category);
             flashcards = Flashcard.getCategory4();
@@ -139,7 +140,6 @@ public class FlashcardActivity extends AppCompatActivity {
         } else if (flashcardCategory == 5) {
             flashcardArrayListSize = Flashcard.getCategory5().size();
             layout.setBackgroundColor(Color.parseColor("#00BD00"));
-            // Connecting Widgets to Variables
             categoryName = findViewById(R.id.category);
             categoryName.setText(category);
             flashcards = Flashcard.getCategory5();
@@ -149,7 +149,6 @@ public class FlashcardActivity extends AppCompatActivity {
         } else if (flashcardCategory == 6) {
             flashcardArrayListSize = Flashcard.getCategory6().size();
             layout.setBackgroundColor(Color.parseColor("#009CFE"));
-            // Connecting Widgets to Variables
             categoryName = findViewById(R.id.category);
             categoryName.setText(category);
             flashcards = Flashcard.getCategory6();
@@ -159,7 +158,6 @@ public class FlashcardActivity extends AppCompatActivity {
         } else if (flashcardCategory == 7) {
             flashcardArrayListSize = Flashcard.getCategory7().size();
             layout.setBackgroundColor(Color.parseColor("#000084"));
-            // Connecting Widgets to Variables
             categoryName = findViewById(R.id.category);
             categoryName.setText(category);
             flashcards = Flashcard.getCategory7();
@@ -169,31 +167,20 @@ public class FlashcardActivity extends AppCompatActivity {
         } else if (flashcardCategory == 8) {
             flashcardArrayListSize = Flashcard.getCategory8().size();
             layout.setBackgroundColor(Color.parseColor("#6D33A6"));
-            // Connecting Widgets to Variables
             categoryName = findViewById(R.id.category);
             categoryName.setText(category);
             flashcards = Flashcard.getCategory8();
             mAdapter = new FlashcardAdapter(flashcards);
             mRecyclerView.setAdapter(mAdapter);
 
-
-            // Sets the order for the flashcards to come up
+        // Sets the order for the flashcards to come up - in order of their Ids
         for (int i = 1; i < flashcardArrayListSize; i++){
             flashcardCategoryList.add(i);
-//            Flashcard flashcard = new Flashcard();
-//            flashcard.isFlipped = false;
-//            flashcardCategoryList.add(i);
-//            list.add(flashcard);
         }
+        // Shuffles the flashcards to come up in a different order
         Collections.shuffle(flashcardCategoryList);
 
-
         }
-
-//    public void addFlashCardPosition(int position) {
-//        category = findViewById(R.id.category);
-//        category.setText(position);
-//    }
     }
 }
 

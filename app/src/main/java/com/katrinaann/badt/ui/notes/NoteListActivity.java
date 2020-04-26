@@ -13,6 +13,7 @@ import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.adapters.NoteListAdapter;
 import com.katrinaann.badt.database.NoteDatabase;
 import com.katrinaann.badt.models.Notes;
 import com.katrinaann.badt.ui.home.HomeActivity;

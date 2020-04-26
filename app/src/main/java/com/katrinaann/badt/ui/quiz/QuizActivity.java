@@ -35,6 +35,7 @@ public class QuizActivity extends AppCompatActivity {
     private Button confirmButton;
     private Button resultsPageButton;
     private ImageView background;
+    private TextView username;
 
     private int qaArrayListSize = 0;
     private int questionNumber = 0;
@@ -67,12 +68,15 @@ public class QuizActivity extends AppCompatActivity {
         quizScore = findViewById((R.id.quizScore_TV));
         layout = findViewById(R.id.quiz_constraint_layout);
         category = findViewById(R.id.category_header);
+        username = findViewById(R.id.username);
 
 
         // Receive data from the quizSelectionPage.
         Intent intent = getIntent();
         quizIndex = intent.getIntExtra("quizIndex", 1);
         currentUser = intent.getStringExtra("currentUser");
+
+        username.setText(currentUser);
 
 
         // Selecting the quiz which the user selected.

@@ -13,17 +13,16 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.adapters.FlashcardSelectionAdapter;
 import com.katrinaann.badt.models.Model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FlashcardSelectionFragment extends Fragment {
-
+    // Initialising UI elements and variables which will be accessed by onclicklisteners.
     private View view;
     private Context context;
-
-
     ViewPager viewPager;
     FlashcardSelectionAdapter mTopicAdapter;
     List<Model> mTopics;
@@ -39,36 +38,29 @@ public class FlashcardSelectionFragment extends Fragment {
         // Required empty public constructor
     }
 
-//    public static FlashcardSelectionFragment newInstance(String tempUsername) {
-//        FlashcardSelectionFragment fragment = new FlashcardSelectionFragment();
-//        Bundle args = new Bundle();
-//        args.putString(currentUser, tempUsername);
-//        fragment.setArguments(args);
-//        return fragment;
-//    }
-//
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Gets the arguments from Home Activity
         Bundle bundle = getArguments();
         if (bundle != null) {
             currentUser = bundle.getString("currentUser");
         }
-
-
         Log.d(TAG, "User is: " + currentUser);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_article_selection_viewpager, container, false);
         context = view.getContext();
 
         Log.d(TAG, "User is: " + currentUser);
 
+        // Setting the titles and images for the view pager
         mTopics = new ArrayList<>();
         mTopics.add(new Model(R.drawable.ic_introductiontobusinessanalysis, "Introduction to Business Analysis", 1, currentUser));
         mTopics.add(new Model(R.drawable.ic_projectmanagement, "Project Management", 2, currentUser));
@@ -87,7 +79,7 @@ public class FlashcardSelectionFragment extends Fragment {
         mTwoPane = view.findViewById(R.id.detail_container) != null;
         Log.d(TAG, "Two Pane is = " + mTwoPane);
 
-
+        // Checks if it's a different sized device replaces the container with a selection fragment
         if (mTwoPane) {
             final FragmentManager manager = getFragmentManager();
             FragmentTransaction transaction = manager.beginTransaction();
@@ -99,9 +91,9 @@ public class FlashcardSelectionFragment extends Fragment {
             transaction.commit();
 
         } else {
-//            launchDetailActivity(position);
-        }
 
+        }
+        // Setting the color of the background for each topic
         Integer[] colors_temp = {
                 getResources().getColor(R.color.rainbow8),
                 getResources().getColor(R.color.rainbow1),
