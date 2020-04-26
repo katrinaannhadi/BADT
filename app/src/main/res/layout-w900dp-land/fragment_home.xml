@@ -14,7 +14,7 @@
         android:id="@+id/choose"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         android:gravity="end"
         android:padding="@dimen/grid_1"
         android:paddingTop="@dimen/grid_1"
@@ -22,8 +22,9 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.Owl.Headline2"
         android:textColor="@color/owl_blue_dark_primary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         tools:ignore="MissingPrefix" />
 
@@ -31,9 +32,10 @@
         android:id="@+id/imageView2"
         android:layout_width="276dp"
         android:layout_height="286dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="100dp"
         android:src="@drawable/ic_logo"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv"
+        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,7 +43,8 @@
         android:id="@+id/tv"
         android:layout_width="478dp"
         android:layout_height="253dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="160dp"
         android:gravity="center"
         android:paddingHorizontal="@dimen/grid_2"
         android:text="@string/scroll"
@@ -49,8 +52,7 @@
         android:textAppearance="@style/TextAppearance.Owl.Headline4"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/choose"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="RtlCompat" />
 
     <TextView
@@ -64,9 +66,10 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.Owl.Headline5"
         android:textColor="@color/design_default_color_on_secondary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv"
+        app:layout_constraintEnd_toEndOf="@+id/tv"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="@+id/tv"
+        app:layout_constraintTop_toTopOf="@+id/choose"
         tools:ignore="RtlCompat" />
 
 

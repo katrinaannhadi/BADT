@@ -14,12 +14,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="172dp"
         android:text="Welcome"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.Owl.Headline1"
         android:textColor="@color/owl_pink_dark_primary"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -48,8 +48,8 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_width="600dp"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:clipToPadding="false"
         android:foregroundGravity="center"
