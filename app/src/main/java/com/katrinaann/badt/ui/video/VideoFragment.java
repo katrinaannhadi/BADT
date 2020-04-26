@@ -30,7 +30,7 @@ public class VideoFragment extends Fragment implements View.OnClickListener {
                              ViewGroup container, Bundle savedInstanceState) {
         videoViewModel =
                 ViewModelProviders.of(this).get(VideoViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_video2, container, false);
+        View root = inflater.inflate(R.layout.fragment_video, container, false);
         final TextView textView = root.findViewById(R.id.text_video);
         videoViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override

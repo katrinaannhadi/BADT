@@ -53,7 +53,7 @@ public class QuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz2);
+        setContentView(R.layout.activity_quiz);
 
         // Connecting UI widgets to variables.
         username_TV = findViewById(R.id.username_TV);

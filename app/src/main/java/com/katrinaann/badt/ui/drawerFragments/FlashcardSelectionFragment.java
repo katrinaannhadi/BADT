@@ -77,7 +77,7 @@ public class FlashcardSelectionFragment extends Fragment {
             bundle.putBoolean("wideScreen",mTwoPane);
             FlashcardSelectionFragment fragment = new FlashcardSelectionFragment();
             fragment.setArguments(bundle);
-            transaction.replace(R.id.detail_container, fragment);
+            transaction.replace(R.id.container, fragment);
             transaction.commit();
 
         } else {

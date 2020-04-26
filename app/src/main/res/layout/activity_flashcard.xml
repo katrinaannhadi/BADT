@@ -17,10 +17,10 @@
         >
 
         <!-- Back Layout Goes Here -->
-        <include layout="@layout/item_card_back"/>
+        <include layout="@layout/item_flashcard_back"/>
 
         <!-- Front Layout Goes Here -->
-        <include layout="@layout/item_card_front"/>
+        <include layout="@layout/item_flashcard_front"/>
 
     </com.wajahatkarim3.easyflipview.EasyFlipView>
 

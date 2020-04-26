@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/owl_pink_500"
+    tools:context=".afterPage">
+
+    <TextView
+        android:id="@+id/title_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/rubik_bold"
+        android:gravity="end"
+        android:padding="@dimen/grid_1"
+        android:paddingTop="@dimen/grid_1"
+        android:text="Your Results"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Owl.Headline3"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:id="@+id/quizName_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="@dimen/grid_1"
+        android:paddingTop="@dimen/grid_1"
+        android:text="Quiz X"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Owl.Headline1"
+        android:textColor="@color/owl_pink_dark_primary"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_TV" />
+
+    <TextView
+        android:id="@+id/quizMark_TV"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center|right|top"
+        android:text="Your Mark:"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Owl.Headline3"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/quizName_TV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizName_TV" />
+
+    <TextView
+        android:id="@+id/mark_TV"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center|center_horizontal|top|center_vertical"
+        android:text="Mark"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Owl.Subtitle1"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/quizMark_TV"
+        app:layout_constraintTop_toBottomOf="@+id/quizMark_TV" />
+
+    <TextView
+        android:id="@+id/percentage_TV"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center|center_horizontal|top|center_vertical"
+        android:text="Percent"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Owl.Subtitle1"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mark_TV"
+        app:layout_constraintTop_toBottomOf="@+id/quizPercentage_TV" />
+
+    <TextView
+        android:id="@+id/quizPercentage_TV"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:gravity="center|right|top"
+        android:text="Percentage:"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Owl.Headline3"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mark_TV" />
+
+    <TextView
+        android:id="@+id/quizFeedback_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/rubik_bold"
+        android:gravity="end"
+        android:padding="30dp"
+        android:paddingTop="@dimen/grid_1"
+        android:text="Feedback"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Owl.Headline3"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/leaderboardButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentage_TV" />
+
+    <Button
+        android:id="@+id/returnTitleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:text="Return to Quiz Selection"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/returnHomeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/returnHomeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:text="Return to Home"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/leaderboardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/design_default_color_primary"
+        android:text="View Leaderboard"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/returnTitleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

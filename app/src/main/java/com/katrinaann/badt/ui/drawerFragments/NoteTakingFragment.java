@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.katrinaann.badt.R;
-import com.katrinaann.badt.ui.notes.NoteActivity;
 import com.katrinaann.badt.ui.notes.NoteListActivity;
 
 /**
@@ -65,7 +64,7 @@ public class NoteTakingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.fragment_note_taking, container, false);
+        view = inflater.inflate(R.layout.fragment_note, container, false);
 
         mButton = view.findViewById(R.id.button);
 

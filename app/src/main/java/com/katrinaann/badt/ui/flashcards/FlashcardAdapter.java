@@ -50,7 +50,7 @@ public class FlashcardAdapter extends RecyclerView.Adapter<FlashcardAdapter.Flas
     @Override
     public FlashcardAdapter.FlashcardViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView =
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recyclerview, parent, false);
+                LayoutInflater.from(parent.getContext()).inflate(R.layout.item_flashcard_recyclerview, parent, false);
         return new FlashcardViewHolder(itemView);
     }
     //replace the contents of the view (invoked by the layout manager)

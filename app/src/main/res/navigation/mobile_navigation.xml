@@ -39,7 +39,7 @@
         android:id="@+id/nav_note"
         android:name="com.katrinaann.badt.ui.drawerFragments.NoteTakingFragment"
         android:label="Note"
-        tools:layout="@layout/fragment_note_taking" />
+        tools:layout="@layout/fragment_note" />
 
     <fragment
         android:id="@+id/nav_flashcard"

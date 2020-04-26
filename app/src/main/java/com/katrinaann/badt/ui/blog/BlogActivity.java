@@ -5,7 +5,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,7 +40,7 @@ public class BlogActivity extends AppCompatActivity {
         topic = intent.getStringExtra("Blog");
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_content2);
+        setContentView(R.layout.activity_blog_detail);
 
         //Match the variables in the fragment to the views in the layout file
         tvTitle = findViewById(R.id.tvTitle);

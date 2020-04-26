@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_designthinking" />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/title"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@id/image"-->
+            <!--                android:layout_marginLeft="16dp"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:text="Brochure"-->
+            <!--                android:textAppearance="@style/TextAppearance.Owl.Headline1"-->
+            <!--                android:textColor="#262626"-->
+            <!--                android:textSize="16sp" />-->
+
+            <TextView
+                android:id="@+id/answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="41dp"
+                android:layout_marginEnd="16dp"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:lineHeight="20dp"
+                android:lineSpacingExtra="24sp"
+                android:maxLines="10"
+                android:text="Text should load here"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Owl.Body2"
+                android:textColor="@color/owl_pink_dark_primary"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
