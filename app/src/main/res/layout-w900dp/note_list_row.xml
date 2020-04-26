@@ -11,6 +11,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="@color/owl_pink_500"
         android:layout_height="match_parent">
 
         <TextView
@@ -21,6 +22,7 @@
             android:gravity="start"
             android:text="Note Title"
             android:textAppearance="@style/TextAppearance.Owl.Headline5"
+            android:textColor="@color/owl_pink_dark_primary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
