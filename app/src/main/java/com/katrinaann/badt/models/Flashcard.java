@@ -152,7 +152,7 @@ public class Flashcard {
                     , R.drawable.ic_introductiontobusinessanalysis
                     , R.drawable.bakeyconcepts
                     , ""));
-            flashcards.add(new Flashcard(4
+            flashcards.add(new Flashcard(5
                     , 1
                     , "Introduction to Business Analysis"
                     , "What is change in Business Analysis?"
@@ -160,7 +160,7 @@ public class Flashcard {
                     , R.drawable.ic_introductiontobusinessanalysis
                     , R.drawable.ic_introductiontobusinessanalysis
                     , "https://source.unsplash.com/mG28olYFgHI/1600x900"));
-            flashcards.add(new Flashcard(5
+            flashcards.add(new Flashcard(6
                     , 1
                     , "Introduction to Business Analysis"
                     , "What is need in Business Analysis?"
@@ -168,7 +168,7 @@ public class Flashcard {
                     , R.drawable.ic_introductiontobusinessanalysis
                     , R.drawable.ic_introductiontobusinessanalysis
                     , "https://source.unsplash.com/M6tN7AZ_bNs/1600x900"));
-            flashcards.add(new Flashcard(6
+            flashcards.add(new Flashcard(7
                     , 1
                     , "Introduction to Business Analysis"
                     , "What is solution in Business Analysis?"
@@ -176,7 +176,7 @@ public class Flashcard {
                     , R.drawable.ic_introductiontobusinessanalysis
                     , R.drawable.ic_introductiontobusinessanalysis
                     , "https://source.unsplash.com/7e2pe9wjL9M/1600x900"));
-            flashcards.add(new Flashcard(7
+            flashcards.add(new Flashcard(8
                     , 1
                     , "Introduction to Business Analysis"
                     , "What is stakeholder in Business Analysis?"
@@ -184,7 +184,7 @@ public class Flashcard {
                     , R.drawable.ic_introductiontobusinessanalysis
                     , R.drawable.ic_introductiontobusinessanalysis
                     , "https://source.unsplash.com/MYbhN8KaaEc/1600x900"));
-            flashcards.add(new Flashcard(8
+            flashcards.add(new Flashcard(9
                     , 1
                     , "Introduction to Business Analysis"
                     , "What is value in Business Analysis?"
@@ -192,7 +192,7 @@ public class Flashcard {
                     , R.drawable.ic_introductiontobusinessanalysis
                     , R.drawable.ic_introductiontobusinessanalysis
                     , "https://source.unsplash.com/JW6r_0CPYec/1600x900"));
-            flashcards.add(new Flashcard(9
+            flashcards.add(new Flashcard(10
                     , 1
                     , "Introduction to Business Analysis"
                     , "What is context in Business Analysis?"
@@ -200,7 +200,7 @@ public class Flashcard {
                     , R.drawable.ic_introductiontobusinessanalysis
                     , R.drawable.ic_introductiontobusinessanalysis
                     , "https://source.unsplash.com/uMWPrcRsrto/1600x900"));
-            flashcards.add(new Flashcard(10
+            flashcards.add(new Flashcard(11
                     , 1
                     , "Introduction to Business Analysis"
                     , "What are the 3 main types of organisations?"
@@ -208,7 +208,7 @@ public class Flashcard {
                     , R.drawable.ic_introductiontobusinessanalysis
                     , R.drawable.ic_introductiontobusinessanalysis
                     , "https://source.unsplash.com/mk7D-4UCfmg/1600x900"));
-            flashcards.add(new Flashcard(11
+            flashcards.add(new Flashcard(12
                     , 1
                     , "Introduction to Business Analysis"
                     , "Type of organisation: \n" +
@@ -219,7 +219,7 @@ public class Flashcard {
                     , R.drawable.ic_introductiontobusinessanalysis
                     , R.drawable.ic_introductiontobusinessanalysis
                     , "https://source.unsplash.com/o0kbc907i20/1600x900"));
-            flashcards.add(new Flashcard(12
+            flashcards.add(new Flashcard(13
                     , 1
                     , "Introduction to Business Analysis"
                     , "Type of organisation: \n" +
@@ -230,7 +230,7 @@ public class Flashcard {
                     , R.drawable.ic_introductiontobusinessanalysis
                     , R.drawable.ic_introductiontobusinessanalysis
                     , "https://source.unsplash.com/ZGjbiukp_-A/1600x900"));
-            flashcards.add(new Flashcard(13
+            flashcards.add(new Flashcard(14
                     , 1
                     , "Introduction to Business Analysis"
                     , "Type of organisation: \n" +
@@ -386,7 +386,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , "https://source.unsplash.com/hpjSkU2UYSU/1600x900"));
-            flashcards.add(new Flashcard(3
+            flashcards.add(new Flashcard(1
                     , 3
                     , "Requirements Determination"
                     , "What are the Requirements Gathering Techniques?"
@@ -394,7 +394,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , "https://source.unsplash.com/jrh5lAq-mIs/1600x900"));
-            flashcards.add(new Flashcard(4
+            flashcards.add(new Flashcard(2
                     , 3
                     , "Requirements Determination"
                     , "Interview technique involves?"
@@ -402,7 +402,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
-            flashcards.add(new Flashcard(5
+            flashcards.add(new Flashcard(3
                     , 3
                     , "Requirements Determination"
                     , "What is Joint Application Development (JAD) ?"
@@ -410,7 +410,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
-            flashcards.add(new Flashcard(6
+            flashcards.add(new Flashcard(4
                     , 3
                     , "Requirements Determination"
                     , "What are Surveys?"
@@ -418,7 +418,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
-            flashcards.add(new Flashcard(7
+            flashcards.add(new Flashcard(5
                     , 3
                     , "Requirements Determination"
                     , "What are Document Analysis?"
@@ -426,7 +426,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
-            flashcards.add(new Flashcard(8
+            flashcards.add(new Flashcard(6
                     , 3
                     , "Requirements Determination"
                     , "What is Observation?"
@@ -434,7 +434,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
-            flashcards.add(new Flashcard(9
+            flashcards.add(new Flashcard(7
                     , 3
                     , "Requirements Determination"
                     , "What are the two types of observation?"
@@ -443,7 +443,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
-            flashcards.add(new Flashcard(11
+            flashcards.add(new Flashcard(8
                     , 3
                     , "Requirements Determination"
                     , "What is Requirements Modelling?"
@@ -451,7 +451,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
-            flashcards.add(new Flashcard(12
+            flashcards.add(new Flashcard(9
                     , 3
                     , "Requirements Determination"
                     , "How are requirement models driven?"
@@ -460,7 +460,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
-            flashcards.add(new Flashcard(13
+            flashcards.add(new Flashcard(10
                     , 3
                     , "Requirements Determination"
                     , "How are models architecture-centric?"
@@ -468,7 +468,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , "https://source.unsplash.com/4PU-OC8sW98/1600x900"));
-            flashcards.add(new Flashcard(14
+            flashcards.add(new Flashcard(11
                     , 3
                     , "Requirements Determination"
                     , "What does incremental and iterative mean in modelling?"
@@ -476,7 +476,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.reqmodellingintro
                     , ""));
-            flashcards.add(new Flashcard(15
+            flashcards.add(new Flashcard(12
                     , 3
                     , "Requirements Determination"
                     , "What is a use-case diagram?"
@@ -484,7 +484,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.usecasediagram
                     , ""));
-            flashcards.add(new Flashcard(16
+            flashcards.add(new Flashcard(13
                     , 3
                     , "Requirements Determination"
                     , "What is a use-case?"
@@ -492,7 +492,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.usecasediagram
                     , ""));
-            flashcards.add(new Flashcard(17
+            flashcards.add(new Flashcard(14
                     , 3
                     , "Requirements Determination"
                     , "What is an actor?"
@@ -500,7 +500,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.usecasediagram
                     , ""));
-            flashcards.add(new Flashcard(18
+            flashcards.add(new Flashcard(15
                     , 3
                     , "Requirements Determination"
                     , "What is a relationship or association?"
@@ -508,7 +508,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.usecasediagram
                     , ""));
-            flashcards.add(new Flashcard(19
+            flashcards.add(new Flashcard(16
                     , 3
                     , "Requirements Determination"
                     , "What is a subject boundary?"
@@ -516,7 +516,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.usecasediagram
                     , ""));
-            flashcards.add(new Flashcard(21
+            flashcards.add(new Flashcard(17
                     , 3
                     , "Requirements Determination"
                     , "What is an activity diagram?"
@@ -524,7 +524,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.activitydiagram
                     , ""));
-            flashcards.add(new Flashcard(20
+            flashcards.add(new Flashcard(18
                     , 3
                     , "Requirements Determination"
                     , "Draw an activity diagram?"
@@ -532,7 +532,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.activitydiagram
                     , ""));
-            flashcards.add(new Flashcard(21
+            flashcards.add(new Flashcard(19
                     , 3
                     , "Requirements Determination"
                     , "What is a class diagram?"
@@ -540,7 +540,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.classdiagram
                     , ""));
-            flashcards.add(new Flashcard(22
+            flashcards.add(new Flashcard(20
                     , 3
                     , "Requirements Determination"
                     , "Draw a class diagram?"
@@ -548,7 +548,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.classdiagram
                     , ""));
-            flashcards.add(new Flashcard(23
+            flashcards.add(new Flashcard(21
                     , 3
                     , "Requirements Determination"
                     , "What is a sequence diagram?"
@@ -556,7 +556,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.sequencediagram
                     , ""));
-            flashcards.add(new Flashcard(24
+            flashcards.add(new Flashcard(22
                     , 3
                     , "Requirements Determination"
                     , "Draw a sequence diagram?"
@@ -564,7 +564,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.sequencediagram
                     , ""));
-            flashcards.add(new Flashcard(25
+            flashcards.add(new Flashcard(23
                     , 3
                     , "Requirements Determination"
                     , "What is a behavioural state machine?"
@@ -572,7 +572,7 @@ public class Flashcard {
                     , R.drawable.ic_requirementsgatheringandmodelling
                     , R.drawable.behaviouralstatemachine
                     , ""));
-            flashcards.add(new Flashcard(26
+            flashcards.add(new Flashcard(24
                     , 3
                     , "Requirements Determination"
                     , "Draw a behavioural state machine?"
@@ -670,7 +670,7 @@ public class Flashcard {
                 , R.drawable.ic_systemsdevelopmentmethodologies
                 , R.drawable.ic_systemsdevelopmentmethodologies
                 , ""));
-        flashcards.add(new Flashcard(0
+        flashcards.add(new Flashcard(1
                 , 5
                 , "Systems Development Methodologies"
                 , "What is Waterfall?"
@@ -678,7 +678,7 @@ public class Flashcard {
                 , R.drawable.ic_systemsdevelopmentmethodologies
                 , R.drawable.waterfall
                 , ""));
-        flashcards.add(new Flashcard(1
+        flashcards.add(new Flashcard(2
                 , 5
                 , "Systems Development Methodologies"
                 , "What is Parallel"
@@ -687,7 +687,7 @@ public class Flashcard {
                 , R.drawable.ic_systemsdevelopmentmethodologies
                 , R.drawable.parallel
                 , ""));
-        flashcards.add(new Flashcard(2
+        flashcards.add(new Flashcard(3
                 , 5
                 , "Systems Development Methodologies"
                 , "What is Phased"
@@ -696,7 +696,7 @@ public class Flashcard {
                 , R.drawable.ic_systemsdevelopmentmethodologies
                 , R.drawable.phased
                 , ""));
-        flashcards.add(new Flashcard(3
+        flashcards.add(new Flashcard(4
                 , 5
                 , "Systems Development Methodologies"
                 , "What is System Prototyping"
@@ -705,7 +705,7 @@ public class Flashcard {
                 , R.drawable.ic_systemsdevelopmentmethodologies
                 , R.drawable.systemprototyping
                 , ""));
-        flashcards.add(new Flashcard(3
+        flashcards.add(new Flashcard(5
                 , 5
                 , "Systems Development Methodologies"
                 , "What is Throwaway Prototyping"
@@ -808,7 +808,7 @@ public class Flashcard {
                     , R.drawable.ic_designthinkinglist
                     , R.drawable.ic_designthinkinglist
                     , "https://source.unsplash.com/LQ1t-8Ms5PY/1600x900"));
-            flashcards.add(new Flashcard(12
+            flashcards.add(new Flashcard(13
                     , 6
                     , "Design Thinking"
                     , "What does the Define phase involve?"
@@ -816,7 +816,7 @@ public class Flashcard {
                     , R.drawable.ic_designthinkinglist
                     , R.drawable.ic_designthinkinglist
                     , "https://source.unsplash.com/va_Opp86kfQ/1600x900"));
-            flashcards.add(new Flashcard(13
+            flashcards.add(new Flashcard(14
                     , 6
                     , "Design Thinking"
                     , "Tools used in Define phase?"
@@ -824,7 +824,7 @@ public class Flashcard {
                     , R.drawable.ic_designthinkinglist
                     , R.drawable.ic_designthinkinglist
                     , "https://source.unsplash.com/RLw-UC03Gwc/1600x900"));
-            flashcards.add(new Flashcard(14
+            flashcards.add(new Flashcard(15
                     , 6
                     , "Design Thinking"
                     , "What does the Ideate phase involve?"
@@ -832,7 +832,7 @@ public class Flashcard {
                     , R.drawable.ic_designthinkinglist
                     , R.drawable.ic_designthinkinglist
                     , "https://source.unsplash.com/82TpEld0_e4/1600x900"));
-            flashcards.add(new Flashcard(14
+            flashcards.add(new Flashcard(16
                     , 6
                     , "Design Thinking"
                     , "Tools used in Ideate phase?"
@@ -840,7 +840,7 @@ public class Flashcard {
                     , R.drawable.ic_designthinkinglist
                     , R.drawable.ic_designthinkinglist
                     , "https://source.unsplash.com/bjemWZcNF34/1600x900"));
-            flashcards.add(new Flashcard(15
+            flashcards.add(new Flashcard(17
                     , 6
                     , "Design Thinking"
                     , "What does the Prototype phase involve?"
@@ -848,7 +848,7 @@ public class Flashcard {
                     , R.drawable.ic_designthinkinglist
                     , R.drawable.ic_designthinkinglist
                     , "https://source.unsplash.com/ukeUH3KbMWU/1600x900"));
-            flashcards.add(new Flashcard(16
+            flashcards.add(new Flashcard(18
                     , 6
                     , "Design Thinking"
                     , "Tools used in Ideate phase?"
@@ -857,7 +857,7 @@ public class Flashcard {
                     , R.drawable.ic_designthinkinglist
                     , R.drawable.ic_designthinkinglist
                     , "https://source.unsplash.com/tZc3vjPCk-Q/1600x900"));
-            flashcards.add(new Flashcard(16
+            flashcards.add(new Flashcard(19
                     , 6
                     , "Design Thinking"
                     , "What does the Testing phase involve?"
@@ -904,11 +904,106 @@ public class Flashcard {
                 , R.drawable.ic_agile
                 , R.drawable.ic_agile
                 , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
-        flashcards.add(new Flashcard(3
+        flashcards.add(new Flashcard(4
                 , 7
                 , "Agile Scrum"
                 , "What is a sprint?"
                 ,"A sprint typically lasts 2-4 weeks or at most a month and involves everything from planning to implementation. Typically, good sprints are characterised by constant duration and good rhythm since it builds efficiency, predictability and familiarity. Additionally, each sprint has its own set of requirements that should not be changed until a sprint has finished"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(5
+                , 7
+                , "Agile Scrum"
+                , "What does a product owner do?"
+                ,"The product owner is the person who is responsible for the project and the end product. This is the person who knows the direction of the product, understands the project and understands the customer needs to guide the project. \n" +
+                "Responsibilities: Defining the features of the product, deciding on the release date and content, being responsible for the product, prioritise and adjust features and accepting or rejecting the final product"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(6
+                , 7
+                , "Agile Scrum"
+                , "What does a scrum master do?"
+                ,"The scrum master is a “servant leader” who serves the members of the team rather than orders them. The main role of the scrum master is to ensure the smoothness of the project by fulfilling the team’s needs and requirements and also by removing impediments to progress\n" +
+                "Roles of a scrum master, they serve to represent the team in the project, enact scrum values and practices, remove impediments, ensure functionality and productivity, allows collaboration between functions and roles and shields the team from external interferences. To sum up, the scrum master is a servant leader who represents the project’s management"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(7
+                , 7
+                , "Agile Scrum"
+                , "What does the Team do?"
+                ,"the team is typically made up of 5-9 people and consists of cross-functional teams including business analysts, developers and testers. A key characteristic of agile teams is that they are self-organising\n" +
+                "These teams are highly autonomous, flexible and flat with roles being delegated amongst members rather than by a higher-up"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(8
+                , 7
+                , "Agile Scrum"
+                , "Ceremonies - What is sprint planning?"
+                ,"Team selects items from the product backlog they can commit to completing and also creates a sprint backlog (more detail provided later). Tasks are identified and time estimates are made for each. This is a collaborative effort between the whole team"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(9
+                , 7
+                , "Agile Scrum"
+                , "Ceremonies - What is scrum/stand-up meeting?"
+                ,"Daily scrum meetings are short 15-minute daily meetings where team members share answers to three questions: What did you do yesterday? What will you do today? Is there anything in your way? This process helps keep meetings concise whilst communicating clearly about the progress of the team. To sum up, the stand-up meeting is a daily meeting where team members review their current workload and plan their future workload"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(10
+                , 7
+                , "Agile Scrum"
+                , "Ceremonies - What is a sprint review?"
+                ,"In the sprint review, the team presents what it accomplished during the sprint. This typically takes the form of a demonstration of new features or underlying architecture"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(11
+                , 7
+                , "Agile Scrum"
+                , "Ceremonies - What is a sprint retrospective?"
+                ,"The sprint retrospective is conducted after a sprint but unlike the sprint review, is focused on the actual project itself rather than the end product. Here, the team collectively identifies what worked and what did not work during the course of the project. Here the three main points raised are: What should we start doing? What should we stop doing? What should we continue doing? \n" +
+                "It is a periodic look at what is and isn’t working in the project after each sprint"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(12
+                , 7
+                , "Agile Scrum"
+                , "Artifacts - What is product vision?"
+                ,"The product vision should be a broad overview of what the product is trying to do. It helps analyse why the project is being undertaken and what the desired end state is"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(13
+                , 7
+                , "Agile Scrum"
+                , "Artifacts - What is the product backlog?"
+                ,"The product backlog contains all the requirements for the project. It is ideally expressed as a list of user stories along with story points, such that each item has value to users or customers of the product. \n" +
+                "The product backlog is managed by the product owner and is prioritised by them at the start of each sprint. Before each sprint, the product owner will choose the most important user stories to be addressed in the next sprint"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(14
+                , 7
+                , "Agile Scrum"
+                , "Artifacts - What is a sprint burndown chart?"
+                ,"A sprint burndown chart is a sprint tracking mechanism and displays what work has been completed and what is left to be completed. This chart is updated every day and best estimates are made about how much work is to completed since it is hard to be precise on exactly how much time will be taken to do a task"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(15
+                , 7
+                , "Agile Scrum"
+                , "Artifacts - Steps in the burndown chart?"
+                ,  "\t•Step 1: Prepare task breakdown and assign effort\n" +
+                "\t•Step 2: Plot the “ideal” progress line  - Straight line from the effort at day 0 to the last day of the sprint. This is a reference line to track how they are faring \n" +
+                "\t•Step 3: Update chart through the sprint as and when tasks are completed\n"
                 , R.drawable.ic_agile
                 , R.drawable.ic_agile
                 , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
@@ -919,24 +1014,70 @@ public class Flashcard {
         flashcards.add(new Flashcard(0
                 , 8
                 , "Lean Start Up"
-                , "What is Lean?"
-                ,"Lean start-up is a methodology that borrows ideas from lean manufacturing and focuses on reducing waste. "
+                , "What is Lean Start Up?"
+                ,"Lean start-up is a methodology that borrows ideas from lean manufacturing and focuses on reducing waste. \n" +
+                "The key idea is to only produce what users need and where there is demand"
                 , R.drawable.ic_leanstartup
                 , R.drawable.ic_leanstartup
                 , "https://source.unsplash.com/TG0jUoGbCCs/1600x900"));
         flashcards.add(new Flashcard(1
                 , 8
                 , "Lean Start Up"
-                , "explore prototyping and experimenting "
-                ,""
+                , "What are the stages in lean start up"
+                ,"Identify and prioritise, Develop hypotheses, Build minimum viable product, Learn from Results"
                 , R.drawable.ic_leanstartup
                 , R.drawable.ic_leanstartup
-                , "https://source.unsplash.com/zoCDWPuiRuA/1600x900"));
+                , "https://source.unsplash.com/t-Pm18joMss/1600x900"));
         flashcards.add(new Flashcard(2
                 , 8
                 , "Lean Start Up"
-                , "What are the stages in lean start up"
-                ,"Identify and prioritise, Develop hypotheses, Build minimum viable product, Learn from Results"
+                , "How do we identify and prioritise assumptions?"
+                ,"Make “I believe that” statements \n" +
+                "“In a city where space is extremely limited, {I believe that} people will pay a small amount of money, for a small amount of space... they don’t need a hotel.” – Airbnb"
+                , R.drawable.ic_leanstartup
+                , R.drawable.ic_leanstartup
+                , "https://source.unsplash.com/zoCDWPuiRuA/1600x900"));
+        flashcards.add(new Flashcard(3
+                , 8
+                , "Lean Start Up"
+                , "How do we develop a hypothesis?"
+                ,"Write “If…. Then” statement.\n" +
+                "\n“If we display professionally shot pictures of rooms, then we will have more bookings” – Airbnb\n"
+                , R.drawable.ic_leanstartup
+                , R.drawable.ic_leanstartup
+                , "https://source.unsplash.com/t-Pm18joMss/1600x900"));
+        flashcards.add(new Flashcard(4
+                , 8
+                , "Lean Start Up"
+                , "What the two different types of hypothesis?"
+                ,"Value and growth hypothesis. \n" +
+                "Value hypothesis tests if a product is valuable to potential customers. \n" +
+                "Growth hypothesis tests how you assume users will find your product"
+                , R.drawable.ic_leanstartup
+                , R.drawable.ic_leanstartup
+                , "https://source.unsplash.com/t-Pm18joMss/1600x900"));
+        flashcards.add(new Flashcard(5
+                , 8
+                , "Lean Start Up"
+                , "What is a minimum viable product?"
+                ,"An MVP is basically the simplest thing or product that you can build to show your customers but still maximise your learning from them. This can be anything from wireframes, coded prototypes to something simple like sign-up booths and presentation decks.\n" +
+                " This range of ‘detail’ is often referred to as fidelity. The higher fidelity an MVP is, the more fleshed-out and detailed it is"
+                , R.drawable.ic_leanstartup
+                , R.drawable.ic_leanstartup
+                , "https://source.unsplash.com/t-Pm18joMss/1600x900"));
+        flashcards.add(new Flashcard(6
+                , 8
+                , "Lean Start Up"
+                , "How do we learn from results?"
+                ,"After conducting the test, it is important to analyse and reflect on the results of the experiment. A common way to do this is through the “Five Whys Root Cause Analysis”. This involves asking “why?” five times consecutively to get to the core reason of why something happens"
+                , R.drawable.ic_leanstartup
+                , R.drawable.ic_leanstartup
+                , "https://source.unsplash.com/t-Pm18joMss/1600x900"));
+        flashcards.add(new Flashcard(7
+                , 8
+                , "Lean Start Up"
+                , "What is iteration?"
+                ,"A learn-build-measure-learn cycle that continuously runs as you build a product, test it and measure it, learn from it and build again"
                 , R.drawable.ic_leanstartup
                 , R.drawable.ic_leanstartup
                 , "https://source.unsplash.com/t-Pm18joMss/1600x900"));

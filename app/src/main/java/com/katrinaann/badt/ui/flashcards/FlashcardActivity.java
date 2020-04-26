@@ -29,6 +29,7 @@ public class FlashcardActivity extends AppCompatActivity {
     // Initialising UI elements and variables t
     private Flashcard mFlashcard;
     private String category;
+    private String user;
     private TextView categoryName;
 
     private int flashcardCategory = 0;
@@ -37,6 +38,7 @@ public class FlashcardActivity extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
+    private String currentUser = "";
 
     // Set the ArrayLists
     ArrayList<Integer> flashcardCategoryList = new ArrayList<Integer>();
@@ -55,8 +57,11 @@ public class FlashcardActivity extends AppCompatActivity {
         Intent intent = getIntent();
         flashcardCategory = intent.getIntExtra("Category", 1);
         category = intent.getStringExtra("Title");
+        user = intent.getStringExtra("currentUser");
+
         Log.d(TAG, "Category is: " + flashcardCategory);
         Log.d(TAG, "Title is: " + category);
+        Log.d(TAG, "User is: " + user);
 
         mRecyclerView = findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
@@ -99,7 +104,7 @@ public class FlashcardActivity extends AppCompatActivity {
 
             mRecyclerView.setAdapter(mAdapter);
             Log.d(TAG, "Category 1 adapter is " + flashcards);
-        //TODO TURN BACK ON
+
 
         } else if (flashcardCategory == 2) {
             flashcardArrayListSize = Flashcard.getCategory2().size();
@@ -173,26 +178,15 @@ public class FlashcardActivity extends AppCompatActivity {
 
 
             // Sets the order for the flashcards to come up
-//        for (int i = 1; i < flashcardArrayListSize; i++){
-//            flashcardCategoryList.add(i);
-////            Flashcard flashcard = new Flashcard();
-////            flashcard.isFlipped = false;
-////            flashcardCategoryList.add(i);
-////            list.add(flashcard);
-//        }
-//        Collections.shuffle(flashcardCategoryList);
-
-            // Fill the Recycler View with flashcard content
-
-
-//        new GetFlashcardTask().execute();
-
-
-//        for (int i = 0; i < 20; i++) {
+        for (int i = 1; i < flashcardArrayListSize; i++){
+            flashcardCategoryList.add(i);
 //            Flashcard flashcard = new Flashcard();
 //            flashcard.isFlipped = false;
+//            flashcardCategoryList.add(i);
 //            list.add(flashcard);
-//        }
+        }
+        Collections.shuffle(flashcardCategoryList);
+
 
         }
 

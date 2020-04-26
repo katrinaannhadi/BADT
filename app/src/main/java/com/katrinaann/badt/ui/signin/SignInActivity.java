@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.katrinaann.badt.database.UsersDatabase;
 import com.katrinaann.badt.models.accountUsers;
@@ -111,6 +112,7 @@ public class SignInActivity extends AppCompatActivity {
     public void login() {
         Intent intent = new Intent(this, HomeActivity.class);
         intent.putExtra("currentUser", tempUsername);
+        Toast.makeText(SignInActivity.this, "Welcome to Learning Galaxy " + tempUsername,Toast.LENGTH_LONG).show();
         startActivity(intent);
     }
 

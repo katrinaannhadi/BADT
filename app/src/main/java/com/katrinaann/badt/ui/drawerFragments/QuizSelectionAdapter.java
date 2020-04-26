@@ -48,11 +48,8 @@ public class QuizSelectionAdapter extends PagerAdapter {
 
         imageView = view.findViewById(R.id.image);
         title = view.findViewById(R.id.title);
-//        desc = view.findViewById(R.id.desc);
-
         imageView.setImageResource(models.get(position).getImage());
         title.setText(models.get(position).getTitle());
-//        desc.setText(models.get(position).getDesc());
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +57,7 @@ public class QuizSelectionAdapter extends PagerAdapter {
 
                 Intent intent = new Intent(context.getActivity(), QuizActivity.class);
                 intent.putExtra("quizIndex", models.get(position).getId());
-//                intent.putExtra("currentUser", currentUser);
+                intent.putExtra("currentUser", models.get(position).getUser());
                 context.startActivity(intent);
 //
 //                Intent intent = new Intent(context.getActivity(), QuizActivity.class);

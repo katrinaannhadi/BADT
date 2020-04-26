@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_home_second"
-        android:name="com.katrinaann.badt.ui.drawerFragments.NoteSelectionFragment"
+        android:name="com.katrinaann.badt.ui.drawerFragments.BlogSelectionFragment"
         android:label="@string/home_second"
         tools:layout="@layout/fragment_article_selection_viewpager">
         <action
@@ -31,32 +31,33 @@
 
     <fragment
         android:id="@+id/nav_blog"
-        android:name="com.katrinaann.badt.ui.drawerFragments.NoteSelectionFragment"
-        android:label="Note"
-        tools:layout="@layout/fragment_article_selection_viewpager" />
+        android:name="com.katrinaann.badt.ui.drawerFragments.BlogSelectionFragment"
+        android:label="Note" />
+<!--        tools:layout="@layout/fragment_article_selection_viewpager" -->
+
 
     <fragment
         android:id="@+id/nav_note"
         android:name="com.katrinaann.badt.ui.drawerFragments.NoteTakingFragment"
-        android:label="Note"
-        tools:layout="@layout/fragment_note" />
+        android:label="Note" />
+<!--        tools:layout="@layout/fragment_note" -->
 
     <fragment
         android:id="@+id/nav_flashcard"
         android:name="com.katrinaann.badt.ui.drawerFragments.FlashcardSelectionFragment"
-        android:label="@string/menu_flashcards"
-        tools:layout="@layout/fragment_article_selection_viewpager" />
+        android:label="@string/menu_flashcards" />
+<!--        tools:layout="@layout/fragment_article_selection_viewpager" -->
 
     <fragment
         android:id="@+id/nav_quiz"
         android:name="com.katrinaann.badt.ui.drawerFragments.QuizSelectionFragment"
-        android:label="@string/menu_quiz"
-        tools:layout="@layout/fragment_article_selection_viewpager" />
+        android:label="@string/menu_quiz" />
+<!--        tools:layout="@layout/fragment_article_selection_viewpager" -->
 
     <fragment
         android:id="@+id/nav_video"
         android:name="com.katrinaann.badt.ui.video.VideoFragment"
-        android:label="@string/menu_video"
-        tools:layout="@layout/fragment_video" />
+        android:label="@string/menu_video" />
+<!--        tools:layout="@layout/fragment_video" -->
 
 </navigation>

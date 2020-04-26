@@ -29,21 +29,35 @@ public class FlashcardSelectionFragment extends Fragment {
     List<Model> mTopics;
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
-    private static final String TAG = " 2 ARTICLE SELECTION ";
+    private String TAG = "Flashcard Fragment";
     private boolean mTwoPane;
+    private String currentUser;
+    private String mUser;
 
 
     public FlashcardSelectionFragment() {
         // Required empty public constructor
     }
 
+//    public static FlashcardSelectionFragment newInstance(String tempUsername) {
+//        FlashcardSelectionFragment fragment = new FlashcardSelectionFragment();
+//        Bundle args = new Bundle();
+//        args.putString(currentUser, tempUsername);
+//        fragment.setArguments(args);
+//        return fragment;
+//    }
+//
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            currentUser = bundle.getString("currentUser");
         }
+
+
+        Log.d(TAG, "User is: " + currentUser);
     }
 
     @Override
@@ -53,15 +67,17 @@ public class FlashcardSelectionFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_article_selection_viewpager, container, false);
         context = view.getContext();
 
+        Log.d(TAG, "User is: " + currentUser);
+
         mTopics = new ArrayList<>();
-        mTopics.add(new Model(R.drawable.ic_introductiontobusinessanalysis, "Introduction to Business Analysis", "Finance shouldn't be hard! Read on for hot tips and trendy articles.", 1));
-        mTopics.add(new Model(R.drawable.ic_projectmanagement, "Project Management", "Have some fun and test yourself with our quiz!", 2));
-        mTopics.add(new Model(R.drawable.ic_requirementsgatheringandmodelling, "Requirements Gathering And Modelling", "We got your back. Sit back and watch informational videos on finance curated by the team!", 3));
-        mTopics.add(new Model(R.drawable.ic_sdlc, "Systems Development Life Cycle", "We got your back. Sit back and watch informational videos on finance curated by the team!", 4));
-        mTopics.add(new Model(R.drawable.ic_systemsdevelopmentmethodologies, "Systems Development Methodologies", "We got your back. Sit back and watch informational videos on finance curated by the team!", 5));
-        mTopics.add(new Model(R.drawable.ic_designthinkinglist, "Design Thinking", "We got your back. Sit back and watch informational videos on finance curated by the team!", 6));
-        mTopics.add(new Model(R.drawable.ic_agile, "Agile SCRUM", "We got your back. Sit back and watch informational videos on finance curated by the team!", 7));
-        mTopics.add(new Model(R.drawable.ic_leanstartup, "Lean Start Up", "We got your back. Sit back and watch informational videos on finance curated by the team!", 8));
+        mTopics.add(new Model(R.drawable.ic_introductiontobusinessanalysis, "Introduction to Business Analysis", 1, currentUser));
+        mTopics.add(new Model(R.drawable.ic_projectmanagement, "Project Management", 2, currentUser));
+        mTopics.add(new Model(R.drawable.ic_requirementsgatheringandmodelling, "Requirements Determination",3, currentUser));
+        mTopics.add(new Model(R.drawable.ic_sdlc, "Systems Development Life Cycle", 4, currentUser));
+        mTopics.add(new Model(R.drawable.ic_systemsdevelopmentmethodologies, "Systems Development Methodologies",5, currentUser));
+        mTopics.add(new Model(R.drawable.ic_designthinkinglist,"Design Thinking", 6, currentUser));
+        mTopics.add(new Model(R.drawable.ic_agile, "Agile SCRUM", 7, currentUser));
+        mTopics.add(new Model(R.drawable.ic_leanstartup, "Lean Start Up",  8, currentUser));
         mTopicAdapter = new FlashcardSelectionAdapter(mTopics, this);
 
         viewPager = view.findViewById(R.id.viewPager);
@@ -70,6 +86,8 @@ public class FlashcardSelectionFragment extends Fragment {
 
         mTwoPane = view.findViewById(R.id.detail_container) != null;
         Log.d(TAG, "Two Pane is = " + mTwoPane);
+
+
         if (mTwoPane) {
             final FragmentManager manager = getFragmentManager();
             FragmentTransaction transaction = manager.beginTransaction();
@@ -91,14 +109,12 @@ public class FlashcardSelectionFragment extends Fragment {
                 getResources().getColor(R.color.rainbow3),
                 getResources().getColor(R.color.rainbow4),
                 getResources().getColor(R.color.rainbow5),
-                getResources().getColor(R.color.rainbow6),
-                getResources().getColor(R.color.rainbow7),
+                getResources().getColor(R.color.rainbow6), getResources().getColor(R.color.rainbow7),
 
         };
-
         colors = colors_temp;
 
-
+        //Changes the colour with the page change
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

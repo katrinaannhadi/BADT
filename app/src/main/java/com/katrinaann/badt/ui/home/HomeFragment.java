@@ -1,6 +1,7 @@
 package com.katrinaann.badt.ui.home;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +21,26 @@ public class HomeFragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private HomeFragmentListener listener;
+    private String TAG = "HomeFragment";
+    private String currentUser;
 
     public interface HomeFragmentListener {
         void onHomeInputSent(int position);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            currentUser = bundle.getString("currentUser");
+        }
+
+
+        Log.d(TAG, "User is: " + currentUser);
+
+
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -30,35 +48,9 @@ public class HomeFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-//
-//        View root = inflater.inflate(R.layout.fragment_home, container, false);
-//
-//
-//        mRecyclerView = root.findViewById(R.id.rvList);
-//        mRecyclerView.setHasFixedSize(true);
-//        mLayoutManager = new LinearLayoutManager(getActivity());
-//        mRecyclerView.setLayoutManager(mLayoutManager);
-//
-//        NoteAdapter.RecyclerViewClickListener listener = new NoteAdapter.RecyclerViewClickListener() {
-//            @Override
-//            public void onClick(View view, int position) {
-//                HomeActivity home = (HomeActivity) getActivity();
-//                home.addNotePosition(position);
-////                listener.onHomeInputSent(position);
-//
-//            }
-//        };
-//        mAdapter = new NoteAdapter(Note.getNote(), listener);
-//        mRecyclerView.setAdapter(mAdapter);
 
         return root;
     }
 }
 
-//    private void launchDetailActivity(int position) {
-//        IntroActivity mn = (IntroActivity) getActivity();
-//        mn.addNotePosition(position);
-//        Intent intent = new Intent(this.getActivity(), NoteDetailActivity.class);
-//        intent.putExtra(EXTRA_MESSAGE, position);
-//        startActivity(intent);
-//    }
+

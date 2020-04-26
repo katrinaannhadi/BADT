@@ -124,7 +124,7 @@ public class QuizAfterPageActivity extends AppCompatActivity {
 
     // Goes to title.
     public void returnTitle() {
-        Intent intent = new Intent(this, QuizSelectionFragment.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         intent.putExtra("currentUser", currentUser);
         startActivity(intent);
     }

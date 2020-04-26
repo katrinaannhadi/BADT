@@ -44,6 +44,7 @@ public class QuizActivity extends AppCompatActivity {
     private int quizIndex = 0;
     private String currentUser = "";
     private ConstraintLayout layout;
+    private TextView category;
 
     // Setting up arraylists.
     private ArrayList<Integer> questionsOrderList = new ArrayList<Integer>();
@@ -65,6 +66,7 @@ public class QuizActivity extends AppCompatActivity {
         resultsPageButton.setVisibility(View.GONE);
         quizScore = findViewById((R.id.quizScore_TV));
         layout = findViewById(R.id.quiz_constraint_layout);
+        category = findViewById(R.id.category_header);
 
 
         // Receive data from the quizSelectionPage.
@@ -78,34 +80,42 @@ public class QuizActivity extends AppCompatActivity {
             qaArrayListSize = QA.getQAs1().size();
             qaArrayRoot = QA.getQAs1();
             layout.setBackgroundColor(Color.parseColor("#ffc000"));
+            category.setText("Introduction to Business Analysis");
         } else if (quizIndex == 2) {
             qaArrayListSize = QA.getQAs2().size();
             qaArrayRoot = QA.getQAs2();
             layout.setBackgroundColor(Color.parseColor("#DE0000"));
+            category.setText("Project Management");
         } else if (quizIndex == 3) {
             qaArrayListSize = QA.getQAs3().size();
             qaArrayRoot = QA.getQAs3();
             layout.setBackgroundColor(Color.parseColor("#FE622D"));
+            category.setText("Requirements Determination");
         } else if (quizIndex == 4) {
             qaArrayListSize = QA.getQAs4().size();
             qaArrayRoot = QA.getQAs4();
             layout.setBackgroundColor(Color.parseColor("#ffc000"));
+            category.setText("Systems Development Life Cycle");
         } else if (quizIndex == 5) {
             qaArrayListSize = QA.getQAs5().size();
             qaArrayRoot = QA.getQAs5();
             layout.setBackgroundColor(Color.parseColor("#00BD00"));
+            category.setText("Systems Development Methodologies");
         } else if (quizIndex == 6) {
             qaArrayListSize = QA.getQAs6().size();
             qaArrayRoot = QA.getQAs6();
             layout.setBackgroundColor(Color.parseColor("#009CFE"));
+            category.setText("Design Thinking");
         } else if (quizIndex == 7) {
             qaArrayListSize = QA.getQAs7().size();
             qaArrayRoot = QA.getQAs7();
             layout.setBackgroundColor(Color.parseColor("#000084"));
+            category.setText("Agile Scrum");
         } else if (quizIndex == 8) {
             qaArrayListSize = QA.getQAs8().size();
             qaArrayRoot = QA.getQAs8();
             layout.setBackgroundColor(Color.parseColor("#6D33A6"));
+            category.setText("Lean Start Up");
         }
 
         // Initialising the name of the quiz - for the intent.

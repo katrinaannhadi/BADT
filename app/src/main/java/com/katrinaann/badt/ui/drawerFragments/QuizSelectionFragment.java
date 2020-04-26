@@ -4,6 +4,7 @@ import android.animation.ArgbEvaluator;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,31 +17,48 @@ import com.katrinaann.badt.models.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class    QuizSelectionFragment extends Fragment {
+public class QuizSelectionFragment extends Fragment {
 
     private View view;
     private Context context;
-
-
     ViewPager viewPager;
     QuizSelectionAdapter mTopicAdapter;
     List<Model> mTopics;
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
-    private static final String TAG = " 2 ARTICLE SELECTION ";
 
+    // Tagging for de-bugging purposes
+    private static final String TAG = " QuizSelectionFragment";
+
+    // Initialising fragment parameters
+//    private static final String currentUser = "tempUsername";
+    private String currentUser;
 
     public QuizSelectionFragment() {
         // Required empty public constructor
     }
 
+    public static QuizSelectionFragment newInstance(String currentUser) {
+        QuizSelectionFragment fragment = new QuizSelectionFragment();
+        Bundle args = new Bundle();
+        args.putString("currentUser", currentUser);
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
 
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            currentUser = bundle.getString("currentUser");
         }
+
+
+        Log.d(TAG, "User is: " + currentUser);
+
+
     }
 
     @Override
@@ -50,24 +68,26 @@ public class    QuizSelectionFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_article_selection_viewpager, container, false);
         context = view.getContext();
 
+        // Getting information bundle from the home activity
 
 
-
+        // Setting the titles and images for the view pager
         mTopics = new ArrayList<>();
-        mTopics.add(new Model(R.drawable.ic_introductiontobusinessanalysis, "Introduction to Business Analysis", "Finance shouldn't be hard! Read on for hot tips and trendy articles.", 1));
-        mTopics.add(new Model(R.drawable.ic_projectmanagement, "Project Management", "Have some fun and test yourself with our quiz!", 2));
-        mTopics.add(new Model(R.drawable.ic_requirementsgatheringandmodelling, "Requirements Gathering And Modelling", "We got your back. Sit back and watch informational videos on finance curated by the team!", 3));
-        mTopics.add(new Model(R.drawable.ic_sdlc, "Systems Development Life Cycle", "We got your back. Sit back and watch informational videos on finance curated by the team!", 4));
-        mTopics.add(new Model(R.drawable.ic_systemsdevelopmentmethodologies, "Systems Development Methodologies", "We got your back. Sit back and watch informational videos on finance curated by the team!", 5));
-        mTopics.add(new Model(R.drawable.ic_designthinkinglist, "Design Thinking", "We got your back. Sit back and watch informational videos on finance curated by the team!", 6));
-        mTopics.add(new Model(R.drawable.ic_agile, "Agile SCRUM", "We got your back. Sit back and watch informational videos on finance curated by the team!", 7));
-        mTopics.add(new Model(R.drawable.ic_leanstartup, "Lean Start Up", "We got your back. Sit back and watch informational videos on finance curated by the team!", 8));
+        mTopics.add(new Model(R.drawable.ic_introductiontobusinessanalysis, "Introduction to Business Analysis", 1, currentUser));
+        mTopics.add(new Model(R.drawable.ic_projectmanagement, "Project Management", 2, currentUser));
+        mTopics.add(new Model(R.drawable.ic_requirementsgatheringandmodelling, "Requirements Determination",3, currentUser));
+        mTopics.add(new Model(R.drawable.ic_sdlc, "Systems Development Life Cycle", 4, currentUser));
+        mTopics.add(new Model(R.drawable.ic_systemsdevelopmentmethodologies, "Systems Development Methodologies",5, currentUser));
+        mTopics.add(new Model(R.drawable.ic_designthinkinglist,"Design Thinking", 6, currentUser));
+        mTopics.add(new Model(R.drawable.ic_agile, "Agile SCRUM", 7, currentUser));
+        mTopics.add(new Model(R.drawable.ic_leanstartup, "Lean Start Up",  8, currentUser));
         mTopicAdapter = new QuizSelectionAdapter(mTopics, this);
 
         viewPager = view.findViewById(R.id.viewPager);
         viewPager.setAdapter(mTopicAdapter);
         viewPager.setPadding(130, 0, 130, 0);
 
+        // Setting the color of the background for each topic
         Integer[] colors_temp = {
                 getResources().getColor(R.color.rainbow8),
                 getResources().getColor(R.color.rainbow1),
@@ -79,11 +99,8 @@ public class    QuizSelectionFragment extends Fragment {
                 getResources().getColor(R.color.rainbow7),
 
         };
-
-
         colors = colors_temp;
-
-
+        // Changes the colour with the page change
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -104,6 +121,7 @@ public class    QuizSelectionFragment extends Fragment {
 
             @Override
             public void onPageSelected(int position) {
+
 
             }
 

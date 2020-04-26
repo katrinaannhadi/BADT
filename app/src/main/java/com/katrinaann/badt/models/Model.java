@@ -4,14 +4,14 @@ public class Model {
 
     private int image;
     private String title;
-    private String desc;
     private int id;
+    private String user;
 
-    public Model(int image, String title, String desc, int id) {
+    public Model(int image, String title, int id, String user) {
         this.image = image;
         this.title = title;
-        this.desc = desc;
         this.id = id;
+        this.user = user;
     }
 
     public int getImage() {
@@ -30,19 +30,19 @@ public class Model {
         this.title = title;
     }
 
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
     }
 }
