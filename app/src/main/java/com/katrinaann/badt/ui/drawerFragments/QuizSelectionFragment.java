@@ -2,6 +2,7 @@ package com.katrinaann.badt.ui.drawerFragments;
 
 import android.animation.ArgbEvaluator;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,6 +52,7 @@ public class    QuizSelectionFragment extends Fragment {
 
 
 
+
         mTopics = new ArrayList<>();
         mTopics.add(new Model(R.drawable.ic_introductiontobusinessanalysis, "Introduction to Business Analysis", "Finance shouldn't be hard! Read on for hot tips and trendy articles.", 1));
         mTopics.add(new Model(R.drawable.ic_projectmanagement, "Project Management", "Have some fun and test yourself with our quiz!", 2));
@@ -77,6 +79,7 @@ public class    QuizSelectionFragment extends Fragment {
                 getResources().getColor(R.color.rainbow7),
 
         };
+
 
         colors = colors_temp;
 

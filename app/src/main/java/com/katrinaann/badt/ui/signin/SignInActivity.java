@@ -15,6 +15,7 @@ import com.katrinaann.badt.database.UsersDatabase;
 import com.katrinaann.badt.models.accountUsers;
 import com.katrinaann.badt.ui.home.HomeActivity;
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.ui.quiz.QuizActivity;
 
 public class SignInActivity extends AppCompatActivity {
 
@@ -92,6 +93,7 @@ public class SignInActivity extends AppCompatActivity {
             } else if ((tempUser.username.equals(tempUsername)) && (tempUser.password.equals(tempPassword))) {
                 login();
 
+
                 // By elimination; Username is correct, but password is wrong.
             } else {
                 errorMessage_TV.setVisibility(View.VISIBLE);
@@ -111,4 +113,5 @@ public class SignInActivity extends AppCompatActivity {
         intent.putExtra("currentUser", tempUsername);
         startActivity(intent);
     }
+
 }
