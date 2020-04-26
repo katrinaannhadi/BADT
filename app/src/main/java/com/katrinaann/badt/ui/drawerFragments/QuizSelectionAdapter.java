@@ -60,8 +60,8 @@ public class QuizSelectionAdapter extends PagerAdapter {
 
                 Intent intent = new Intent(context.getActivity(), QuizActivity.class);
                 intent.putExtra("quizIndex", models.get(position).getId());
+//                intent.putExtra("currentUser", currentUser);
                 context.startActivity(intent);
-
 //
 //                Intent intent = new Intent(context.getActivity(), QuizActivity.class);
 //                intent.putExtra("Category", models.get(position).getId());

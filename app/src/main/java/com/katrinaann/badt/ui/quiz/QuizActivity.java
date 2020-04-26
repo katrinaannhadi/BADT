@@ -64,8 +64,6 @@ public class QuizActivity extends AppCompatActivity {
         resultsPageButton = findViewById(R.id.resultsPage_BT);
         resultsPageButton.setVisibility(View.GONE);
         quizScore = findViewById((R.id.quizScore_TV));
-        background = findViewById(R.id.bg_light2);
-        background.setVisibility(View.GONE);
         layout = findViewById(R.id.quiz_constraint_layout);
 
 
@@ -171,7 +169,7 @@ public class QuizActivity extends AppCompatActivity {
 
             adjustScores(amountCorrect, questionNumber);
             resultsPageButton.setVisibility(View.VISIBLE);
-            background.setVisibility(View.VISIBLE);
+
         } else {
             adjustScores(amountCorrect, questionNumber);
             askQuestionAnswer();

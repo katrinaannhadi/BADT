@@ -15,7 +15,7 @@ import com.katrinaann.badt.models.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuizSelectionFragment extends Fragment {
+public class    QuizSelectionFragment extends Fragment {
 
     private View view;
     private Context context;
