@@ -9,11 +9,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.database.UsersDatabase;
-import com.katrinaann.badt.models.AccountUsers;
+import com.katrinaann.badt.models.accountUsers;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
-
 public class signupPageActivity extends AppCompatActivity {
 
     // Initialising UI elements and variables which will be through onclicklisteners.
@@ -92,7 +91,7 @@ public class signupPageActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             UsersDatabase userDB = Room.databaseBuilder(getApplicationContext(), UsersDatabase.class, "users-database").build();
-            userDB.userDaoUsers().insertUsers(new AccountUsers(username, fullname, email, password));
+            userDB.userDaoUsers().insertUsers(new accountUsers(username, fullname, email, password));
             return null;
         }
     }

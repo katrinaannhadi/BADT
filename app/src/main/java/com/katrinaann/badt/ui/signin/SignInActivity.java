@@ -1,5 +1,8 @@
 package com.katrinaann.badt.ui.signin;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -8,17 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
-
-import com.katrinaann.badt.R;
 import com.katrinaann.badt.database.UsersDatabase;
-import com.katrinaann.badt.models.AccountUsers;
+import com.katrinaann.badt.models.accountUsers;
 import com.katrinaann.badt.ui.home.HomeActivity;
+import com.katrinaann.badt.R;
 
 public class SignInActivity extends AppCompatActivity {
-
 
     // Initialising UI elements and variables which will be accessed through onclicklisteners.
     private TextView username_TV;
@@ -36,9 +34,6 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-
-
-
 
         // Matching UI elements to variables.
         username_TV = findViewById(R.id.username_TV);
@@ -78,16 +73,16 @@ public class SignInActivity extends AppCompatActivity {
 
     // An AsyncTask which queries a user (in the ROOM database) which has the same username as tempUsername (the username used to login).
     // This is essentially to check whether the login username exists.
-    private class getUserDetailsTask extends AsyncTask<Void, Void, AccountUsers> {
+    private class getUserDetailsTask extends AsyncTask<Void, Void, accountUsers> {
         @Override
-        protected AccountUsers doInBackground(Void... voids) {
+        protected accountUsers doInBackground(Void... voids) {
             UsersDatabase usersDB = Room.databaseBuilder(getApplicationContext(), UsersDatabase.class, "users-database").build();
             return usersDB.userDaoUsers().getUsernameByString(tempUsername);
         }
 
         // Checking whether the login details are correct.
         @Override
-        protected void onPostExecute(AccountUsers tempUser) {
+        protected void onPostExecute(accountUsers tempUser) {
             // If no user was returned, then the username was wrong to begin with.
             // This has to go first since if the user doesn't exist, its (nonexistent) attributes cannot be part of any comparison statements.
             if (tempUser == null) {

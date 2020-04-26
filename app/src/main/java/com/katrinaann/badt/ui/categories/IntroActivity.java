@@ -35,7 +35,7 @@ public class IntroActivity extends AppCompatActivity {
         if (isFirstRun) {
             // Show intro activity
             //TODO CHANGE BACK TO SIGN IN ACTIVITY
-            startActivity(new Intent(IntroActivity.this, HomeActivity.class));
+            startActivity(new Intent(IntroActivity.this, SignInActivity.class));
             Toast.makeText(IntroActivity.this, "Run only once", Toast.LENGTH_LONG)
                     .show();
         }

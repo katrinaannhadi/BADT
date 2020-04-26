@@ -1,10 +1,11 @@
-package com.katrinaann.badt.ui.blog;
+package com.katrinaann.badt.ui.notes;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.fragment.app.Fragment;
 import androidx.room.Room;
 
@@ -16,14 +17,13 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.katrinaann.badt.R;
-import com.katrinaann.badt.ui.notes.NoteDatabase;
-import com.katrinaann.badt.ui.notes.NoteListActivity;
-import com.katrinaann.badt.ui.notes.Notes;
+import com.katrinaann.badt.database.NoteDatabase;
+import com.katrinaann.badt.models.Notes;
 
 import java.util.List;
 
 
-public class BlogFragment extends Fragment {
+public class NoteFragment extends Fragment {
 
     private Button btnSave;
     private Button btnDelete;
@@ -32,9 +32,9 @@ public class BlogFragment extends Fragment {
     private Notes mNotes;
     private NoteDatabase mDb;
     public static final String ARG_ITEM_ID = "note_id";
-    private static final String TAG = "BlogFragment";
+    private static final String TAG = "NoteFragment";
 
-    public BlogFragment() {
+    public NoteFragment() {
         // Required empty public constructor
     }
 
@@ -51,6 +51,16 @@ public class BlogFragment extends Fragment {
             //Execute the GetNoteTask, passing in the arguments from the NoteListActivity (The ID of the note clicked in the RecyclerView)
             new GetNoteTask().execute(getArguments().getInt(ARG_ITEM_ID));
         }
+
+        //Callback to override the back button, ensuring that pressing back on the NoteFragment always goes
+        //Back to the list (NoteListActivity)
+        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                startActivity(new Intent(getActivity(), NoteListActivity.class));
+            }
+        };
+        requireActivity().getOnBackPressedDispatcher().addCallback(this, callback);
     }
 
     @Override

@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 
 // This object is an entity, meaning that it is a row in the database
 @Entity
-public class AccountUsers {
+public class accountUsers {
     // The username is the PK because all usernames will be unique. Additionally, it's non-nullable since usernames can't be empty.
     @PrimaryKey
     @NonNull
@@ -15,11 +15,11 @@ public class AccountUsers {
     public String email;
     public String password;
 
-    // Constructors since they are object. Additionally, there will be instances of the AccountUsers Object
-    public AccountUsers() {
+    // Constructors since they are object. Additionally, there will be instances of the accountUsers Object
+    public accountUsers() {
     }
 
-    public AccountUsers(String username, String fullName, String email, String password) {
+    public accountUsers(String username, String fullName, String email, String password) {
         this.username = username;
         this.fullName = fullName;
         this.email = email;

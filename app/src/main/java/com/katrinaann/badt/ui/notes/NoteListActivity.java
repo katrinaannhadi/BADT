@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +13,9 @@ import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.katrinaann.badt.R;
+import com.katrinaann.badt.database.NoteDatabase;
+import com.katrinaann.badt.models.Notes;
+import com.katrinaann.badt.ui.home.HomeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +26,7 @@ public class NoteListActivity extends AppCompatActivity {
     private NoteListAdapter mAdapter;
     private Boolean wideScreen;
     private FloatingActionButton fabNewNote;
-    private NoteDatabase mDb;
+    private com.katrinaann.badt.database.NoteDatabase mDb;
     private static final String TAG = "NoteListActivity";
 
     @Override
@@ -45,7 +49,7 @@ public class NoteListActivity extends AppCompatActivity {
         setTitle("Your Notes");
 
         //Create Database
-        mDb = Room.databaseBuilder(getApplicationContext(),NoteDatabase.class,"noteDB").build();
+        mDb = Room.databaseBuilder(getApplicationContext(), NoteDatabase.class,"noteDB").build();
 
         //Execute the GetNoteTask to get the note list from the database and set the adapter to display them
         new GetNoteTask().execute();
@@ -102,5 +106,12 @@ public class NoteListActivity extends AppCompatActivity {
             mAdapter.setNotes(notes);
             Log.d(TAG, "createNoteTask onPostExecute: SUCCESS");
         }
+    }
+
+    //Override the back button to make sure that when back button is pressed on the this activity, it always goes back to "Home"
+    //Overcomes issues with going back to NoteFragment when back is pressed after making changes to a note
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, HomeActivity.class));
     }
 }

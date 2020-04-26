@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.katrinaann.badt.R;
-import com.katrinaann.badt.ui.blog.BlogFragment;
+import com.katrinaann.badt.models.Notes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +30,8 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.NoteLi
                 //If the user is using a wide-screen device, initialise the fragment on the same activity
                 Log.d(TAG, "User clicked on row with a wide-screen device");
                 Bundle arguments = new Bundle();
-                arguments.putInt(BlogFragment.ARG_ITEM_ID, note.getNoteId());
-                BlogFragment fragment = new BlogFragment();
+                arguments.putInt(NoteFragment.ARG_ITEM_ID, note.getNoteId());
+                NoteFragment fragment = new NoteFragment();
                 fragment.setArguments(arguments);
                 mParentActivity.getSupportFragmentManager()
                         .beginTransaction()
@@ -42,7 +42,7 @@ public class NoteListAdapter extends RecyclerView.Adapter<NoteListAdapter.NoteLi
                 Log.d(TAG, "User clicked on row with a non-wide-screen device");
                 Context context = v.getContext();
                 Intent intent = new Intent(context, NoteActivity.class);
-                intent.putExtra(BlogFragment.ARG_ITEM_ID, note.getNoteId());
+                intent.putExtra(NoteFragment.ARG_ITEM_ID, note.getNoteId());
                 context.startActivity(intent);
             }
         };

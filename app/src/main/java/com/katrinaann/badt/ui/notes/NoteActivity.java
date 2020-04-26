@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.katrinaann.badt.R;
-import com.katrinaann.badt.ui.blog.BlogFragment;
 
 public class NoteActivity extends AppCompatActivity {
 
@@ -22,17 +21,17 @@ public class NoteActivity extends AppCompatActivity {
 
         //Get intent from the NoteListAdapter and get the noteId that was passed from it
         Intent intent = getIntent();
-        int noteId = intent.getIntExtra(BlogFragment.ARG_ITEM_ID,0);
+        int noteId = intent.getIntExtra(NoteFragment.ARG_ITEM_ID,0);
         Log.d(TAG, "noteId = " + noteId);
 
         //Initalise a new fragment, passing on the noteId that was passed in from NoteListAdapter
         Bundle arguments = new Bundle();
-        arguments.putInt(BlogFragment.ARG_ITEM_ID, noteId);
-        Fragment fragment = new BlogFragment();
+        arguments.putInt(NoteFragment.ARG_ITEM_ID, noteId);
+        Fragment fragment = new NoteFragment();
         fragment.setArguments(arguments);
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.scrollDetailActivity, fragment) //Replace the scrollDetailActivity with BlogFragment
+                .replace(R.id.fragment_container, fragment) //Replace the scrollDetailActivity with BlogFragment
                 .commit();
     }
 }

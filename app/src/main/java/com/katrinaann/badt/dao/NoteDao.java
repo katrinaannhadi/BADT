@@ -1,10 +1,12 @@
-package com.katrinaann.badt.ui.notes;
+package com.katrinaann.badt.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
+
+import com.katrinaann.badt.models.Notes;
 
 import java.util.List;
 

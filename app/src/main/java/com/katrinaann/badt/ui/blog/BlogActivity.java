@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.katrinaann.badt.R;
 import com.katrinaann.badt.models.Blog;
+import com.katrinaann.badt.ui.quiz.QuizActivity;
 
 public class BlogActivity extends AppCompatActivity {
 
@@ -28,8 +30,9 @@ public class BlogActivity extends AppCompatActivity {
     private String topic;
     private int maxPages;
     private ConstraintLayout layout;
-    public static final String TAG = "BlogActivity";
     private FloatingActionButton search;
+    public static final String TAG = "BlogActivity";
+    private TextView tvCategory;
 
 
     @Override
@@ -51,6 +54,7 @@ public class BlogActivity extends AppCompatActivity {
         ivPicture = findViewById(R.id.ivPicture);
         layout = findViewById(R.id.layoutBlog);
         search = findViewById(R.id.ivSearch);
+        tvCategory = findViewById(R.id.article_category);
 
         //Run the method to display the UI elements of the page based on the topic
         displayPage();
@@ -60,6 +64,9 @@ public class BlogActivity extends AppCompatActivity {
 
         //Set the back button to invisble on default (will be set to visible later)
         btnBack.setVisibility(View.INVISIBLE);
+
+        //Set the title (article_category) of the activity to the topic name
+        tvCategory.setText(topic);
 
         //Set listener for "Next Button" to let the user move to the next page
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +84,13 @@ public class BlogActivity extends AppCompatActivity {
             }
         });
 
+        //Set listener for the "Search Button" to let the user search the current topic on Google
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                searchBlog();
+            }
+        });
     }
 
     //Method to "move onto a next page" by updating the content in the view
@@ -101,10 +115,10 @@ public class BlogActivity extends AppCompatActivity {
 
         //If the current page is the last page, run the new activity/quiz on click
         else {
-            //Run the quiz
+            loadQuiz();
         }
 
-        Log.d(TAG,"nextPage: Success");
+        Log.d(TAG, "nextPage: Success");
     }
 
     //Method to "move onto the previous page" by updating the content in the view
@@ -125,7 +139,7 @@ public class BlogActivity extends AppCompatActivity {
         tvPage.setText(Integer.toString(page));
 
 
-        Log.d(TAG,"previousPage: Success");
+        Log.d(TAG, "previousPage: Success");
     }
 
     //Method to update the UI of the page based on what extra (String that represents topic) was passed in
@@ -136,17 +150,21 @@ public class BlogActivity extends AppCompatActivity {
 
             //If the topic is design thinking, set the views to display design thinking
             case "Introduction to Business Analysis":
+                //Set the content body (tvInformation) to the information of the Introduction to Business Analysis topic
+                //get(page-1) is because page starts at 1 and index starts at 0.
                 tvInformation.setText(Blog.getIntroductiontoBA().get(page - 1).getInformation());
+                //Set the maximum number of pages to the size of the array
                 maxPages = Blog.getIntroductiontoBA().size();
-                setTitle(Blog.getIntroductiontoBA().get(page - 1).getTopic());
+                //Set the title in the title textview to the subtopic name
                 tvTitle.setText(Blog.getIntroductiontoBA().get(page - 1).getSubTopic());
+                //Set the image to the subtopic image provided in the array
                 ivPicture.setImageResource(Blog.getIntroductiontoBA().get(page - 1).getSupTopicImage());
+                //Set the colour of the background to equal to the topic colour
                 layout.setBackgroundColor(Color.parseColor("#ffc000"));
                 break;
             case "Project Management":
                 tvInformation.setText(Blog.getProjectManagement().get(page - 1).getInformation());
                 maxPages = Blog.getProjectManagement().size();
-                setTitle(Blog.getProjectManagement().get(page - 1).getTopic());
                 tvTitle.setText(Blog.getProjectManagement().get(page - 1).getSubTopic());
                 ivPicture.setImageResource(Blog.getProjectManagement().get(page - 1).getSupTopicImage());
                 layout.setBackgroundColor(Color.parseColor("#DE0000"));
@@ -154,7 +172,6 @@ public class BlogActivity extends AppCompatActivity {
             case "Requirements Gathering And Modelling":
                 tvInformation.setText(Blog.getReqGatheringAndModelling().get(page - 1).getInformation());
                 maxPages = Blog.getReqGatheringAndModelling().size();
-                setTitle(Blog.getReqGatheringAndModelling().get(page - 1).getTopic());
                 tvTitle.setText(Blog.getReqGatheringAndModelling().get(page - 1).getSubTopic());
                 ivPicture.setImageResource(Blog.getReqGatheringAndModelling().get(page - 1).getSupTopicImage());
                 layout.setBackgroundColor(Color.parseColor("#FE622D"));
@@ -162,7 +179,6 @@ public class BlogActivity extends AppCompatActivity {
             case "Systems Development Life Cycle":
                 tvInformation.setText(Blog.getSDLC().get(page - 1).getInformation());
                 maxPages = Blog.getSDLC().size();
-                setTitle(Blog.getSDLC().get(page - 1).getTopic());
                 tvTitle.setText(Blog.getSDLC().get(page - 1).getSubTopic());
                 ivPicture.setImageResource(Blog.getSDLC().get(page - 1).getSupTopicImage());
                 layout.setBackgroundColor(Color.parseColor("#ffc000"));
@@ -176,24 +192,15 @@ public class BlogActivity extends AppCompatActivity {
                 layout.setBackgroundColor(Color.parseColor("#00BD00"));
                 break;
             case "Design Thinking":
-                //Set the content body (tvInformation) to the information of the Design Thinking topic
-                //get(page-1) is because page starts at 1 and index starts at 0.
                 tvInformation.setText(Blog.getDesignThinking().get(page - 1).getInformation());
-                //Set the maximum number of pages to the size of the array
                 maxPages = Blog.getDesignThinking().size();
-                //Set the title of the activity to the topic name
-                setTitle(Blog.getDesignThinking().get(page - 1).getTopic());
-                //Set the title in the title textview to the subtopic name
                 tvTitle.setText(Blog.getDesignThinking().get(page - 1).getSubTopic());
-                //Set the image to the subtopic image provided in the array
                 ivPicture.setImageResource(Blog.getDesignThinking().get(page - 1).getSupTopicImage());
-                //Set the colour of the background to equal to the topic colour
                 layout.setBackgroundColor(Color.parseColor("#009CFE"));
                 break;
             case "Agile SCRUM":
                 tvInformation.setText(Blog.getAgileSCRUM().get(page - 1).getInformation());
                 maxPages = Blog.getAgileSCRUM().size();
-                setTitle(Blog.getAgileSCRUM().get(page - 1).getTopic());
                 tvTitle.setText(Blog.getAgileSCRUM().get(page - 1).getSubTopic());
                 ivPicture.setImageResource(Blog.getAgileSCRUM().get(page - 1).getSupTopicImage());
                 layout.setBackgroundColor(Color.parseColor("#000084"));
@@ -202,41 +209,56 @@ public class BlogActivity extends AppCompatActivity {
             case "Lean Startup":
                 tvInformation.setText(Blog.getLeanStartup().get(page - 1).getInformation());
                 maxPages = Blog.getLeanStartup().size();
-                setTitle(Blog.getLeanStartup().get(page - 1).getTopic());
                 tvTitle.setText(Blog.getLeanStartup().get(page - 1).getSubTopic());
                 ivPicture.setImageResource(Blog.getLeanStartup().get(page - 1).getSupTopicImage());
                 layout.setBackgroundColor(Color.parseColor("#6D33A6"));
                 break;
-
-//            search.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    searchBlog(Blog.getTopic());
-//
-//                }
-//            });
         }
-//        public void searchBlog(String blog) {
-//            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/search?q=" + blog ));
-//            startActivity(intent);
-//        }
 
-        Log.d(TAG,"displayPage: Success");
+        Log.d(TAG, "displayPage: Success");
+    }
+
+    //Method to search on Google for the current topic
+    public void searchBlog() {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/search?q=" + topic));
+        startActivity(intent);
+    }
+
+    //Method to connect to the quiz component of the app after all the learning material is finished
+    public void loadQuiz() {
+        int quizIndex = 0;
+        switch (topic) {
+            case "Introduction to Business Analysis":
+                //Specific quiz run is determined by an int (quizIndex). This sets that int to the right
+                //number in relation to the topic.
+                quizIndex = 1;
+                break;
+            case "Project Management":
+                quizIndex = 2;
+                break;
+            case "Requirements Gathering And Modelling":
+                quizIndex = 3;
+                break;
+            case "Design Thinking":
+                quizIndex = 4;
+                break;
+            case "Agile SCRUM":
+                quizIndex = 5;
+                break;
+            case "Systems Development Life Cycle":
+                quizIndex = 6;
+                break;
+            case "Systems Development Methodologies":
+                quizIndex = 7;
+                break;
+            case "Lean Startup":
+                quizIndex = 8;
+                break;
+        }
+
+        //Intent to start QuizActivity and passes in the right quizIndex to start a specific quiz
+        Intent intent = new Intent(this, QuizActivity.class);
+        intent.putExtra("quizIndex", quizIndex);
+        startActivity(intent);
     }
 }
-
-
-//TODO DELETE THIS
-//        btnNote.setOnClickListener(new View.OnClickListener() {
-//@Override
-//public void onClick(View v) {
-//        newActivity2(v, "Note");
-//        }
-//        });
-//        }
-//
-//public void newActivity(View v, String topic) {
-//        Intent intent = new Intent(this, ContentActivity.class);
-//        intent.putExtra("Topic",topic);
-//        startActivity(intent);
-//        }
