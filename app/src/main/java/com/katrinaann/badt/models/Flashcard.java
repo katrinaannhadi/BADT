@@ -98,74 +98,7 @@ public class Flashcard {
         this.imageURL = imageURL;
     }
     //    public Flashcard(int id, int category, String categoryName, String title, String answer, int imageCategory, int imageAnswer) {
-//        this.id = id;
-//        this.category = category;
-//        this.categoryName = categoryName;
-//        this.title = title;
-//        this.answer = answer;
-//        this.imageCategory = imageCategory;
-//        this.imageAnswer = imageAnswer;
-//    }
-//
-//    public Flashcard() {
-//
-//    }
-//
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public void setId(int id) {
-//        this.id = id;
-//    }
-//
-//    public int getCategory() {
-//        return category;
-//    }
-//
-//    public void setCategory(int category) {
-//        this.category = category;
-//    }
-//
-//    public String getCategoryName() {
-//        return categoryName;
-//    }
-//
-//    public void setCategoryName(String categoryName) {
-//        this.categoryName = categoryName;
-//    }
-//
-//    public String getTitle() {
-//        return title;
-//    }
-//
-//    public void setTitle(String title) {
-//        this.title = title;
-//    }
-//
-//    public String getAnswer() {
-//        return answer;
-//    }
-//
-//    public void setAnswer(String answer) {
-//        this.answer = answer;
-//    }
-//
-//    public int getImageCategory() {
-//        return imageCategory;
-//    }
-//
-//    public void setImageCategory(int imageCategory) {
-//        this.imageCategory = imageCategory;
-//    }
-//
-//    public int getImageAnswer() {
-//        return imageAnswer;
-//    }
-//
-//    public void setImageAnswer(int imageAnswer) {
-//        this.imageAnswer = imageAnswer;
-//    }
+
 
     public static ArrayList<Flashcard> getCategory1() {
         ArrayList<Flashcard> flashcards = new ArrayList<>();
@@ -433,10 +366,42 @@ public class Flashcard {
                     , 3
                     , "Requirements Determination"
                     , "What is Requirements Determination?"
-                    ,"The waterfall or structured design is a path dependent process. Each stage is completed sequentially and must be fully completed before moving onto the next stage"
+                    ,"Requirements Analysis Strategies are a part of requirements determination and are decided upon during the preparation phase. There are three main requirements analysis strategies"
                     , R.drawable.ic_requirementsgatheringandmodelling
-                    , R.drawable.waterfall
-                    , ""));
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/68ZlATaVYIo/1600x900"));
+            flashcards.add(new Flashcard(1
+                    , 3
+                    , "Requirements Determination"
+                    , "What is Business Process Automation?"
+                    ,"Business Process Automation is a strategy used for small changes and often involves using technology to automate some portions of a process. This process involves a lot of information gathering about the current (as-is) system which often comes in the form of problem analysis or root cause analysis."
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/2EJCSULRwC8/1600x900"));
+            flashcards.add(new Flashcard(2
+                    , 3
+                    , "Requirements Determination"
+                    , "What is Requirements Determination?"
+                    ,"Requirements Analysis Strategies are a part of requirements determination and are decided upon during the preparation phase. There are three main requirements analysis strategies"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/hpjSkU2UYSU/1600x900"));
+            flashcards.add(new Flashcard(3
+                    , 3
+                    , "Requirements Determination"
+                    , "What are the Requirements Gathering Techniques?"
+                    ,"Interviews, Joint Application Development, Surveys, Document Analysis, Observation"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/jrh5lAq-mIs/1600x900"));
+            flashcards.add(new Flashcard(4
+                    , 3
+                    , "Requirements Determination"
+                    , "What is Requirements Determination?"
+                    ,"Requirements Analysis Strategies are a part of requirements determination and are decided upon during the preparation phase. There are three main requirements analysis strategies"
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , R.drawable.ic_requirementsgatheringandmodelling
+                    , "https://source.unsplash.com/unRkg2jH1j0/1600x900"));
             return flashcards;
         }
     public static ArrayList<Flashcard> getCategory4() {
@@ -693,10 +658,26 @@ public class Flashcard {
                 , 7
                 , "Agile Scrum"
                 , "What is Agile?"
-                ,"The waterfall or structured design is a path dependent process. Each stage is completed sequentially and must be fully completed before moving onto the next stage"
+                ,"An agile methodology is the opposite end of the spectrum to waterfall development which focuses on sequential, well-planned project management"
                 , R.drawable.ic_agile
                 , R.drawable.ic_agile
-                , ""));
+                , "https://source.unsplash.com/WC6MJ0kRzGw/1600x900"));
+        flashcards.add(new Flashcard(1
+                , 7
+                , "Agile Scrum"
+                , "What are the roles in agile scrum?"
+                ,"Product Owner, Scrum Master, Team"
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/tV-RX0beDp8/1600x900"));
+        flashcards.add(new Flashcard(2
+                , 7
+                , "Agile Scrum"
+                , "What is the role of the scrum master?"
+                ,"The scrum master is a “servant leader” who serves the members of the team rather than orders them. The main role of the scrum master is to ensure the smoothness of the project by fulfilling the team’s needs and requirements and also by removing impediments to progress."
+                , R.drawable.ic_agile
+                , R.drawable.ic_agile
+                , "https://source.unsplash.com/Ap3fFS0iOiE/1600x900"));
         return flashcards;
     }
     public static ArrayList<Flashcard> getCategory8() {
@@ -705,10 +686,26 @@ public class Flashcard {
                 , 8
                 , "Lean Start Up"
                 , "What is Lean?"
-                ,"The waterfall or structured design is a path dependent process. Each stage is completed sequentially and must be fully completed before moving onto the next stage"
+                ,"Lean start-up is a methodology that borrows ideas from lean manufacturing and focuses on reducing waste. "
                 , R.drawable.ic_leanstartup
                 , R.drawable.ic_leanstartup
-                , ""));
+                , "https://source.unsplash.com/TG0jUoGbCCs/1600x900"));
+        flashcards.add(new Flashcard(1
+                , 8
+                , "Lean Start Up"
+                , "explore prototyping and experimenting "
+                ,""
+                , R.drawable.ic_leanstartup
+                , R.drawable.ic_leanstartup
+                , "https://source.unsplash.com/zoCDWPuiRuA/1600x900"));
+        flashcards.add(new Flashcard(2
+                , 8
+                , "Lean Start Up"
+                , "What are the stages in lean start up"
+                ,"Identify and prioritise, Develop hypotheses, Build minimum viable product, Learn from Results"
+                , R.drawable.ic_leanstartup
+                , R.drawable.ic_leanstartup
+                , "https://source.unsplash.com/t-Pm18joMss/1600x900"));
         return flashcards;
     }
 
