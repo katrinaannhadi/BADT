@@ -17,8 +17,14 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity implements YouTub
 
     private static final String TAG = "YoutubeActivity";
     static final String GOOGLE_API_KEY = "AIzaSyBGLD7OOCSXgfn5E1nKG2NNBj7XfJ28Rkc";
-    static final String YOUTUBE_VIDEO_ID = "gnWj97CEjeo";
-    static final String YOUTUBE_PLAYLIST = "PLhxFuaI_pG0HjklS6iFXPuzCQnyqWxhT-";
+    static final String YOUTUBE_VIDEO_ID_1 = "XsKdzHVEXig";
+    static final String YOUTUBE_VIDEO_ID_2 = "5On4Iso_Tf8";
+    static final String YOUTUBE_VIDEO_ID_3 = "kCJFBmAAvV4";
+    static final String YOUTUBE_VIDEO_ID_4 = "kQPTB0ygYfY";
+    static final String YOUTUBE_VIDEO_ID_5 = "6-GbY4Asgf8";
+    static final String YOUTUBE_PLAYLIST_6 = "PLhxFuaI_pG0HjklS6iFXPuzCQnyqWxhT-";
+    static final String YOUTUBE_VIDEO_ID_7 = "mfQIjf2TPdk";
+    static final String YOUTUBE_VIDEO_ID_8 = "_a3s0IXSuxY";
 
 
     @Override
@@ -54,7 +60,7 @@ public class YoutubePlayerActivity extends YouTubeBaseActivity implements YouTub
 
         // Checks to see whether the youtube video was restored and if not cue the video from start
         if(!wasRestored) {
-            youTubePlayer.cueVideo(YOUTUBE_VIDEO_ID);
+            youTubePlayer.cueVideo(YOUTUBE_VIDEO_ID_1);
         }
 
     }

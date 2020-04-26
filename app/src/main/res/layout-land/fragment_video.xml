@@ -1,57 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.video.VideoFragment">
+    android:background="@color/owl_pink_500">
 
-    <TextView
-        android:id="@+id/text_video"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182" />
-    <ImageView
-        android:id="@+id/buttonVideo"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_designthinking"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/buttonVideo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/bt_video"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_video" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/buttonPlaylist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/bt_playlist"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonVideo" />
+            <ImageView
+                android:id="@+id/playlist1"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_introductiontobusinessanalysis"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Introduction to Business Analysis"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Owl.Headline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/playlist1"
+                app:layout_constraintTop_toBottomOf="@id/playlist1" />
+
+            <ImageView
+                android:id="@+id/playlist2"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_projectmanagement"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text1"/>
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Project Management"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Owl.Headline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/playlist2"
+                app:layout_constraintTop_toBottomOf="@id/playlist2" />
+
+            <ImageView
+                android:id="@+id/playlist3"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_requirementsgatheringandmodelling"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text2"/>
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Requirements Determination"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Owl.Headline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/playlist3"
+                app:layout_constraintTop_toBottomOf="@id/playlist3" />
+
+            <ImageView
+                android:id="@+id/playlist4"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_sdlc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text3"/>
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Requirements Determination"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Owl.Headline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/playlist4"
+                app:layout_constraintTop_toBottomOf="@id/playlist4" />
+
+            <ImageView
+                android:id="@+id/playlist5"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_systemsdevelopmentmethodologies"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text4"/>
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Systems Development Methodologies"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Owl.Headline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/playlist5"
+                app:layout_constraintTop_toBottomOf="@id/playlist5" />
+
+            <ImageView
+                android:id="@+id/playlist6"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_designthinkinglist"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text5"/>
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Design Thinking List"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Owl.Headline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/playlist6"
+                app:layout_constraintTop_toBottomOf="@id/playlist6" />
+
+            <ImageView
+                android:id="@+id/playlist7"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_agile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text6"/>
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Agile"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Owl.Headline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/playlist7"
+                app:layout_constraintTop_toBottomOf="@id/playlist7" />
+
+            <ImageView
+                android:id="@+id/playlist8"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_leanstartup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text7"/>
+
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Lean Start Up"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.Owl.Headline4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/playlist8"
+                app:layout_constraintTop_toBottomOf="@id/playlist8" />
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

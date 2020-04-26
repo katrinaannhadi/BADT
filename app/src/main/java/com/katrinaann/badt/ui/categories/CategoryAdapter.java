@@ -61,7 +61,7 @@ public class CategoryAdapter extends PagerAdapter {
             @Override
             public void onClick(View v) {
                 //TODO CHANGE BACK TO SIGNIN ACTIVITY
-                Intent intent = new Intent(context, HomeActivity.class);
+                Intent intent = new Intent(context, SignInActivity.class);
                 intent.putExtra("param", models.get(position).getTitle());
                 context.startActivity(intent);
                 // finish();
